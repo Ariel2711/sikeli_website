@@ -26,3 +26,28 @@ body{
   justify-items: center;
   align-items: center;
 }
+
+.c-item{
+  height: 500px;
+}
+
+.c-img{
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-caption .text-center {
+  max-width: 80%; /* Adjust the maximum width as needed */
+  margin: auto;
+}

@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <title>SIKELI</title>
 </head>
-<body class="vh-100 overflow-hidden">
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top" style="background-color: white;">
         <div class="container-fluid">
@@ -54,11 +54,62 @@
                 </li>
               </ul>
               <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
-                <a href="pages/halamanLogin.html" class="text-white text-decoration-none px-3 py-1 rounded-4" style="background-color: #02343F;">LOGIN</a>
+                <a href="pages/halamanLogin.html">
+                  <button class="btn btn-primary text-white text-decoration-none px-4 py-1 rounded-4" style="font-size: 15px;">Login</button>
+                </a>
               </div>
             </div>
           </div>
         </div>
     </nav>
+
+    <!-- Carousel Slider -->
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="images/slider1.jpg" class="d-block w-100 c-img" alt="Slide 1">
+          <div class="carousel-caption d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <h1 class="display-1 fw-bolder text-capitalize mt-5">Judul Slider</h1>
+              <p class="fs-3 text-uppercase">Isi Slider</p>
+              <button class="btn btn-primary px-4 py-1 fs-5 mt-2 rounded-pill" style="font-size: 100px;">Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="images/slider2.jpg" class="d-block w-100 c-img" alt="Slide 2">
+          <div class="carousel-caption d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <h1 class="display-1 fw-bolder text-capitalize mt-5">Judul Slider</h1>
+              <p class="fs-3 text-uppercase">Isi Slider</p>
+              <button class="btn btn-primary px-4 py-1 fs-5 mt-2 rounded-pill" style="font-size: 100px;">Button</button>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="images/slider3.jpg" class="d-block w-100 c-img" alt="Slide 3">
+          <div class="carousel-caption d-flex align-items-center justify-content-center">
+            <div class="text-center">
+              <h1 class="display-1 fw-bolder text-capitalize mt-5">Judul Slider</h1>
+              <p class="fs-3 text-uppercase">Isi Slider</p>
+              <button class="btn btn-primary px-4 py-1 fs-5 mt-2 rounded-pill" style="font-size: 100px;">Button</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 </body>
 </html>
