@@ -18,6 +18,12 @@ body {
 .header img {
     width: 300px;
     height: 300px;
+    border: 1px solid transparent; 
+    cursor: pointer;
+}
+
+.header img:hover {
+    border-color:black;
 }
 
 .form-container {
@@ -62,9 +68,13 @@ body {
     color: #fff;
     padding: 10px 10px;
     margin: 5px 3px;
-    border: none;
+    border: 1px solid transparent; 
     cursor: pointer;
     border-radius: 5px;  
+}
+
+.form-group button:hover {
+    border-color: black;
 }
 
 .register-link {
@@ -93,13 +103,13 @@ body {
     margin: 5px 3px;
     background-color: #007bff;
     color: white;
-    border: 1px;
+    border: 1px solid transparent; 
     border-radius: 5px;
     cursor: pointer;
 }
 
 .facebook-login:hover {
-    border-color: yellow;
+    border-color: black;
     cursor: pointer;
 }
 
@@ -110,7 +120,7 @@ body {
     margin: 5px 3px;
     background-color: #e8e8e8;
     color: black;
-    border: none;
+    border: 1px solid transparent; 
     border-radius: 5px;
     cursor: pointer;
 }
