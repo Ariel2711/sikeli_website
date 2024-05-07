@@ -5,7 +5,7 @@ body{
 
 @media (max-width: 1200px) {
   .sidebar{
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.6);
     backdrop-filter: blur(10px);
   }
 }
@@ -15,7 +15,6 @@ body{
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  /* margin-right: 5px; */
 }
 
 .circle img {
@@ -27,9 +26,36 @@ body{
   align-items: center;
 }
 
-.c-item{
-  height: 500px;
+@media only screen and (max-width: 1400px){
+  .c-item{
+    height: 500px;
+  }
+
+  .c-title{
+    font-size: 40px;
+    font-weight: 500;
+  }
+
+  .c-isi{
+    font-size: 25px;
+  }
 }
+
+@media only screen and (max-width: 400px){
+  .c-item{
+    height: 600px;
+  }
+
+  .c-title{
+    font-size: 25px;
+    font-weight: 500;
+  }
+
+  .c-isi{
+    font-size: 15px;
+  }
+}
+
 
 .c-img{
   height: 100%;
@@ -48,6 +74,6 @@ body{
 }
 
 .carousel-caption .text-center {
-  max-width: 80%; /* Adjust the maximum width as needed */
+  max-width: 80%;
   margin: auto;
 }
