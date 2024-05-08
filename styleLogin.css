@@ -61,6 +61,31 @@ body {
     border-radius: 5px;
 }
 
+.password-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-input input {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 0;
+}
+
+.password-input img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.password-input:hover {
+    border-color: black;
+}
+
 .form-group button {
     align-self: center;
     width: 50%;
