@@ -88,7 +88,10 @@ nav a {
     margin-bottom: 10px;
     border-radius: 5px;
     padding: 5px;
-    color: #fffbfb;
+}
+
+.question-title:hover{
+    color: white;
 }
 
 .question-content {
@@ -118,6 +121,14 @@ nav a {
 }
 
 .views {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #000000;
+    color: #fffefe;
+    display: block; 
+}
+
+.date {
     border-radius: 5px;
     padding: 5px;
     background-color: #000000;
