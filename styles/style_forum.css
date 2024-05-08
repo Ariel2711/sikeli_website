@@ -1,0 +1,134 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #78c0bf;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh; 
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    position: sticky;
+    margin-top: 20px;
+}
+
+.container2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container2 li {
+    background-color: #78c0bfa4;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.container2 a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container2 a:hover {
+    text-decoration: underline;
+}
+
+.question-box {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    width: 400px;
+}
+
+.question-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    color: #fffbfb;
+}
+
+.question-content {
+    line-height: 1.5;
+}
+
+.question-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.8em;
+    color: #888;
+}
+
+.category {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.reply{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #000000;
+    color: #fffbfb;
+}
+
+.views {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #000000;
+    color: #fffefe;
+    display: block; 
+}
+
+.description {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
