@@ -15,7 +15,7 @@ body {
 }
 
 .pilih2 ul {
-    list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -25,8 +25,7 @@ body {
     background-color: #78c0bfa4;
     border-radius: 5px;
     padding: 5px;
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 10px;
     justify-content: space-evenly;
 }
 
@@ -40,9 +39,15 @@ body {
 }
 
 .container {
+    align-items: center;
     width: 100%;
     max-width: 800px;
-    margin: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 .forum-post {
@@ -97,16 +102,19 @@ body {
 
 .post-category a {
     text-decoration: none;
-    color: #cd7b7b;
+    background-color: #78c0bfa4;
+    border-radius: 5px;
+    padding: 5px;
+    color: #000000;
 }
 
 .post-views {
-    color: #1f8134;
+    color: #78c0bf;
 }
 
 .post-views a {
     text-decoration: none;
-    color: #1f8134;
+    color: #609695;
 }
 
 .description {
