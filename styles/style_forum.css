@@ -22,6 +22,7 @@ body {
 }
 
 .pilih2 li {
+    text-align: center;
     background-color: #78c0bfa4;
     border-radius: 10px; 
     padding: 15px;
@@ -155,16 +156,21 @@ body {
     background-color: #e5e5e5;
 }
 
-@media only screen and (max-width: 451px) {
+@media only screen and (max-width: 450px) {
     .pilih2 {
-        margin-top: 50px;
+        margin-top: 70px;
+        display: block;
     }
 
     .pilih2 li {
-        padding: 10px;
+        padding: 7px;
         margin: 5px;
         min-width: 80px;
-        min-height: 40px !important;
+        min-height: 20px !important;
+    }
+
+    .pilih2 a{
+        font-size: 10px;
     }
 
     .container {
@@ -172,8 +178,8 @@ body {
     }
 
     .plus-sign {
-        bottom: 50px;
-        right: 50px;
+        bottom: 30px;
+        right: 30px;
         width: 40px;
         height: 40px;
         border-width: 1px;
