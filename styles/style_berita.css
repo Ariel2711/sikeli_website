@@ -30,3 +30,12 @@ ul.filters > li.active > a{
   color: #fff;
   background-color: #0d6efd;
 }
+
+.post-category a {
+  background-color: #0d6efd;
+  border-radius: 5px;
+  padding: 5px;
+  /* margin-bottom: 10px; */
+  color: white;
+  text-decoration: none;
+}
