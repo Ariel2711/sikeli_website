@@ -90,6 +90,7 @@ body {
     color: #fff;
     padding: 10px 10px;
     margin: 5px 3px;
+    font-size: 18px;
     border: 1px solid transparent; 
     cursor: pointer;
     border-radius: 5px;  
@@ -123,6 +124,7 @@ body {
     width: calc(50% - 6px); /* Menggunakan calc() untuk menghitung lebar dengan mengurangi padding */
     padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
     margin: 5px 3px;
+    font-size: 18px;
     background-color: #007bff;
     color: white;
     border: 1px solid transparent; 
@@ -140,6 +142,7 @@ body {
     width: calc(50% - 6px); /* Menggunakan calc() untuk menghitung lebar dengan mengurangi padding */
     padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
     margin: 5px 3px;
+    font-size: 18px;
     background-color: #e8e8e8;
     color: black;
     border: 1px solid transparent; 
