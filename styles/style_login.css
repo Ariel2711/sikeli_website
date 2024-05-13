@@ -9,7 +9,6 @@ body {
     width: 100%;
     max-width: 600px;
     margin: 30px auto;
-    
     padding: 20px;
     background-color: white;
 }
@@ -19,8 +18,8 @@ body {
 }
 
 .header img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .form-container {
@@ -196,8 +195,8 @@ body {
 
 @media only screen and (max-width: 450px) {
     .header img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
     }
 
     .form-group label {
