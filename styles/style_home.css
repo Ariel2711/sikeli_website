@@ -1,5 +1,5 @@
 body{
-  background-color: white;
+  background-color: rgb(242,252,255);
   font-family: 'Lexend';
 }
 
@@ -8,6 +8,15 @@ body{
     background-color: rgba(255,255,255,0.6);
     backdrop-filter: blur(10px);
   }
+}
+
+.btn {
+  background-color: rgb(81,173,171);
+  border: 0;
+}
+
+.btn:hover {
+  background-color: rgb(31,66,65);
 }
 
 .circle {
