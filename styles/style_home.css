@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(242,252,255);
+  background-color: #f0f8f8;
   font-family: 'Lexend';
 }
 
@@ -11,12 +11,15 @@ body{
 }
 
 .btn {
-  background-color: rgb(81,173,171);
+  background-color:#a6edfc;
   border: 0;
+  color: black;
+  font-weight: 600;
+  font-family: 'Lexend';
 }
 
 .btn:hover {
-  background-color: rgb(31,66,65);
+  background-color: rgb(62,132,132);
 }
 
 .circle {
@@ -24,6 +27,8 @@ body{
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  background-color: white;
+  padding: 5px;
 }
 
 .circle img {
