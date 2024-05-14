@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: rgb(242,252,255);
     font-family: 'Lexend';
 }
 
@@ -28,7 +28,7 @@ ul.filters>li>a:hover {
 
 ul.filters>li.active>a {
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #609695;
 }
 
 .fluent--open-16-regular {

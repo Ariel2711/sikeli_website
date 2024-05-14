@@ -1,5 +1,5 @@
 body{
-  background-color: white;
+  background-color: #f0f8f8;
   font-family: 'Lexend';
 }
 
@@ -10,11 +10,25 @@ body{
   }
 }
 
+.btn {
+  background-color:#a6edfc;
+  border: 0;
+  color: black;
+  font-weight: 600;
+  font-family: 'Lexend';
+}
+
+.btn:hover {
+  background-color: rgb(62,132,132);
+}
+
 .circle {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+  background-color: white;
+  padding: 5px;
 }
 
 .circle img {

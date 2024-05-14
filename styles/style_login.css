@@ -2,13 +2,15 @@ body {
     font-family: 'Lexend';
     margin: 0;
     padding: 0;
+    background-color: rgb(242,252,255);
 }
 
 .container {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 20px;
+    background-color: white;
 }
 
 .header {
@@ -16,8 +18,8 @@ body {
 }
 
 .header img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 .form-container {
@@ -111,17 +113,21 @@ body {
 }
 
 .social-login {
+    display: flex;
+    flex-direction: column;
     text-align: center;
     margin-top: 20px;
 }
 
 .social-login p {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .facebook-login {
     display: inline-block;
-    width: calc(50% - 6px); /* Menggunakan calc() untuk menghitung lebar dengan mengurangi padding */
+    align-self: center;
+    width: 50%; 
     padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
     margin: 5px 3px;
     font-size: 18px;
@@ -139,7 +145,8 @@ body {
 
 .google-login {
     display: inline-block;
-    width: calc(50% - 6px); /* Menggunakan calc() untuk menghitung lebar dengan mengurangi padding */
+    align-self: center;
+    width: 50%; 
     padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
     margin: 5px 3px;
     font-size: 18px;
@@ -171,7 +178,7 @@ body {
 
 /* Media Queries for Responsive Design */
 
-@media only screen and (max-width: 1200px) {
+/* @media only screen and (max-width: 1200px) {
     .header img {
         width: 250px;
         height: 250px;
@@ -184,9 +191,9 @@ body {
     .form-group input {
         width: 100%;
     }
-}
+} */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
     .header img {
         width: 200px;
         height: 200px;
@@ -200,12 +207,28 @@ body {
         font-size: 14px;
     }
 
+    .form-group button {
+        font-size: 14px;
+    }
+
     .register-link,
     .forgot-password-link {
         font-size: 14px;
     }
 
+    .facebook-login {
+        font-size: 14px;
+    }
+
+    .google-login {
+        font-size: 14px;
+    }
+
     .social-login p {
+        font-size: 14px;
+    }
+
+    .register-link {
         font-size: 14px;
     }
 }

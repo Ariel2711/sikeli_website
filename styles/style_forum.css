@@ -3,7 +3,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background-color: #ffffff;
+    background-color: rgb(242,252,255);
     font-family: 'Lexend';
 }
 
@@ -48,7 +48,6 @@ body {
     width: 100%;
     max-width: 800px;
     margin: 20px auto;
-    background-color: #fff;
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
