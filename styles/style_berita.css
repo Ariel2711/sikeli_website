@@ -87,3 +87,20 @@ ul.filters > li.active > a{
     margin-top: 5px;
   }
 }
+
+.card-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.card-text-desc{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  margin-top: 5px;
+}
