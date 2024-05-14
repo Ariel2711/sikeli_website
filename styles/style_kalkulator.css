@@ -23,9 +23,13 @@ body{
   align-items: center;
 }
 
-@media only screen and (max-width: 450px){
+@media only screen and (max-width: 800px){
   .circle-result{
     width: 250px;
     height: 250px;
+  }
+
+  .card-result{
+    width: 100%;
   }
 }
