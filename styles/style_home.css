@@ -91,3 +91,47 @@ body{
   max-width: 80%;
   margin: auto;
 }
+
+@media only screen and (min-width: 768px) {
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-title,
+  .card-text-date {
+      margin: 0;
+  }
+
+  .card-text-date {
+      margin-top: auto;
+  }
+
+
+  .card-custom-height {
+    height: 170px;
+  }
+  
+  .img-custom-height {
+    height: 170px;
+    object-fit: cover;
+  }
+
+  .card-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+
+  .card-text-desc{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin-top: 5px;
+  }
+}
