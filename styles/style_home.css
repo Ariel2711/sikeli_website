@@ -92,7 +92,7 @@ body{
   margin: auto;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   .card-body {
     display: flex;
     flex-direction: column;
@@ -109,16 +109,25 @@ body{
   }
 
 
-  .card-custom-height {
+  .card-custom-height-home {
     height: 170px;
+    min-height: 170px;
   }
   
-  .img-custom-height {
+  .img-custom-height-home {
     height: 170px;
     object-fit: cover;
   }
 
   .card-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+  
+  .card-title-home{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -134,9 +143,91 @@ body{
     -webkit-line-clamp: 2;
     margin-top: 5px;
   }
+
+  .card-text-desc-home{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin-top: 0px;
+    font-size: 15px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 999px){
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .card-title,
+  .card-text-date {
+      margin: 0;
+  }
+
+  .card-text-date {
+      margin-top: auto;
+  }
+
+
+  .card-custom-height-home {
+    height: 120px;
+    min-height: 120px;
+  }
+  
+  .img-custom-height-home {
+    height: 120px;
+    object-fit: cover;
+  }
+
+  .card-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+  
+  .card-title-home{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 18px;
+  }
+
+  .card-text-desc{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin-top: 5px;
+  }
+
+  .card-text-desc-home{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin-top: 0px;
+    font-size: 0px;
+  }
 }
 
 .card-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.card-title-home{
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -151,6 +242,15 @@ body{
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   margin-top: 5px;
+  font-size: 15px;
+}
+
+.card-text-desc-home{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
 }
 
 .card{
