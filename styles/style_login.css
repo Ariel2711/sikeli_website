@@ -11,6 +11,7 @@ body {
     margin: 30px auto;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -27,9 +28,9 @@ body {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: auto;
     display: flex;
-    flex-direction: column; /* Mengatur tata letak elemen dalam bentuk kolom */
+    flex-direction: column; 
 }
 
 #forgot {
@@ -47,12 +48,6 @@ body {
     font-weight: bold;
 }
 
-.form-group-pw label {
-    margin-bottom: 5px;
-    margin-top: 5px;
-    font-weight: bold;
-}
-
 .form-group input {
     margin: 0;
     width: 100%;
@@ -60,13 +55,14 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    outline: none;
 }
 
-.form-group-pw input {
+#password {
     margin: 0;
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid transparent;
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -149,7 +145,7 @@ body {
     display: inline-block;
     align-self: center;
     width: 50%; 
-    padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
+    padding: 10px 0; 
     margin: 5px 3px;
     font-size: 18px;
     background-color: #007bff;
@@ -193,11 +189,9 @@ body {
 .google-login img {
     width: 20px;
     height: 20px;
-    vertical-align: middle; /* Untuk mengatur posisi vertikal gambar */
-    margin-right: 5px; /* Jarak antara gambar dan teks */
+    vertical-align: middle; 
+    margin-right: 5px; 
 }
-
-/* Media Queries for Responsive Design */
 
 /* @media only screen and (max-width: 1200px) {
     .header img {
