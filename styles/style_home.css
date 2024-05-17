@@ -11,15 +11,46 @@ body{
 }
 
 .btn {
-  background-color:#a6edfc;
+  background-color:rgb(62,132,132);
   border: 0;
-  color: black;
+  color: white;
   font-weight: 600;
   font-family: 'Lexend';
 }
 
 .btn:hover {
-  background-color: rgb(62,132,132);
+  background-color: #04738b;
+  color: white;
+}
+
+.btn-login {
+  background-color:white;
+  border: 0;
+  color: black;
+  font-size: 15px;
+  font-weight: 600;
+  font-weight: 600;
+  font-family: 'Lexend';
+}
+
+.btn-login:hover {
+  background-color: black;
+  color: white;
+}
+
+.btn-slider {
+  background-color:white;
+  border: 0;
+  color: black;
+  font-size: 100px;
+  font-weight: 600;
+  font-weight: 600;
+  font-family: 'Lexend';
+}
+
+.btn-slider:hover {
+  background-color: black;
+  color: white;
 }
 
 .circle {
@@ -256,4 +287,23 @@ body{
 .card{
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 0;
+}
+
+@media only screen and (max-width: 767px) {
+  /* .card-custom-height-home {
+    height: 350px;
+    min-height: 300px;
+  } */
+  
+  .img-custom-height-home {
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .img-custom-height{
+    height: 270px;
+    width: 100%;
+    object-fit: cover;
+  }
 }

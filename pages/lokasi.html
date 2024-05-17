@@ -37,8 +37,9 @@
             </button>
             <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" 
-                    id="offcanvasNavbarLabel">SIKELI</h5>
+                    <a href="../index.html">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">SIKELI</h5>
+                    </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body d-flex flex-column flex-lg-row">
@@ -50,7 +51,7 @@
                             <a class="nav-link active text-white" aria-current="page" href="review.html">REVIEW</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="lokasi.html">LOKASI</a>
+                            <a class="nav-link active" aria-current="page" href="lokasi.html" style="color: aqua;">LOKASI</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
@@ -61,7 +62,7 @@
                     </ul>
                     <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
                         <a href="login.html">
-                            <button class="btn text-black text-decoration-none px-4 py-1 rounded-4" style="font-size: 15px; background-color: white;">Login</button>
+                            <button class="btn-login text-decoration-none px-4 py-1 rounded-4">Login</button>
                         </a>
                     </div>
                 </div>
@@ -72,7 +73,7 @@
     <div class="row justify-content-center me-3 ms-3">
         <form class="d-flex justify-content-center" style="margin-top: 80px;">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
+            <button class="btn" type="submit">Search</button>
         </form>
     </div>
     
@@ -82,8 +83,8 @@
         <li data-filter="."><a href="#!">SPKLU</a></li>
     </ul>
 
-    <div class="container mt-3 mx-auto">
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+    <div class="container mx-auto">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location2.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -97,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location3.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -111,7 +112,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -125,7 +126,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -141,6 +142,11 @@
         </div>
     </div>
 
+    <footer class="bg-dark text-white mt-5">
+        <div class="bg-secondary text-center py-3">
+          <p class="mb-0">© 2024 SIKELI. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

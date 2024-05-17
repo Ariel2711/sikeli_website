@@ -36,8 +36,9 @@
         </button>
         <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title text-white" 
-                id="offcanvasNavbarLabel">SIKELI</h5>
+                <a href="../index.html">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">SIKELI</h5>
+                </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex flex-column flex-lg-row">
@@ -46,7 +47,7 @@
                         <a class="nav-link active text-white" aria-current="page" href="berita.html">BERITA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="review.html">REVIEW</a>
+                        <a class="nav-link active" aria-current="page" href="review.html" style="color: aqua;">REVIEW</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-white" aria-current="page" href="lokasi.html">LOKASI</a>
@@ -60,7 +61,7 @@
                 </ul>
                 <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
                     <a href="login.html">
-                        <button class="btn text-black text-decoration-none px-4 py-1 rounded-4" style="font-size: 15px; background-color: white;">Login</button>
+                        <button class="btn-login text-decoration-none px-4 py-1 rounded-4">Login</button>
                     </a>
                 </div>
             </div>
@@ -71,17 +72,18 @@
 <div class="row justify-content-center me-3 ms-3">
     <form class="d-flex justify-content-center" style="margin-top: 80px;">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
+        <button class="btn" type="submit">Search</button>
     </form>
 </div>
 
+<ul class="filters text-center" style="margin-top: 30px;">
+  <li class="active" data-filter="*"><a href="#!">Terbaru</a></li>
+  <li class="" data-filter="*"><a href="#!">Terpopuler</a></li>
+  <li data-filter=""><a href="#!">Mobil Listrik</a></li>
+  <li data-filter=""><a href="#!">Motor Listrik</a></li>
+</ul>
+
     <div class="container">
-      <ul class="filters text-center">
-        <li class="active" data-filter="*"><a href="#!">Terbaru</a></li>
-        <li class="" data-filter="*"><a href="#!">Terpopuler</a></li>
-        <li data-filter=""><a href="#!">Mobil Listrik</a></li>
-        <li data-filter=""><a href="#!">Motor Listrik</a></li>
-    </ul>
       <br>
       <div class="review-container">
         <div class="review">
@@ -211,5 +213,11 @@
         </div>
       </div>
     </div>
+</div>
+    <footer class="bg-dark text-white mt-5">
+        <div class="bg-secondary text-center py-3">
+          <p class="mb-0">© 2024 SIKELI. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

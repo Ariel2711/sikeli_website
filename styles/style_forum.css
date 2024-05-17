@@ -47,7 +47,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0px auto;
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
@@ -152,7 +152,7 @@ body {
 
 .plus-sign:hover {
     cursor: pointer;
-    /* background-color: #e5e5e5; */
+    background-color: #04738b;
 }
 
 @media only screen and (max-width: 450px) {
