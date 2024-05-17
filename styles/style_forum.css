@@ -232,3 +232,12 @@ ul.filters{
         height: 3px;
     }
 }
+
+.btn-modal{
+    width: 100%;
+    background-color: #007bff;
+}
+
+.label-input{
+    width: 100%;
+}

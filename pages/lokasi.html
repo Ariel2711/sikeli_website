@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="../styles/style_home.css">
     <link rel="stylesheet" href="../styles/style_lokasi.css">
     <script src="../scripts/script_berita.js"></script>
-    <script src="scripts/script_home.js"></script>
     <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +17,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #04738b;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col">
@@ -29,7 +28,7 @@
                   </a>
                 </div>
                 <div class="col">
-                    <a class="navbar-brand justify-content-start text-white" style="font-size: x-large;" href="../index.html">SIKELI</a>
+                    <a class="navbar-brand justify-content-start text-white" href="../index.html">SIKELI</a>
                 </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -37,7 +36,7 @@
             </button>
             <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <a href="../index.html">
+                    <a href="../index.html" class="offcanvas-title">
                         <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">SIKELI</h5>
                     </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -45,19 +44,19 @@
                 <div class="offcanvas-body d-flex flex-column flex-lg-row">
                     <ul class="navbar-nav justify-content-md-start justify-content-lg-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="berita.html">BERITA</a>
+                            <a class="nav-link text-white" aria-current="page" href="berita.html">BERITA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="review.html">REVIEW</a>
+                            <a class="nav-link text-white" aria-current="page" href="review.html">REVIEW</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="lokasi.html" style="color: aqua;">LOKASI</a>
+                            <a class="nav-link active" aria-current="page" href="lokasi.html">LOKASI</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
+                            <a class="nav-link text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="forum.html">FORUM</a>
+                            <a class="nav-link text-white" aria-current="page" href="forum.html">FORUM</a>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
@@ -71,7 +70,7 @@
     </nav>
 
     <div class="row justify-content-center me-3 ms-3">
-        <form class="d-flex justify-content-center" style="margin-top: 80px;">
+        <form class="d-flex justify-content-center search-bar">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn" type="submit">Search</button>
         </form>
@@ -84,7 +83,7 @@
     </ul>
 
     <div class="container mx-auto">
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location2.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -98,7 +97,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location3.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -112,7 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -126,7 +125,7 @@
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 740px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">

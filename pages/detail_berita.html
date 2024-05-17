@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/style_home.css">
     <link rel="stylesheet" href="../styles/style_detail_berita.css">
-    <script src="scripts/script_home.js"></script>
     <script src="../scripts/script_berita.js"></script>
     <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +15,7 @@
     <title>DETAIL BERITA - SIKELI</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #04738b;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col">
@@ -27,7 +26,7 @@
                   </a>
                 </div>
                 <div class="col">
-                    <a class="navbar-brand justify-content-start text-white" style="font-size: x-large;" href="../index.html">SIKELI</a>
+                    <a class="navbar-brand justify-content-start text-white" href="../index.html">SIKELI</a>
                 </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -35,8 +34,10 @@
             </button>
             <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" 
-                    id="offcanvasNavbarLabel">SIKELI</h5>
+                    <a href="../index.html" class="offcanvas-title">
+                        <h5 class="offcanvas-title text-white" 
+                        id="offcanvasNavbarLabel">SIKELI</h5>
+                    </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body d-flex flex-column flex-lg-row">
@@ -59,7 +60,7 @@
                     </ul>
                     <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
                         <a href="login.html">
-                            <button class="btn text-black text-decoration-none px-4 py-1 rounded-4" style="font-size: 15px; background-color: white;">Login</button>
+                            <button class="btn-login text-decoration-none px-4 py-1 rounded-4">Login</button>
                         </a>
                     </div>
                 </div>

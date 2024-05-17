@@ -3,6 +3,67 @@ body{
   font-family: 'Lexend';
 }
 
+.navbar{
+  background-color: #04738b;
+}
+
+.navbar-brand{
+  font-size: x-large;
+  text-decoration: none;
+}
+
+.offcanvas-title{
+  text-decoration: none;
+}
+
+.nav-link{
+  color: white !important;
+}
+
+.nav-link:hover{
+  color: aqua !important;
+}
+
+.nav-link.active{
+  color: aqua !important;
+}
+
+.nav-link.active:hover{
+  color: aqua !important;
+}
+
+.card{
+  max-width: 740px;
+}
+
+.card-home{
+  max-width: 540px;
+}
+
+.span-square-kategori{
+  margin-top: 0px;
+}
+
+.square-kategori{
+  width: 10px; 
+  height: 10px; 
+  display: inline-block;
+}
+
+.text-kategori{
+  font-size: 15px; 
+  margin: 0;
+}
+
+.title-berita{
+  text-decoration: none;
+  color: black;
+}
+
+.search-bar{
+  margin-top: 80px;
+}
+
 @media (max-width: 1200px) {
   .sidebar{
     background-color: rgba(4,115,139,0.6);
@@ -60,6 +121,11 @@ body{
   overflow: hidden;
   background-color: white;
   padding: 5px;
+  margin-right: 0px;
+}
+
+.navbar-brand{
+  margin-left: 0px;
 }
 
 .circle img {
@@ -282,6 +348,7 @@ body{
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+  margin-top: 0px;
 }
 
 .card{

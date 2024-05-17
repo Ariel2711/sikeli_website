@@ -7,7 +7,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/style_home.css">
     <link rel="stylesheet" href="../styles/style_forum.css">
-    <script src="scripts/script_home.js"></script>
     <script src="../scripts/script_berita.js"></script>
     <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +15,7 @@
     <title>FORUM - SIKELI</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #04738b;">
+  <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
         <div class="row align-items-center">
             <div class="col">
@@ -27,7 +26,7 @@
               </a>
             </div>
             <div class="col">
-                <a class="navbar-brand justify-content-start text-white" style="font-size: x-large;" href="../index.html">SIKELI</a>
+                <a class="navbar-brand justify-content-start text-white" href="../index.html">SIKELI</a>
             </div>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -35,7 +34,7 @@
         </button>
         <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <a href="../index.html">
+                <a href="../index.html" class="offcanvas-title">
                     <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">SIKELI</h5>
                 </a>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -43,19 +42,19 @@
             <div class="offcanvas-body d-flex flex-column flex-lg-row">
                 <ul class="navbar-nav justify-content-md-start justify-content-lg-center flex-grow-1 pe-3">
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="berita.html">BERITA</a>
+                        <a class="nav-link text-white" aria-current="page" href="berita.html">BERITA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="review.html">REVIEW</a>
+                        <a class="nav-link text-white" aria-current="page" href="review.html">REVIEW</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="lokasi.html">LOKASI</a>
+                        <a class="nav-link text-white" aria-current="page" href="lokasi.html">LOKASI</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
+                        <a class="nav-link text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="forum.html" style="color: aqua;">FORUM</a>
+                        <a class="nav-link active" aria-current="page" href="forum.html">FORUM</a>
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
@@ -67,18 +66,9 @@
         </div>
     </div>
 </nav>
-    <!-- <div class="pilih2" style="overflow-x: auto;">
-      <ul style="white-space: nowrap;">
-        <li><a href="#">Semua</a></li>
-        <li><a href="#">Mobil Listrik</a></li>
-        <li><a href="#">Motor Listrik</a></li>
-        <li><a href="#">Umum</a></li>
-        <li><a href="#">FAQs</a></li>
-      </ul>
-    </div> -->
 
     <div class="row justify-content-center me-3 ms-3">
-        <form class="d-flex justify-content-center" style="margin-top: 80px;">
+        <form class="d-flex justify-content-center search-bar">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn" type="submit">Search</button>
         </form>
@@ -165,7 +155,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#formForumModal" style="background-color: #007bff; width: 100%;">Login</button>
+            <button type="button" class="btn btn-modal" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#formForumModal">Login</button>
         </div>
       </div>
     </div>
@@ -181,17 +171,17 @@
         <div class="modal-body">
             <div class="inputan">
                 <h6>Topik Forum</h6>
-                <input type="text" style="width: 100%;">
+                <input type="text" class="label-input">
             </div>
             <div class="inputan mt-3">
                 <h6>Kategori Forum</h6>
-                <select name="jenis" style="width: 100%;">
+                <select name="jenis" class="label-input">
                   <option value="mobil listrik">Mobil Listrik</option>
                   <option value="motor listrik">Motor Listrik</option>
                   <option value="motor listrik">Umum</option>
                 </select>
               </div>
-            <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal" style="background-color: #007bff; width: 100%;">Submit</button>
+            <button type="button" class="btn btn-modal mt-3" data-bs-dismiss="modal">Submit</button>
         </div>
       </div>
     </div>
