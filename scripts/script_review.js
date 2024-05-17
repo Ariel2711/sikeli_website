@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const filters = document.querySelectorAll(".filters li");
-    const cards = document.querySelectorAll(".card-filter");
+    const cards = document.querySelectorAll(".review");
 
     filters.forEach(filter => {
         filter.addEventListener("click", function () {
