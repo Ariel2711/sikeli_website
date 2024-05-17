@@ -1,0 +1,37 @@
+body{
+    background-color: #f0f8f8;
+    font-family: 'Lexend';
+}
+
+.container {
+    align-items: center;
+    width: 100%;
+    max-width: 80%;
+    margin: 20px auto;
+    border-radius: 5px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: 0;
+    color: rgb(0, 0, 0,0.5);
+}
+
+.container img {
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-report {
+    margin: 10px auto;
+    padding: 10px 10px;
+}
+
+.news-report p{
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 18px;
+    color: black;
+}
