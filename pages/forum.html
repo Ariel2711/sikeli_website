@@ -152,10 +152,51 @@
   </div>
 </div>
 
-<div class="plus-sign">
+<div class="plus-sign" data-bs-toggle="modal" data-bs-target="#loginModal">
   <div class="vertical-line"></div>
   <div class="horizontal-line"></div>
 </div>
+
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="loginModalLabel">Login terlebih dahulu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#formForumModal" style="background-color: #007bff; width: 100%;">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="formForumModal" tabindex="-1" aria-labelledby="formForumModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center" id="formForumModalLabel">Form Forum</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="inputan">
+                <h6>Topik Forum</h6>
+                <input type="text" style="width: 100%;">
+            </div>
+            <div class="inputan mt-3">
+                <h6>Kategori Forum</h6>
+                <select name="jenis" style="width: 100%;">
+                  <option value="mobil listrik">Mobil Listrik</option>
+                  <option value="motor listrik">Motor Listrik</option>
+                  <option value="motor listrik">Umum</option>
+                </select>
+              </div>
+            <button type="button" class="btn btn-primary mt-3" data-bs-dismiss="modal" style="background-color: #007bff; width: 100%;">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 <footer class="bg-dark text-white mt-5">
     <div class="bg-secondary text-center py-3">
