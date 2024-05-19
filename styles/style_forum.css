@@ -22,7 +22,6 @@ body {
 }
 
 .pilih2 li {
-    text-align: center;
     background-color: #78c0bfa4;
     border-radius: 10px; 
     padding: 15px;
@@ -31,7 +30,7 @@ body {
     justify-content: center;
     align-items: center; 
     min-width: 120px;
-    min-height: 50px !important;
+    min-height: 50px;
 }
 
 .pilih2 a {
@@ -52,7 +51,6 @@ body {
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .forum-post {
@@ -122,14 +120,30 @@ body {
     color: #609695;
 }
 
+.post-replies {
+    border-top: 1px solid #ccc; /* Garis sekat */
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+.reply {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Garis sekat */
+}
+
+.reply:last-child {
+    border-bottom: none; /* Hilangkan garis bawah pada balasan terakhir */
+}
+
 .description {
     padding: 10px;
 }
 
 .plus-sign {
     position: fixed;
-    bottom: 50px;
-    right: 75px;
+    bottom: 100px;
+    right: 150px;
     width: 50px;
     height: 50px;
     background-color: #609695;
@@ -156,21 +170,25 @@ body {
     background-color: #e5e5e5;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 451px) {
     .pilih2 {
-        margin-top: 70px;
-        display: block;
+        margin-top: 50px;
+        flex-wrap: wrap;
     }
 
     .pilih2 li {
-        padding: 7px;
+        padding: 10px;
         margin: 5px;
         min-width: 80px;
-        min-height: 20px !important;
+        min-height: 40px !important;
+        flex-basis: calc(33.33% - 10px);
+        text-align: center;
     }
 
-    .pilih2 a{
-        font-size: 10px;
+    .pilih2 li:nth-child(4),
+    .pilih2 li:nth-child(5) {
+        order: 1;
+        flex-basis: calc(50% - 10px);
     }
 
     .container {
@@ -178,25 +196,10 @@ body {
     }
 
     .plus-sign {
-        bottom: 30px;
-        right: 30px;
+        bottom: 50px;
+        right: 50px;
         width: 40px;
         height: 40px;
-        border-width: 1px;
-    }
-
-    .vertical-line, .horizontal-line {
-        width: 40%;
-        height: 3px;
-    }
-}
-
-@media only screen and (max-width: 990px) {
-    .plus-sign {
-        bottom: 35px;
-        right: 35px;
-        width: 45px;
-        height: 45px;
         border-width: 1px;
     }
 
