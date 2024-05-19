@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <title>KALKULATOR DAYA - SIKELI</title>
+    <script src="../scripts/script_kalkulator.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-expand-lg fixed-top">
@@ -73,21 +74,21 @@
                 <div class="inputan">
                   <h6>Jenis Kendaraan</h6>
                   <select name="jenis" class="label-input">
-                    <option value="mobil listrik">Hyundai Kona Electric</option>
-                    <option value="motor listrik">Tesla Model 3</option>
-                    <option value="motor listrik">Wuling Air EV</option>
-                    <option value="motor listrik">Gesits</option>
-                    <option value="motor listrik">Alva One</option>
-                    <option value="motor listrik">Selis E-Max</option>
+                    <option value="Hyundai Kona Electric">Hyundai Kona Electric</option>
+                    <option value="Tesla Model 3">Tesla Model 3</option>
+                    <option value="Wuling Air EV">Wuling Air EV</option>
+                    <option value="Gesits">Gesits</option>
+                    <option value="Alva Onek">Alva One</option>
+                    <option value="Selis E-Max">Selis E-Max</option>
                   </select>
                 </div>
                 <div class="inputan">
                   <h6>KwH Listrik Rumah</h6>
-                  <input type="text" class="label-input">
+                  <input type="text" class="label-input" name="kwh">
                 </div>
                 <div class="inputan">
                   <h6>Jarak Tempuh Per Hari</h6>
-                  <input type="text" class="label-input">
+                  <input type="text" class="label-input" name="jarak">
                 </div>
                 <div class="inputan">
                   <h6>Jangka Waktu</h6>
@@ -99,10 +100,10 @@
                 </div>
                 <div class="row button-group">
                   <div class="col text-center">
-                    <button class="btn text-decoration-none px-4 py-1 rounded-4">RESET</button>
+                    <button id="resetBtn" class="btn text-decoration-none px-4 py-1 rounded-4">RESET</button>
                   </div>
                   <div class="col text-center">
-                    <button class="btn text-decoration-none px-4 py-1 rounded-4">SUBMIT</button>
+                    <button id="submitBtn" class="btn text-decoration-none px-4 py-1 rounded-4">SUBMIT</button>
                   </div>
                 </div>
               </div>
@@ -110,20 +111,21 @@
 
           <div class="col-md-12 col-lg-6 mb-3 card-result">
               <div class="square px-3 py-3 d-flex flex-column justify-content-between square-result">
-                <h6>Jika Anda menggunakan jenis Kendaraan Hyundai Kona Electric yang memiliki jarak tempuh 345 km dan kapasitas baterai 64,8 kWh, maka biaya tambahan yang dibutuhkan jika Anda mengisi baterai kendaraan Anda di rumah per harinya adalah</h6>
-                <!-- <h5>Per 1 Minggu</h5> -->
+                <h6>Estimasi biaya tambahan untuk pengisian baterai Kendaraan ..... per ..... adalah</h6>
                 <div class="circle-result mx-auto">
-                  <h2>Rp. 100.000,00</h1>
+                  <h2>Rp. 0,00</h1>
                 </div>
               </div>
           </div>
       </div>
   </div>
 
+  <script src="../scripts/script_kalkulator.js"></script>
   <footer class="bg-dark text-white mt-5">
     <div class="bg-secondary text-center py-3">
       <p class="mb-0">© 2024 SIKELI. All rights reserved.</p>
     </div>
 </footer>
+
 </body>
 </html>
