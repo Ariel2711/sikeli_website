@@ -84,16 +84,24 @@ body {
 }
 
 .post-content {
+    text-decoration: none;
     margin-bottom: 15px;
 }
 
 .post-content h2 {
     font-size: 1.5em;
+    text-decoration: none;
     margin-bottom: 10px;
 }
 
 .post-content p {
+    text-decoration: none;
     line-height: 1.6;
+}
+
+.post-content a{
+    text-decoration: none;
+    color: #000;
 }
 
 .post-footer {
@@ -169,6 +177,37 @@ body {
     background-color: #04738b;
 }
 
+.span-square-kategori{
+    margin-top: 0px;
+  }
+  
+  .square-kategori{
+    width: 10px; 
+    height: 10px; 
+    display: inline-block;
+  }
+  
+  .text-kategori{
+    font-size: 15px; 
+    margin: 0;
+  }
+
+.review-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.review-actions .fa {
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.3s;
+}
+
+.review-actions .fa:hover {
+    color: #007bff;
+}
+
 @media only screen and (max-width: 451px) {
     .pilih2 {
         margin-top: 50px;
@@ -207,8 +246,6 @@ body {
         height: 3px;
     }
 }
-<<<<<<< HEAD
-=======
 
 ul.filters{
     display: block;
@@ -261,4 +298,3 @@ ul.filters{
 .label-input{
     width: 100%;
 }
->>>>>>> cbdb837cf61802588467cdec172af8e4a89889fc

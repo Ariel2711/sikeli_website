@@ -15,55 +15,57 @@
     <title>Detail Forum SIKELI</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: white;">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col">
-                  <a href="../index.html">
-                    <div class="circle">
-                        <img src="../images/Logo_SIKELI-No_Caption-Removebg.png" alt="Logo SIKELI" class="">
-                    </div>
-                  </a>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col">
+              <a href="../index.html">
+                <div class="circle">
+                  <img src="../images//Logo_SIKELI-No_Caption-Removebg.png" alt="Logo SIKELI" class="">
                 </div>
-              <div class="col">
-                <a class="navbar-brand justify-content-start" style="font-size: x-large;" href="../index.html">SIKELI</a>
-              </div>
+              </a>
             </div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <div class="col">
+                <a class="navbar-brand justify-content-start text-white" href="../index.html">SIKELI</a>
+            </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        </button>
+        <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">SIKELI</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                <a href="../index.html" class="offcanvas-title">
+                    <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">SIKELI</h5>
+                </a>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body d-flex flex-column flex-lg-row">
-              <ul class="navbar-nav justify-content-md-start justify-content-lg-center flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="berita.html">BERITA</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="review.html">REVIEW</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="lokasi.html">LOKASI</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="kalkulator.html">KALKULATOR</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="forum.html">FORUM</a>
-                </li>
-              </ul>
-              <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
-                <a href="login.html">
-                  <button class="btn btn-primary text-white text-decoration-none px-4 py-1 rounded-4" style="font-size: 15px;">Login</button>
-                </a>
-              </div>
+                <ul class="navbar-nav justify-content-md-start justify-content-lg-center flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="berita.html">BERITA</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="review.html">REVIEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="lokasi.html">LOKASI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="forum.html">FORUM</a>
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
+                    <a href="login.html">
+                        <button class="btn-login text-decoration-none px-4 py-1 rounded-4">Login</button>
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
-    </nav>
+    </div>
+</nav>
     <div class="pilih2" style="overflow-x: auto;">
       <ul style="white-space: nowrap;">
         <li><a href="#">Semua</a></li>
@@ -88,7 +90,10 @@
           <p>Kalau mobil yang bagus sekarang apa kalau listrik?</p>
       </div>
       <div class="post-footer">
-          <span class="post-category"><a href="#">Mobil Listrik</a></span>
+        <span class="d-flex align-items-center span-square-kategori">
+          <span class="square-kategori bg-primary me-2"></span>
+          <h6 class="text-primary text-kategori">Mobil Listrik</h6>
+      </span>
           <span class="post-views">25 Views | 4 Reply</span>
       </div>
 
@@ -104,6 +109,11 @@
             <div class="post-content">
                 <p>Menurut saya, Tesla Model 3 adalah pilihan yang sangat bagus saat ini.</p>
             </div>
+            <div class="review-actions">
+              <span class="fa fa-thumbs-up"></span><span>0</span>
+              <span class="fa fa-thumbs-down"></span><span>0</span>
+              <span class="fa fa-share"></span>
+          </div>
         </div>
 
         <div class="reply">
@@ -117,6 +127,11 @@
             <div class="post-content">
                 <p>Saya setuju, selain Tesla, Hyundai Kona Electric juga cukup baik.</p>
             </div>
+            <div class="review-actions">
+              <span class="fa fa-thumbs-up"></span><span>0</span>
+              <span class="fa fa-thumbs-down"></span><span>0</span>
+              <span class="fa fa-share"></span>
+          </div>
         </div>
 
         <div class="reply">
@@ -130,6 +145,11 @@
             <div class="post-content">
                 <p>Nissan Leaf juga pilihan yang menarik, terutama untuk penggunaan di perkotaan.</p>
             </div>
+            <div class="review-actions">
+              <span class="fa fa-thumbs-up"></span><span>0</span>
+              <span class="fa fa-thumbs-down"></span><span>0</span>
+              <span class="fa fa-share"></span>
+          </div>
         </div>
 
         <div class="reply">
@@ -143,6 +163,11 @@
             <div class="post-content">
                 <p>Kalau mau yang lebih premium, bisa coba Audi e-tron atau Mercedes EQC.</p>
             </div>
+            <div class="review-actions">
+              <span class="fa fa-thumbs-up"></span><span>0</span>
+              <span class="fa fa-thumbs-down"></span><span>0</span>
+              <span class="fa fa-share"></span>
+          </div>
         </div>
       </div>
   </div>

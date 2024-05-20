@@ -1,101 +1,4 @@
 body{
-<<<<<<< HEAD
-    background-color: rgb(242,252,255);
-    font-family: 'Lexend';
-  }
-  
-  ul.filters{
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 30px 0;
-  }
-  
-  ul.filters > li{
-    list-style: none;
-    display: inline-block;
-  }
-  
-  ul.filters > li > a{
-    display: block;
-    color: #434e5e;
-    text-decoration: none;
-    padding: 5px 20px;
-  }
-  
-  ul.filters > li > a:hover{
-    background-color: #e6e9ed;
-  }
-  
-  ul.filters > li.active > a{
-    color: #fff;
-    background-color: #609695;
-  }
-  
-  .post-category a {
-    background-color: #0d6efd;
-    border-radius: 5px;
-    padding: 5px;
-    /* margin-bottom: 10px; */
-    color: white;
-    text-decoration: none;
-  }
-  
-  @media only screen and (min-width: 768px) {
-    .card-body {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-  
-    .card-title,
-    .card-text-date {
-        margin: 0;
-    }
-  
-    .card-text-date {
-        margin-top: auto;
-    }
-  
-  
-    .card-custom-height {
-      height: 170px;
-    }
-  
-    .card-custom-height-big{
-      height: 400px;
-    }
-    
-    .img-custom-height {
-      height: 170px;
-      object-fit: cover;
-    }
-    
-    .img-custom-height-big {
-      min-height: 170px;
-      height: 170px;
-      object-fit: cover;
-    }
-  
-    .card-title{
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 2;
-    }
-  
-    .card-text-desc{
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      -webkit-line-clamp: 2;
-      margin-top: 5px;
-    }
-  }
-  
-=======
   background-color: rgb(242,252,255);
   font-family: 'Lexend';
 }
@@ -173,7 +76,6 @@ ul.filters > li.active > a{
     object-fit: cover;
   }
 
->>>>>>> cbdb837cf61802588467cdec172af8e4a89889fc
   .card-title{
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -181,11 +83,6 @@ ul.filters > li.active > a{
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
   }
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> cbdb837cf61802588467cdec172af8e4a89889fc
   .card-text-desc{
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -193,9 +90,6 @@ ul.filters > li.active > a{
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     margin-top: 5px;
-<<<<<<< HEAD
-  }
-=======
   }
 }
 
@@ -215,4 +109,3 @@ ul.filters > li.active > a{
   -webkit-line-clamp: 2;
   margin-top: 5px;
 }
->>>>>>> cbdb837cf61802588467cdec172af8e4a89889fc
