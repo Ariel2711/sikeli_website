@@ -10,6 +10,3 @@ eyeicon.onclick = function() {
         eyeicon.src = "../images/eye-closed.ico";
     }
 }
-document.getElementById('register-now').addEventListener('click', function() {
-    window.location.href = 'register.html';
-});

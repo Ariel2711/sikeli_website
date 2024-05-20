@@ -47,7 +47,7 @@ body {
     align-items: center;
     width: 100%;
     max-width: 800px;
-    margin: 20px auto;
+    margin: 0px auto;
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
@@ -128,7 +128,7 @@ body {
 .plus-sign {
     position: fixed;
     bottom: 50px;
-    right:50px;
+    right: 75px;
     width: 50px;
     height: 50px;
     background-color: #609695;
@@ -152,7 +152,7 @@ body {
 
 .plus-sign:hover {
     cursor: pointer;
-    /* background-color: #e5e5e5; */
+    background-color: #04738b;
 }
 
 @media only screen and (max-width: 450px) {
@@ -217,3 +217,27 @@ ul.filters{
     color: #fff;
     background-color: #609695;
   }
+  
+@media only screen and (max-width: 990px) {
+    .plus-sign {
+        bottom: 35px;
+        right: 35px;
+        width: 45px;
+        height: 45px;
+        border-width: 1px;
+    }
+
+    .vertical-line, .horizontal-line {
+        width: 40%;
+        height: 3px;
+    }
+}
+
+.btn-modal{
+    width: 100%;
+    background-color: #007bff;
+}
+
+.label-input{
+    width: 100%;
+}

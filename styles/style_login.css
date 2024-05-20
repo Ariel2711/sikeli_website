@@ -11,6 +11,7 @@ body {
     margin: 30px auto;
     padding: 20px;
     background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -27,9 +28,9 @@ body {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: auto;
     display: flex;
-    flex-direction: column; /* Mengatur tata letak elemen dalam bentuk kolom */
+    flex-direction: column; 
 }
 
 #forgot {
@@ -54,6 +55,20 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    outline: none;
+}
+
+#password {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:hover{
+    border-color: black;
 }
 
 .password-input {
@@ -91,7 +106,9 @@ body {
     background-color: #007bff;
     color: #fff;
     padding: 10px 10px;
-    margin: 5px 3px;
+    /* margin: 5px 3px; */
+    margin-top: 20px;
+    margin-bottom: 5px;
     font-size: 18px;
     border: 1px solid transparent; 
     cursor: pointer;
@@ -116,7 +133,7 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .social-login p {
@@ -128,7 +145,7 @@ body {
     display: inline-block;
     align-self: center;
     width: 50%; 
-    padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
+    padding: 10px 0; 
     margin: 5px 3px;
     font-size: 18px;
     background-color: #007bff;
@@ -167,16 +184,14 @@ body {
     height: 20px;
     vertical-align: middle; /* Untuk mengatur posisi vertikal gambar */
     margin-right: 5px; /* Jarak antara gambar dan teks */
+    margin-left: 3px;
 }
 
 .google-login img {
     width: 20px;
     height: 20px;
-    vertical-align: middle; /* Untuk mengatur posisi vertikal gambar */
-    margin-right: 5px; /* Jarak antara gambar dan teks */
+    vertical-align: middle; 
 }
-
-/* Media Queries for Responsive Design */
 
 /* @media only screen and (max-width: 1200px) {
     .header img {
@@ -230,5 +245,11 @@ body {
 
     .register-link {
         font-size: 14px;
+    }
+
+    .container{
+        max-width: 400px;
+        margin: 0;
+        background-color: white;
     }
 }
