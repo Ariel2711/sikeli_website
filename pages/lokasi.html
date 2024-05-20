@@ -8,28 +8,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../styles/style_home.css">
     <link rel="stylesheet" href="../styles/style_lokasi.css">
-    <script src="../scripts/script_berita.js"></script>
-    <script src="scripts/script_home.js"></script>
+    <script src="../scripts/script_lokasi.js"></script>
     <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-    <title>LOKASI PENGISIAN SIKELI</title>
+    <title>LOKASI PENGISIAN BATERAI - SIKELI</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #04738b;">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col">
-                  <a href="../index.html">
-                    <div class="circle">
-                      <img src="../images//Logo_SIKELI-No_Caption-Removebg.png" alt="Logo SIKELI" class="">
-                    </div>
-                  </a>
+                    <a href="../index.html">
+                        <div class="circle">
+                            <img src="../images//Logo_SIKELI-No_Caption-Removebg.png" alt="Logo SIKELI" class="">
+                        </div>
+                    </a>
                 </div>
                 <div class="col">
-                    <a class="navbar-brand justify-content-start text-white" style="font-size: x-large;" href="../index.html">SIKELI</a>
+                    <a class="navbar-brand justify-content-start text-white" href="../index.html">SIKELI</a>
                 </div>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -37,31 +36,32 @@
             </button>
             <div class="sidebar offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title text-white" 
-                    id="offcanvasNavbarLabel">SIKELI</h5>
+                    <a href="../index.html" class="offcanvas-title">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">SIKELI</h5>
+                    </a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body d-flex flex-column flex-lg-row">
                     <ul class="navbar-nav justify-content-md-start justify-content-lg-center flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="berita.html">BERITA</a>
+                            <a class="nav-link text-white" aria-current="page" href="berita.html">BERITA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="review.html">REVIEW</a>
+                            <a class="nav-link text-white" aria-current="page" href="review.html">REVIEW</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="lokasi.html">LOKASI</a>
+                            <a class="nav-link active" aria-current="page" href="lokasi.html">LOKASI</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
+                            <a class="nav-link text-white" aria-current="page" href="kalkulator.html">KALKULATOR</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="forum.html">FORUM</a>
+                            <a class="nav-link text-white" aria-current="page" href="forum.html">FORUM</a>
                         </li>
                     </ul>
                     <div class="d-flex justify-content-center flex-lg-row align-items-center gap-3">
                         <a href="login.html">
-                            <button class="btn text-black text-decoration-none px-4 py-1 rounded-4" style="font-size: 15px; background-color: #a6edfc;">Login</button>
+                            <button class="btn-login text-decoration-none px-4 py-1 rounded-4">Login</button>
                         </a>
                     </div>
                 </div>
@@ -69,21 +69,21 @@
         </div>
     </nav>
 
-    <div class="row justify-content-center">
-        <form class="d-flex justify-content-center" style="margin-top: 80px; width: 90%;">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-primary" type="submit">Search</button>
+    <div class="row justify-content-center me-3 ms-3">
+        <form class="d-flex justify-content-center search-bar">
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button id="searchButton" class="btn" type="button">Search</button>
         </form>
     </div>
 
     <ul class="filters text-center">
         <li class="active" data-filter="*"><a href="#!">Semua</a></li>
-        <li data-filter=""><a href="#!">SPLU</a></li>
-        <li data-filter="."><a href="#!">SPKLU</a></li>
+        <li data-filter="SPLU"><a href="#!">SPLU</a></li>
+        <li data-filter="SPKLU"><a href="#!">SPKLU</a></li>
     </ul>
 
-    <div class="container mt-3 mx-auto">
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+    <div class="container mx-auto">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height SPLU">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location2.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -92,12 +92,40 @@
                     <div class="card-body">
                         <h5 class="card-title">SPLU PLN</h5>
                         <p class="card-text-desc">Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111</p>
-                        <a href="#!">open<span class="fluent--open-16-regular"></span></a>
+                        <a href="https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9">open<span class="fluent--open-16-regular"></span></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height SPLU">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/location2.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">SPLU Ketabang</h5>
+                        <p class="card-text-desc">Jl. Pemuda No.209, Ketabang, Kec. Genteng, Surabaya, Jawa Timur 60271</p>
+                        <a href="https://maps.app.goo.gl/QxYEDyxMzoCV8eut5">open<span class="fluent--open-16-regular"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3 mt-3 mx-auto card-custom-height SPLU">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="../images/location2.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">SPLU Batu</h5>
+                        <p class="card-text-desc">Jl. Diponegoro No.1, Sisir, Kec. Batu, Kota Batu Jawa Timur, Sisir, Kec. Batu, Kota Batu, Jawa Timur 65314</p>
+                        <a href="https://maps.app.goo.gl/n4uL8zJDe4vBEPU86">open<span class="fluent--open-16-regular"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3 mt-3 mx-auto card-custom-height SPKLU">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="../images/location3.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
@@ -106,41 +134,47 @@
                     <div class="card-body">
                         <h5 class="card-title">SPKLU PLN</h5>
                         <p class="card-text-desc">Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111</p>
-                        <a href="#!">open<span class="fluent--open-16-regular"></span></a>
+                        <a href="https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9">open<span class="fluent--open-16-regular"></span></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height SPKLU">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="../images/location1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
+                    <img src="../images/location3.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">SPKLU Araya</h5>
                         <p class="card-text-desc">Jl.Araya Boulevard No.27, Ulesari, Tirtomoyo, Pakis, Malang Regency, Jawa Timur 65154</p>
-                        <a href="#!">open<span class="fluent--open-16-regular"></span></a>
+                        <a href="https://maps.app.goo.gl/BrsCrcFqVxvehHzE8">open<span class="fluent--open-16-regular"></span></a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="card mb-3 mt-3 mx-auto card-custom-height" style="max-width: 540px;">
+        <div class="card mb-3 mt-3 mx-auto card-custom-height SPKLU">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="../images/location1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
+                    <img src="../images/location3.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">SPKLU Ijen</h5>
                         <p class="card-text-desc">Jl. Ijen Nirwana Raya No.16 Blok A, Bareng, Kec. Klojen, Kota Malang, Jawa Timur 65116</p>
-                        <a href="#!">open<span class="fluent--open-16-regular"></span></a>
+                        <a href="https://maps.app.goo.gl/CRAp85stA69Gqz9i8">open<span class="fluent--open-16-regular"></span></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
+    <footer class="bg-dark text-white mt-5">
+        <div class="bg-secondary text-center py-3">
+            <p class="mb-0">© 2024 SIKELI. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

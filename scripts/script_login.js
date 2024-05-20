@@ -1,0 +1,15 @@
+let eyeicon = document.getElementById("eyeicon");
+let password = document.getElementById("password");
+
+eyeicon.onclick = function() {
+    if (password.type == "password") {
+        password.type = "text";
+        eyeicon.src = "../images/eye-open.ico";
+    } else {
+        password.type = "password";
+        eyeicon.src = "../images/eye-closed.ico";
+    }
+}
+document.getElementById('register-now').addEventListener('click', function() {
+    window.location.href = 'register.html';
+});

@@ -24,31 +24,33 @@
                     <input type="text" id="username" name="username" placeholder="Enter your username">
                 </div>
                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
                     <label for="password">Password</label>
                     <div class="password-input">
                         <input type="password" id="password" name="password" placeholder="Enter your password">
-                        <img src="../images/eye-closed.ico" alt="" id="eyeicon">
+                        <img src="../images/eye-closed.ico" alt="Toggle Password Visibility" id="password-eye-icon">
                     </div>
-                    <label for="password" id="forgot">Forgot Password?</label>
                 </div>
                 <div class="form-group">
-                    <button type="submit" id="sing-in">Sign In</button>
+                    <label for="confirmation">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="confirmation" name="confirmation" placeholder="Confirm your password">
+                        <img src="../images/eye-closed.ico" alt="Toggle Confirmation Password Visibility" id="confirmation-eye-icon">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="sign-up">Sign Up</button>
                 </div>
             </form>
-            <div class="social-login">
-                <p>Or Sign In Using</p>
-                <div class="facebook-login">
-                    <img src="../images/icons8-facebook.svg" alt="Facebook"> Sign in with Facebook
-                </div>
-                <br>
-                <div class="google-login">
-                    <img src="../images/icons8-google.svg" alt="Google"> Sign in with Google
-                </div>
+            <div class="login-link" id="already-account" style="text-align: center;">
+                <p>Already have an account? <span id="sign-in-here"><strong>Sign In Here</strong></span></p>
             </div>
-            <p class="register-link">New User? <span id="register-now"><strong>Register Now</strong></span></p>
         </div>
     </div>
-    <script src="../scripts/script_login.js"></script>
+    <script src="../scripts/script_register.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,136 @@
+body {
+    font-family: 'Lexend';
+    margin: 0;
+    padding: 0;
+    background-color: rgb(242, 252, 255);
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+}
+
+.header img {
+    width: 250px;
+    height: 250px;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input:hover {
+    border-color: black;
+}
+
+.password-input {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.password-input input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.password-input img {
+    width: 25px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.password-input:hover {
+    border-color: black;
+}
+
+.form-group button {
+    font-family: 'Lexend';
+    align-self: center;
+    width: 50%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 10px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    border-color: black;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#sign-in-here strong {
+    color: black;
+}
+
+#sign-in-here:hover strong {
+    color: blue;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 450px) {
+    .header img {
+        width: 200px;
+        height: 200px;
+    }
+    .form-group label {
+        font-size: 14px;
+    }
+    .form-group input {
+        font-size: 14px;
+    }
+    .form-group button {
+        font-size: 14px;
+    }
+    .login-link {
+        font-size: 14px;
+    }
+    .container {
+        max-width: 400px;
+        margin: 0;
+        background-color: white;
+    }
+}
