@@ -28,7 +28,7 @@ body {
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: auto;
     display: flex;
     flex-direction: column;
 }
@@ -49,11 +49,22 @@ body {
     outline: none;
 }
 
+#password {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
 .form-group input:hover {
     border-color: black;
 }
 
 .password-input {
+    margin: 0;
+    width: 100%;
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -62,10 +73,11 @@ body {
 }
 
 .password-input input {
-    flex-grow: 1;
+    margin: 0;
+    width: 100%;
     padding: 10px;
-    border: none;
-    outline: none;
+    outline: 0;
+    border: 1px solid transparent;
 }
 
 .password-input img {
@@ -85,6 +97,7 @@ body {
     background-color: #007bff;
     color: #fff;
     padding: 10px 10px;
+    /* margin: 5px 3px; */
     margin-top: 20px;
     margin-bottom: 5px;
     font-size: 18px;
@@ -102,13 +115,14 @@ body {
     margin-top: 15px;
 }
 
-#sign-in-here strong {
-    color: black;
-}
-
-#sign-in-here:hover strong {
+#sign-in-here:hover {
     color: blue;
     cursor: pointer;
+}
+
+#confirmation-eye-icon:hover,
+#confirmation:hover~.password-input img {
+    filter: none;
 }
 
 @media only screen and (max-width: 450px) {
