@@ -2,13 +2,16 @@ body {
     font-family: 'Lexend';
     margin: 0;
     padding: 0;
+    background-color: rgb(242,252,255);
 }
 
 .container {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .header {
@@ -16,26 +19,18 @@ body {
 }
 
 .header img {
-    width: 300px;
-    height: 300px;
-    border: 1px solid transparent; 
-    cursor: pointer;
-}
-
-.header img:hover {
-    border-color:black;
+    width: 250px;
+    height: 250px;
 }
 
 .form-container {
-    /* background-color: antiquewhite; */
-    /* border: 1px solid #ccc; */
     padding: 20px;
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: auto;
     display: flex;
-    flex-direction: column; /* Mengatur tata letak elemen dalam bentuk kolom */
+    flex-direction: column; 
 }
 
 #forgot {
@@ -59,14 +54,31 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#password {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group input:hover{
+    border-color: black;
 }
 
 .password-input {
+    margin: 0;
     width: 100%;
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
 .password-input input {
@@ -74,11 +86,12 @@ body {
     width: 100%;
     padding: 10px;
     outline: 0;
-    border: 0;
+    border: 1px solid transparent;
 }
 
 .password-input img {
     width: 25px;
+    margin: 0 3px;
     cursor: pointer;
 }
 
@@ -87,12 +100,16 @@ body {
 }
 
 .form-group button {
+    font-family: 'Lexend';
     align-self: center;
     width: 50%;
     background-color: #007bff;
     color: #fff;
     padding: 10px 10px;
-    margin: 5px 3px;
+    /* margin: 5px 3px; */
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-size: 18px;
     border: 1px solid transparent; 
     cursor: pointer;
     border-radius: 5px;  
@@ -113,19 +130,24 @@ body {
 }
 
 .social-login {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .social-login p {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .facebook-login {
     display: inline-block;
-    width: calc(50% - 6px); /* Menggunakan calc() untuk menghitung lebar dengan mengurangi padding */
-    padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
+    align-self: center;
+    width: 50%; 
+    padding: 10px 0; 
     margin: 5px 3px;
+    font-size: 18px;
     background-color: #007bff;
     color: white;
     border: 1px solid transparent; 
@@ -140,9 +162,11 @@ body {
 
 .google-login {
     display: inline-block;
-    width: calc(50% - 6px); /* Menggunakan calc() untuk menghitung lebar dengan mengurangi padding */
+    align-self: center;
+    width: 50%; 
     padding: 10px 0; /* Menghilangkan padding horizontal dan memberikan padding vertical yang sama */
     margin: 5px 3px;
+    font-size: 18px;
     background-color: #e8e8e8;
     color: black;
     border: 1px solid transparent; 
@@ -160,29 +184,16 @@ body {
     height: 20px;
     vertical-align: middle; /* Untuk mengatur posisi vertikal gambar */
     margin-right: 5px; /* Jarak antara gambar dan teks */
+    margin-left: 3px;
 }
 
 .google-login img {
     width: 20px;
     height: 20px;
-    vertical-align: middle; /* Untuk mengatur posisi vertikal gambar */
-    margin-right: 5px; /* Jarak antara gambar dan teks */
+    vertical-align: middle; 
 }
 
-/* .social-login a {
-    display: inline-block;
-    padding: 8px 8px;
-    background-color: black;
-    color: white;
-    border: none;
-    margin: 5px;
-    text-decoration: none;
-    border-radius: 5px;
-} */
-
-/* Media Queries for Responsive Design */
-
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 1200px) {
     .header img {
         width: 250px;
         height: 250px;
@@ -195,9 +206,9 @@ body {
     .form-group input {
         width: 100%;
     }
-}
+} */
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 450px) {
     .header img {
         width: 200px;
         height: 200px;
@@ -211,12 +222,34 @@ body {
         font-size: 14px;
     }
 
+    .form-group button {
+        font-size: 14px;
+    }
+
     .register-link,
     .forgot-password-link {
         font-size: 14px;
     }
 
+    .facebook-login {
+        font-size: 14px;
+    }
+
+    .google-login {
+        font-size: 14px;
+    }
+
     .social-login p {
         font-size: 14px;
+    }
+
+    .register-link {
+        font-size: 14px;
+    }
+
+    .container{
+        max-width: 400px;
+        margin: 0;
+        background-color: white;
     }
 }

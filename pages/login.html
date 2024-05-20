@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SIKELI Login</title>
+    <title>LOGIN - SIKELI</title>
+    <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style_login.css">
 </head>
@@ -22,28 +25,29 @@
                     <label for="password">Password</label>
                     <div class="password-input">
                         <input type="password" id="password" name="password" placeholder="Enter your password">
-                        <img src="../images/eye-closed-svgrepo-com.svg" alt="">
+                        <img src="../images/eye-closed.ico" alt="" id="eyeicon">
                     </div>
-                    <label for="forgot-password" id="forgot">Forgot Password?</label>
+                    <label for="password" id="forgot">Forgot Password?</label>
                 </div>
                 <div class="form-group">
-                        <button type="submit">Sign In</button>
-                    </div>
+                    <button type="submit" id="sing-in">Login</button>
+                </div>
             </form>
             <div class="social-login">
-                <p>Or Sign In Using</p>
+                <p>Or Login With</p>
                 <div class="facebook-login">
                     <img src="../images/icons8-facebook.svg" alt="Facebook">
-                    Sign in with Facebook
+                    Login with Facebook
                 </div>
-                <br>
                 <div class="google-login">
                     <img src="../images/icons8-google.svg" alt="Google">
-                    Sign in with Google
+                    Login with Google
                 </div>
             </div>
             <p class="register-link">New User? <span id="register-now"><strong>Register Now</strong></span></p>
+            <a href=""></a>
         </div>
     </div>
+    <script src="../scripts/script_login.js"></script>
 </body>
 </html>
