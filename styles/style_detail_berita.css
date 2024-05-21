@@ -8,20 +8,38 @@ body{
     width: 100%;
     max-width: 90%;
     margin: 20px auto;
+    padding: 10px 10px;
     border-radius: 5px;
     justify-content: center;
     flex-direction: column;
+}
+
+.container img {
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .list-group-item {
     background-color: transparent;
     border: 0;
     color: rgb(0, 0, 0,0.5);
+    display: flex;
+    align-items: center;
+    font-size: 18px;
 }
 
-.container img {
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+#writer-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.news-title {
+    padding: 10px 10px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: black;
 }
 
 .news-report {
@@ -34,6 +52,62 @@ body{
     text-justify: inter-word;
     font-size: 18px;
     color: black;
+}
+
+.comment-section h2{
+  padding: 10px 10px;
+}
+
+.news-comment {
+  padding: 10px 10px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+}
+
+.comment-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-name {
+  font-size: 15px;
+}
+
+.comment-date {
+  font-size: 15px;
+  color: rgb(0, 0, 0,0.5);
+}
+
+.comment-content {
+  margin-bottom: 15px;
+}
+
+.comment-content p {
+  line-height: 1.6;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-love img {
+  width: 25px;
+  height: 25px;
+  box-shadow: none;
 }
 
 .breadcrumb-container {
@@ -75,4 +149,69 @@ body{
   -webkit-line-clamp: 1;
 }
 
-  
+@media only screen and (max-width: 450px){
+  .news-title {
+    font-size: 30px;
+  }
+
+  .list-group-item {
+    font-size: 14px;
+  }
+
+  #writer-img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .news-report p {
+    font-size: 14px;
+  }
+
+  .comment-section {
+    font-size: 26px;
+  }
+
+  .comment-author img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .author-name {
+    font-size: 12px;
+  }
+
+  .comment-content p {
+    font-size: 12px;
+  }
+
+  .comment-love img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .comment-date {
+    font-size: 12px;
+  }
+
+  .breadcrumb {
+    font-size: 10px;
+  }
+
+}
+
+.review-actions {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-actions .fa {
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.3s;
+}
+
+.review-actions .fa:hover {
+  color: #007bff;
+}

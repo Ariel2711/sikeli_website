@@ -67,12 +67,13 @@
     </div>
 </nav>
 
-    <div class="row justify-content-center me-3 ms-3">
-        <form class="d-flex justify-content-center search-bar">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn" type="submit">Search</button>
-        </form>
-    </div>
+    <div class="content">
+      <div class="row justify-content-center me-3 ms-3">
+          <form class="d-flex justify-content-center search-bar">
+              <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button id="searchButton" class="btn" type="button">Search</button>
+          </form>        
+      </div>
 
     <ul class="filters text-center">
         <li class="active" data-filter="*"><a href="#!">Terbaru</a></li>
@@ -82,25 +83,7 @@
         <li class="FAQ" data-filter="*"><a href="#!">FAQs</a></li>
     </ul>
     
-  <div class="container Mobil">
-  <div class="forum-post">
-      <div class="post-header">
-          <div class="post-author">
-              <img src="../images/slider3.jpg" alt="Photo Profile">
-              <span>Sukirman</span>
-          </div>
-          <span class="post-date">12 December 2024</span>
-      </div>
-      <div class="post-content">
-          <h2>Harga Motor Listrik</h2>
-          <p>Motor Listrik sekarang masih mahal atau nggak dibanding dulu?</p>
-      </div>
-      <div class="post-footer">
-          <span class="post-category"><a href="#">Motor Listrik</a></span>
-          <span class="post-views">24 Views | <a href="">12 Reply</a></span>
-      </div>
-  </div>
-</div>
+  
   <div class="container Mobil FAQ">
   <div class="forum-post">
       <div class="post-header">
@@ -111,11 +94,14 @@
           <span class="post-date">12 December 2024</span>
       </div>
       <div class="post-content">
-          <h2>Harga Motor Listrik</h2>
+          <h2><a href="detail_forum.html">Harga Motor Listrik</a></h2>
           <p>Motor Listrik sekarang masih mahal atau nggak dibanding dulu?</p>
       </div>
       <div class="post-footer">
-          <span class="post-category"><a href="#">Motor Listrik</a></span>
+        <span class="d-flex align-items-center span-square-kategori">
+            <span class="square-kategori bg-success me-2"></span>
+            <h6 class="text-success text-kategori">Motor Listrik</h6>
+        </span>
           <span class="post-views">24 Views | <a href="">12 Reply</a></span>
       </div>
   </div>
@@ -131,36 +117,20 @@
           <span class="post-date">31 December 2024</span>
       </div>
       <div class="post-content">
-          <h2>Jenis Mobil yang bagus?</h2>
+          <h2><a href="detail_forum.html">Jenis Mobil yang bagus?</a></h2>
           <p>Kalau mobil yang bagus sekarang apa kalau listrik?</p>
       </div>
       <div class="post-footer">
-        <span class="post-category"><a href="#">Motor Listrik</a></span>
-        <span class="post-views">25 Views | <a href="">4 Reply</a></span>
-      </div>
-  </div>
-</div>
-<div class="container Motor FAQ">
-  <div class="forum-post">
-      <div class="post-header">
-          <div class="post-author">
-              <img src="../images/slider2.jpg" alt="Photo Profile">
-              <span>Suparjo</span>
-          </div>
-          <span class="post-date">31 December 2024</span>
-      </div>
-      <div class="post-content">
-          <h2>Jenis Mobil yang bagus?</h2>
-          <p>Kalau mobil yang bagus sekarang apa kalau listrik?</p>
-      </div>
-      <div class="post-footer">
-        <span class="post-category"><a href="#">Motor Listrik</a></span>
+        <span class="d-flex align-items-center span-square-kategori">
+            <span class="square-kategori bg-primary me-2"></span>
+            <h6 class="text-primary text-kategori">Mobil Listrik</h6>
+        </span>
         <span class="post-views">25 Views | <a href="">4 Reply</a></span>
       </div>
   </div>
 </div>
 
-<div class="container Umum">
+<div class="container Umum FAQ">
   <div class="forum-post">
       <div class="post-header">
           <div class="post-author">
@@ -170,30 +140,14 @@
           <span class="post-date">15 November 2024</span>
       </div>
       <div class="post-content">
-          <h2>Di isi dirumah boros nggak?</h2>
+        <h2><a href="detail_forum.html">Di isi dirumah boros nggak?</a></h2>
           <p>Kalau mobil biasanya boros nggak buat listrik rumah?</p>
       </div>
       <div class="post-footer">
-        <span class="post-category"><a href="#">Umum</a></span>
-        <span class="post-views">54 Views | <a href="">20 Reply</a></span>
-      </div>
-  </div>
-</div>
-<div class="container Umum Terpopuler">
-  <div class="forum-post">
-      <div class="post-header">
-          <div class="post-author">
-              <img src="../images/tes.png" alt="Photo Profile">
-              <span>Suparjo</span>
-          </div>
-          <span class="post-date">15 November 2024</span>
-      </div>
-      <div class="post-content">
-          <h2>Di isi dirumah boros nggak?</h2>
-          <p>Kalau mobil biasanya boros nggak buat listrik rumah?</p>
-      </div>
-      <div class="post-footer">
-        <span class="post-category"><a href="#">Umum</a></span>
+        <span class="d-flex align-items-center span-square-kategori">
+            <span class="square-kategori bg-danger me-2"></span>
+            <h6 class="text-danger text-kategori">Umum</h6>
+        </span>
         <span class="post-views">54 Views | <a href="">20 Reply</a></span>
       </div>
   </div>
@@ -243,6 +197,7 @@
       </div>
     </div>
   </div>
+    </div>
 
 
 <footer class="bg-dark text-white mt-5">

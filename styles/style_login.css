@@ -121,7 +121,14 @@ body {
 
 .register-link {
     text-align: center;
+    text-decoration: none;
     margin-top: 15px;
+}
+
+.register-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
 }
 
 #register-now:hover{

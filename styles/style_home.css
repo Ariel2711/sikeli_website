@@ -1,6 +1,28 @@
+html, body{
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.content{
+  flex: 1;
+}
+
+footer{
+  flex-shrink: 0;
+}
+
 body{
   background-color: #f0f8f8;
   font-family: 'Lexend';
+}
+
+footer{
+  flex-shrink: 0;
 }
 
 .navbar{
@@ -21,7 +43,8 @@ body{
 }
 
 .nav-link:hover{
-  color: aqua !important;
+  font-weight: 600;
+  /* color: aqua !important; */
 }
 
 .nav-link.active{
@@ -29,11 +52,12 @@ body{
 }
 
 .nav-link.active:hover{
-  color: aqua !important;
+  font-weight: 600;
+  /* color: aqua !important; */
 }
 
 .card{
-  max-width: 740px;
+  max-width: 800px;
 }
 
 .card-home{
@@ -330,6 +354,11 @@ body{
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
+}
+
+.card-body a{
+  text-decoration: none;
+  color: black;
 }
 
 .card-text-desc{

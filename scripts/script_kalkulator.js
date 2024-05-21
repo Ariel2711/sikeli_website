@@ -32,8 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
         if (jangkaWaktu == "hari") {
             jumlahHari = 1;
         } else if (jangkaWaktu == "minggu") {
-            jumlahHari = 30;
+            jumlahHari = 7;
         } else if (jangkaWaktu == "bulan") {
+            jumlahHari = 30;
+        } else if (jangkaWaktu == "tahun") {
             jumlahHari = 365;
         }
 
