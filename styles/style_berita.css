@@ -83,7 +83,6 @@ ul.filters > li.active > a{
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
   }
-
   .card-text-desc{
     display: -webkit-box;
     -webkit-box-orient: vertical;
