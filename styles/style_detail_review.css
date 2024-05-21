@@ -61,9 +61,6 @@ body {
     font-weight: bold;
 }
 
-/*.review-rating .fa {
-    color: orange;
-}*/
 
 .review-rating .fa.checked {
     color: orange;
