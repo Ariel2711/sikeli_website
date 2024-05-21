@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOGIN - SIKELI</title>
+    <title>SIKELI Login</title>
     <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,30 +24,33 @@
                     <input type="text" id="username" name="username" placeholder="Enter your username">
                 </div>
                 <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
                     <label for="password">Password</label>
                     <div class="password-input">
                         <input type="password" id="password" name="password" placeholder="Enter your password">
                         <img src="../images/eye-closed.ico" alt="" id="eyeicon">
                     </div>
-                    <label for="password" id="forgot">Forgot Password?</label>
                 </div>
                 <div class="form-group">
-                    <button type="submit" id="sing-in">Login</button>
+                    <label for="password">Confirm Password</label>
+                    <div class="password-input">
+                        <input type="password" id="password" name="password" placeholder="Confirm your password">
+                        <img src="../images/eye-closed.ico" alt="" id="eyeicon">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="sign-up">Sign Up</button>
                 </div>
             </form>
-            <div class="social-login">
-                <p>Or Login With</p>
-                <div class="facebook-login">
-                    <img src="../images/icons8-facebook.svg" alt="Facebook"> Login with Facebook
-                </div>
-                <div class="google-login">
-                    <img src="../images/icons8-google.svg" alt="Google"> Login with Google
-                </div>
+            <div class="login-link" id="already-account" style="text-align: center;">
+                <p class="logister-link">Already have an account? <span id="login-here"><a href="login.html" style="text-decoration: none;">Login Here</a></span></p>
             </div>
-            <p class="register-link">New User? <span id="register-now"><a href="register.html" style="text-decoration: none;">Register Now</a></span></p>
         </div>
     </div>
-    <script src="../scripts/script_login.js"></script>
+    <script src="../scripts/script_register.js"></script>
 </body>
 
 </html>
