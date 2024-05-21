@@ -149,7 +149,7 @@ body{
   -webkit-line-clamp: 1;
 }
 
-@media only screen and (max-width: 426px){
+@media only screen and (max-width: 450px){
   .news-title {
     font-size: 30px;
   }
@@ -197,4 +197,21 @@ body{
     font-size: 10px;
   }
 
+}
+
+.review-actions {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.review-actions .fa {
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.3s;
+}
+
+.review-actions .fa:hover {
+  color: #007bff;
 }

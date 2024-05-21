@@ -148,3 +148,13 @@ body {
         background-color: white;
     }
 }
+
+.login-link{
+    text-align: center;
+}
+
+.login-link a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}

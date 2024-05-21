@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (searchTerm === "") {
             cardsBig.forEach(function (card) {
-                card.style.display = "block";
+                card.style.display = "grid";
             });
         } else {
             cardsBig.forEach(function (card) {

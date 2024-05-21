@@ -22,3 +22,33 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const reviews = document.querySelectorAll(".container");
+
+    function filterReviews(searchTerm) {
+        reviews.forEach(function (review) {
+            const title = review.querySelector("h2").textContent.toLowerCase();
+            const description = review.querySelector("p").textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                review.style.display = "block";
+            } else {
+                review.style.display = "none";
+            }
+        });
+    }
+
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterReviews(searchTerm);
+    });
+
+    searchButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterReviews(searchTerm);
+    });
+});

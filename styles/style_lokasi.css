@@ -98,3 +98,8 @@ ul.filters>li.active>a {
     -webkit-line-clamp: 2;
     margin-top: 5px;
 }
+
+.card-body a{
+    color: blue;
+    text-decoration: none;
+}
