@@ -21,6 +21,10 @@ body{
   font-family: 'Lexend';
 }
 
+.lihat-semua{
+  text-decoration: none;
+}
+
 footer{
   flex-shrink: 0;
 }

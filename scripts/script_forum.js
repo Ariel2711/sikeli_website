@@ -21,9 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
     const reviews = document.querySelectorAll(".container");

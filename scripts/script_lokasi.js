@@ -1,9 +1,69 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+    const cardData = [
+        {
+            title: "SPLU Klojen",
+            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            image: "../images/location5.jpg",
+            type: "SPLU"
+        },
+        {
+            title: "SPLU Klojen",
+            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            image: "../images/location5.jpg",
+            type: "SPLU"
+        },
+        {
+            title: "SPLU Klojen",
+            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            image: "../images/location5.jpg",
+            type: "SPLU"
+        },
+        {
+            title: "SPKLU Klojen",
+            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            image: "../images/location5.jpg",
+            type: "SPKLU"
+        },
+        {
+            title: "SPKLU Klojen",
+            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            image: "../images/location5.jpg",
+            type: "SPKLU"
+        },
+    ];
+
+    const cardContainer = document.getElementById('cardContainer');
+
+    cardData.forEach(data => {
+        const cardHTML = `
+                <div class="card mb-3 mt-3 mx-auto card-custom-height ${data.type}">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="${data.image}" class="img-fluid rounded-start img-custom-height" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">${data.title}</h5>
+                                <p class="card-text-desc">${data.address}</p>
+                                <a href="${data.link}">open<span class="fluent--open-16-regular"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        cardContainer.innerHTML += cardHTML;
+    });
+
     const filters = document.querySelectorAll(".filters li");
     const cards = document.querySelectorAll(".card");
 
     filters.forEach(filter => {
-        filter.addEventListener("click", function() {
+        filter.addEventListener("click", function () {
             filters.forEach(item => {
                 item.classList.remove("active");
             });
@@ -21,16 +81,12 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
 
     function filterCards(searchTerm) {
-        const cards = document.querySelectorAll(".card");
-
-        cards.forEach(function(card) {
+        cards.forEach(function (card) {
             const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
             const cardDescription = card.querySelector(".card-text-desc").textContent.toLowerCase();
             if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
@@ -41,12 +97,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    searchInput.addEventListener("input", function() {
+    searchInput.addEventListener("input", function () {
         const searchTerm = searchInput.value.toLowerCase();
         filterCards(searchTerm);
     });
 
-    searchButton.addEventListener("click", function() {
+    searchButton.addEventListener("click", function () {
         const searchTerm = searchInput.value.toLowerCase();
         filterCards(searchTerm);
     });
