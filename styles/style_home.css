@@ -21,9 +21,9 @@ body{
   font-family: 'Lexend';
 }
 
-.lihat-semua{
+/* .lihat-semua{
   text-decoration: none;
-}
+} */
 
 footer{
   flex-shrink: 0;
@@ -64,8 +64,16 @@ footer{
   max-width: 800px;
 }
 
+.card:hover{
+  transform: scale(1.01);
+}
+
 .card-home{
   max-width: 540px;
+}
+
+.card-home:hover{
+  transform: scale(1.01);
 }
 
 .span-square-kategori{

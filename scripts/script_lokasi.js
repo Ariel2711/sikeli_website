@@ -1,40 +1,47 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cardData = [
         {
-            title: "SPLU Klojen",
-            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
-            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
-            image: "../images/location5.jpg",
-            type: "SPLU"
+            "title": "SPLU Klojen",
+            "address": "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            "link": "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            "image": "../images/location5.jpg",
+            "type": "SPLU"
         },
         {
-            title: "SPLU Klojen",
-            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
-            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
-            image: "../images/location5.jpg",
-            type: "SPLU"
+            "title": "SPLU Batu",
+            "address": "Jl. Diponegoro No.1, Sisir, Kec. Batu, Kota Batu Jawa Timur, Sisir, Kec. Batu, Kota Batu, Jawa Timur 65314",
+            "link": "https://maps.app.goo.gl/6bvXqpBgGPAgayYx5",
+            "image": "../images/location2.jpg",
+            "type": "SPLU"
         },
         {
-            title: "SPLU Klojen",
-            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
-            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
-            image: "../images/location5.jpg",
-            type: "SPLU"
+            "title": "SPLU Ketabang",
+            "address": "Jl. Pemuda No.209, Ketabang, Kec. Genteng, Surabaya, Jawa Timur 60271",
+            "link": "https://maps.app.goo.gl/QxYEDyxMzoCV8eut5",
+            "image": "../images/location1.jpg",
+            "type": "SPLU"
         },
         {
-            title: "SPKLU Klojen",
-            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
-            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
-            image: "../images/location5.jpg",
-            type: "SPKLU"
+            "title": "SPKLU Klojen",
+            "address": "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
+            "link": "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
+            "image": "../images/location3.jpg",
+            "type": "SPKLU"
         },
         {
-            title: "SPKLU Klojen",
-            address: "Jl. Jenderal Basuki Rahmat, Klojen, Kec. Klojen, Kota Malang, Jawa Timur 65111",
-            link: "https://maps.app.goo.gl/A4WtX8tiDF4i7Agh9",
-            image: "../images/location5.jpg",
-            type: "SPKLU"
+            "title": "SPKLU Araya",
+            "address": "Jl.Araya Boulevard No.27, Ulesari, Tirtomoyo, Pakis, Malang Regency, Jawa Timur 65154",
+            "link": "https://maps.app.goo.gl/BrsCrcFqVxvehHzE8",
+            "image": "../images/location4.jpg",
+            "type": "SPKLU"
         },
+        {
+            "title": "SPKLU Ijen",
+            "address": "Jl. Ijen Nirwana Raya No.16 Blok A, Bareng, Kec. Klojen, Kota Malang, Jawa Timur 65116",
+            "link": "https://maps.app.goo.gl/CRAp85stA69Gqz9i8",
+            "image": "../images/location6.jpg",
+            "type": "SPKLU"
+        }
     ];
 
     const cardContainer = document.getElementById('cardContainer');

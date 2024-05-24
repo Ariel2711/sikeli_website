@@ -74,60 +74,10 @@
                 <button id="searchButton" class="btn" type="button">Search</button>
             </form>        
         </div>
-    
+
         <div class="container mt-4 d-flex justify-content-center align-items-center mx-auto">
-            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
-                <div class="col justify-content-center">
-                    <div class="card card-custom-height-big">
-                        <img src="../images/slider1.jpg" class="card-img-top img-custom-height-big" alt="...">
-                        <div class="card-body">
-                            <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Nyaman dan Irit Menjelajahi Trans Jawa Bersama All New Honda CR-V RS e:HEV</h5>
-                            </a>
-                            <p class="card-text-desc">All New CR-V RS e:HEV menjadi pilihan karena selain ingin mengeksplorasi potensi mesin hybrid untuk menjelajah Trans Jawa, rangkaian fitur yang dimilikinya juga bisa membuat perjalanan lebih nyaman dan aman. Terutama lewat kehadiran teknologi Honda Sensing yang lengkap, menyediakan ragam fitur keselamatan aktif.</p>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-primary me-2"></span>
-                                <h6 class="text-primary text-kategori">Mobil Listrik</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">25 April 2024</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col justify-content-center">
-                    <div class="card card-custom-height-big">
-                        <img src="../images/slider2.jpg" class="card-img-top img-custom-height-big" alt="...">
-                        <div class="card-body">
-                            <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Road Trip Jakarta - Surabaya Bersama All New Toyota Yaris Cross S HV</h5>
-                            </a>
-                            <p class="card-text-desc">Toyota menjadi pabrikan yang aktif menawarkan produk hybrid. Cukup banyak model yang masuk lini keluarga hybrid ditawarkan di Indonesia. Salah satu yang terbaru adalah Yaris Cross. Varian atas dengan menawarkan opsi dengan imbuhan Toyota Hybrid System. Menjadi model yang pas sebagai tes perjalanan jarak jauh sekaligus meninjau jalur mudik. Kami pun memutuskan membawa All New Yaris Cross HEV dari Jakarta menuju Surabaya dalam Electria: Mudik with Hybrid.</p>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-success me-2"></span>
-                                <h6 class="text-success text-kategori">Motor Listrik</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">20 April 2024</small></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col justify-content-center">
-                    <div class="card card-custom-height-big">
-                        <img src="../images/slider3.jpg" class="card-img-top img-custom-height-big" alt="...">
-                        <div class="card-body">
-                            <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Mudik Asyik Bareng Suzuki Ertiga Cruise Hybrid Menuju Kota Yogyakarta</h5>
-                            </a>
-                            <p class="card-text-desc">Guna menjaga kenyamanan dan efisiensi berkendara ketika melancong jauh, All New Ertiga Hybrid Cruise dimotori oleh mesin berkode K15B. Kemudian dilengkapi teknologi Smart Hybrid Vehicle by Suzuki (SHVS). Kapasitas baterai pun meningkat. Dari 6 Ah menjadi 10 Ah agar memberikan kinerja semakin optimal sebagai mobil rendah emisi dan irit bahan bakar. Bagian ini yang membuat kian mantap buat diajak berkelana dari Jakarta menuju Yogyakarta dengan jarak sejauh lebih kurang 600 km. Selain pengujian, perjalanan ini menjadi simulasi mudik Lebaran 2024.</p>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-danger me-2"></span>
-                                <h6 class="text-danger text-kategori">Berita Umum</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">20 April 2024</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="cardContainerBig" class="row row-cols-1 row-cols-md-3 g-4 justify-content-center"></div>
         </div>
-    
         <ul class="filters text-center">
             <li class="active" data-filter="*"><a href="#!">Terbaru</a></li>
             <li class="" data-filter="Terpopuler"><a href="#!">Terpopuler</a></li>
@@ -136,68 +86,8 @@
             <li data-filter="Berita-Umum"><a href="#!">Berita Umum</a></li>
         </ul>
           
-    
         <div class="container mx-auto">
-            <div class="card mb-3 mt-3 card-filter card-custom-height mx-auto Terpopuler Mobil card-mid">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/images/slider1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Nyaman dan Irit Menjelajahi Trans Jawa Bersama All New Honda CR-V RS e:HEV</h5>
-                            </a>
-                            <h6 class="card-text-desc">All New CR-V RS e:HEV menjadi pilihan karena selain ingin mengeksplorasi potensi mesin hybrid untuk menjelajah Trans Jawa, rangkaian fitur yang dimilikinya juga bisa membuat perjalanan lebih nyaman dan aman. Terutama lewat kehadiran teknologi Honda Sensing yang lengkap, menyediakan ragam fitur keselamatan aktif.</h6>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-primary me-2"></span>
-                                <h6 class="text-primary text-kategori">Mobil Listrik</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">25 April 2024</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3 mt-3 card-filter card-custom-height mx-auto Motor Terpopuler card-mid">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/images/slider1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Road Trip Jakarta - Surabaya Bersama All New Toyota Yaris Cross S HV</h5>
-                            </a>
-                            <h6 class="card-text-desc">Toyota menjadi pabrikan yang aktif menawarkan produk hybrid. Cukup banyak model yang masuk lini keluarga hybrid ditawarkan di Indonesia. Salah satu yang terbaru adalah Yaris Cross. Varian atas dengan menawarkan opsi dengan imbuhan Toyota Hybrid System. Menjadi model yang pas sebagai tes perjalanan jarak jauh sekaligus meninjau jalur mudik. Kami pun memutuskan membawa All New Yaris Cross HEV dari Jakarta menuju Surabaya dalam Electria: Mudik with Hybrid.</h6>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-success me-2"></span>
-                                <h6 class="text-success text-kategori">Motor Listrik</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">20 April 2024</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card mb-3 mt-3 card-filter card-custom-height mx-auto Berita-Umum card-mid">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="/images/slider1.jpg" class="img-fluid rounded-start img-custom-height" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Mudik Asyik Bareng Suzuki Ertiga Cruise Hybrid Menuju Kota Yogyakarta</h5>
-                            </a>
-                            <h6 class="card-text-desc">Guna menjaga kenyamanan dan efisiensi berkendara ketika melancong jauh, All New Ertiga Hybrid Cruise dimotori oleh mesin berkode K15B. Kemudian dilengkapi teknologi Smart Hybrid Vehicle by Suzuki (SHVS). Kapasitas baterai pun meningkat. Dari 6 Ah menjadi 10 Ah agar memberikan kinerja semakin optimal sebagai mobil rendah emisi dan irit bahan bakar. Bagian ini yang membuat kian mantap buat diajak berkelana dari Jakarta menuju Yogyakarta dengan jarak sejauh lebih kurang 600 km. Selain pengujian, perjalanan ini menjadi simulasi mudik Lebaran 2024.</h6>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-danger me-2"></span>
-                                <h6 class="text-danger text-kategori">Berita Umum</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">20 April 2024</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div id="cardContainerSmall"></div>
         </div>
     </div>
 

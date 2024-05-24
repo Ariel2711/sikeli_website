@@ -330,7 +330,7 @@ ul.filters{
   }
   
   .breadcrumb a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #007bff;
     transition: color 0.3s ease;
   }
@@ -346,4 +346,8 @@ ul.filters{
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
+  }
+
+  .container:hover{
+    transform: scale(1.01);
   }

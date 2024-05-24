@@ -49,4 +49,73 @@ document.addEventListener("DOMContentLoaded", function () {
         const searchTerm = searchInput.value.trim().toLowerCase();
         filterReviews(searchTerm);
     });
+
+    const forumPosts = [
+        {
+            "author": "Sukirman",
+            "date": "12 December 2024",
+            "title": "Harga Motor Listrik",
+            "content": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
+            "category": {
+                "text": "Motor Listrik",
+                "color": "bg-success",
+                "textColor": "text-success"
+            },
+            "views": "24 Views | 12 Reply"
+        },
+        {
+            "author": "Suparjo",
+            "date": "31 December 2024",
+            "title": "Jenis Mobil yang bagus?",
+            "content": "Kalau mobil yang bagus sekarang apa kalau listrik?",
+            "category": {
+                "text": "Mobil Listrik",
+                "color": "bg-primary",
+                "textColor": "text-primary"
+            },
+            "views": "25 Views | 4 Reply"
+        },
+        {
+            "author": "Suparjo",
+            "date": "15 November 2024",
+            "title": "Di isi dirumah boros nggak?",
+            "content": "Kalau mobil biasanya boros nggak buat listrik rumah?",
+            "category": {
+                "text": "Umum",
+                "color": "bg-danger",
+                "textColor": "text-danger"
+            },
+            "views": "54 Views | 20 Reply"
+        }
+    ];
+
+    const forumPostsContainer = document.getElementById('forum-posts');
+
+    forumPosts.forEach(post => {
+        const postHTML = `
+            <div class="container ${post.category.text} FAQ">
+                <div class="forum-post">
+                    <div class="post-header">
+                        <div class="post-author">
+                            <img src="../images/slider3.jpg" alt="Photo Profile">
+                            <span>${post.author}</span>
+                        </div>
+                        <span class="post-date">${post.date}</span>
+                    </div>
+                    <div class="post-content">
+                        <h2><a href="detail_forum.html">${post.title}</a></h2>
+                        <p>${post.content}</p>
+                    </div>
+                    <div class="post-footer">
+                        <span class="d-flex align-items-center span-square-kategori">
+                            <span class="square-kategori ${post.category.color} me-2"></span>
+                            <h6 class="${post.category.textColor} text-kategori">${post.category.text}</h6>
+                        </span>
+                        <span class="post-views">${post.views}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        forumPostsContainer.innerHTML += postHTML;
+    });
 });
