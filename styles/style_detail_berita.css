@@ -56,6 +56,7 @@ body{
 
 .comment-section h2{
   padding: 10px 10px;
+  margin-top: 20px;
 }
 
 .news-comment {
@@ -149,6 +150,33 @@ body{
   -webkit-line-clamp: 1;
 }
 
+.card-news-recommendation {
+  padding: 10px 10px;
+  margin: 20px auto;
+}
+
+.card-title{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+
+.card-text-desc{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  margin-top: 5px;
+}
+
+.card-custom-height-big img {
+  height: 220px;
+  object-fit: cover;
+}
+
 @media only screen and (max-width: 450px){
   .news-title {
     font-size: 30px;
@@ -197,6 +225,32 @@ body{
     font-size: 10px;
   }
 
+  .card-custom-height {
+    height: 170px;
+  }
+
+  .img-custom-height {
+    height: 170px;
+    object-fit: cover;
+  }
+
+  .card-title{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    font-size: 18px;
+  }
+  .card-text-desc{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    margin-top: 5px;
+    font-size: 14px;
+  }
 }
 
 .review-actions {

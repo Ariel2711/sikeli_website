@@ -12,3 +12,13 @@ eyeicon.onclick = function() {
         eyeicon.src = "../images/eye-closed.ico";
     }
 }
+
+eyeiconConfirm.onclick = function() {
+    if (confirmation.type == "password") {
+        confirmation.type = "text";
+        eyeiconConfirm.src = "../images/eye-open.ico";
+    } else {
+        confirmation.type = "password";
+        eyeiconConfirm.src = "../images/eye-closed.ico";
+    }
+}
