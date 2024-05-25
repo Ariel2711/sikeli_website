@@ -131,7 +131,7 @@ body {
     font-weight: 600;
 }
 
-#register-now:hover {
+.register-link a:hover {
     color: blue;
     cursor: pointer;
 }
@@ -202,21 +202,6 @@ body {
     height: 20px;
     vertical-align: middle;
 }
-
-/* @media only screen and (max-width: 1200px) {
-    .header img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .form-group {
-        width: 100%;
-    }
-
-    .form-group input {
-        width: 100%;
-    }
-} */
 
 @media only screen and (max-width: 450px) {
     .header img {
