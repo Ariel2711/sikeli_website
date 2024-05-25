@@ -1,32 +1,32 @@
-body{
-  background-color: rgb(242,252,255);
+body {
+  background-color: rgb(242, 252, 255);
   font-family: 'Lexend';
 }
 
-ul.filters{
+ul.filters {
   display: block;
   width: 100%;
   margin: 0;
   padding: 30px 0;
 }
 
-ul.filters > li{
+ul.filters>li {
   list-style: none;
   display: inline-block;
 }
 
-ul.filters > li > a{
+ul.filters>li>a {
   display: block;
   color: #434e5e;
   text-decoration: none;
   padding: 5px 20px;
 }
 
-ul.filters > li > a:hover{
+ul.filters>li>a:hover {
   background-color: #e6e9ed;
 }
 
-ul.filters > li.active > a{
+ul.filters>li.active>a {
   color: #fff;
   background-color: #609695;
 }
@@ -49,11 +49,11 @@ ul.filters > li.active > a{
 
   .card-title,
   .card-text-date {
-      margin: 0;
+    margin: 0;
   }
 
   .card-text-date {
-      margin-top: auto;
+    margin-top: auto;
   }
 
 
@@ -61,29 +61,30 @@ ul.filters > li.active > a{
     height: 170px;
   }
 
-  .card-custom-height-big{
+  .card-custom-height-big {
     height: 400px;
   }
-  
+
   .img-custom-height {
     height: 170px;
     object-fit: cover;
   }
-  
+
   .img-custom-height-big {
     min-height: 170px;
     height: 170px;
     object-fit: cover;
   }
 
-  .card-title{
+  .card-title {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
   }
-  .card-text-desc{
+
+  .card-text-desc {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -93,7 +94,7 @@ ul.filters > li.active > a{
   }
 }
 
-.card-title{
+.card-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -101,7 +102,7 @@ ul.filters > li.active > a{
   -webkit-line-clamp: 2;
 }
 
-.card-text-desc{
+.card-text-desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;

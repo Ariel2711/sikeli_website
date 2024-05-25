@@ -3,7 +3,7 @@ let confirmation = document.getElementById('confirmation');
 let eyeicon = document.getElementById('eyeicon');
 let eyeiconConfirm = document.getElementById('eyeicon-confirm');
 
-eyeicon.onclick = function() {
+eyeicon.onclick = function () {
     if (password.type == "password") {
         password.type = "text";
         eyeicon.src = "../images/eye-open.ico";

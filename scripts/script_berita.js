@@ -192,4 +192,66 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         cardContainerSmall.innerHTML += cardHTML;
     });
+
+    const commentsData = [
+        {
+            "authorName": "Sukirman",
+            "authorImage": "../images/slider3.jpg",
+            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
+            "commentDate": "12 December 2024",
+            "likes": 0,
+            "dislikes": 0
+        },
+        {
+            "authorName": "Sukirman",
+            "authorImage": "../images/slider3.jpg",
+            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
+            "commentDate": "12 December 2024",
+            "likes": 0,
+            "dislikes": 0
+        },
+        {
+            "authorName": "Sukirman",
+            "authorImage": "../images/slider3.jpg",
+            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
+            "commentDate": "12 December 2024",
+            "likes": 0,
+            "dislikes": 0
+        },
+        {
+            "authorName": "Sukirman",
+            "authorImage": "../images/slider3.jpg",
+            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
+            "commentDate": "12 December 2024",
+            "likes": 0,
+            "dislikes": 0
+        }
+    ];
+
+    const commentsSection = document.getElementById('comments');
+
+    commentsData.forEach(data => {
+        const commentHTML = `
+            <div class="news-comment">
+                <hr>
+                <div class="comment-header">
+                    <div class="comment-author">
+                        <img src="${data.authorImage}" alt="Photo Profile">
+                        <span class="author-name">${data.authorName}</span>
+                    </div>
+                </div>
+                <div class="comment-content">
+                    <p>${data.commentContent}</p>
+                </div>
+                <div class="comment-footer">
+                    <div class="review-actions">
+                        <span class="fa fa-thumbs-up"></span><span>${data.likes}</span>
+                        <span class="fa fa-thumbs-down"></span><span>${data.dislikes}</span>
+                    </div>
+                    <span class="comment-date">${data.commentDate}</span>
+                </div>
+            </div>
+        `;
+        commentsSection.innerHTML += commentHTML;
+    });
 });

@@ -3,9 +3,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     submitBtn.addEventListener('click', function () {
         const jenisKendaraan = document.querySelector('select[name="jenis"]').value;
-        const kwhRumah = parseFloat(document.querySelector('input[name="kwh"]').value);
-        const jarakTempuh = parseFloat(document.querySelector('input[name="jarak"]').value);
+        const kwhRumah = document.querySelector('input[name="kwh"]').value;
+        const jarakTempuh = document.querySelector('input[name="jarak"]').value;
         const jangkaWaktu = document.querySelector('select[name="waktu"]').value;
+
+        if (!kwhRumah) {
+            alert("Masukkan data untuk KwH listrik rumah terlebih dahulu");
+            return;
+        } else if (isNaN(kwhRumah)) {
+            alert("Input tidak valid untuk KwH rumah");
+            return;
+        } else if (!jarakTempuh) {
+            alert("Masukkan data untuk jarak tempuh terlebih dahulu");
+            return;
+        } else if (isNaN(jarakTempuh)) {
+            alert("Input tidak valid untuk jarak tempuh");
+            return;
+        }
+
+        const kwhRumahValue = parseFloat(kwhRumah);
+        const jarakTempuhValue = parseFloat(jarakTempuh);
 
         let estimasiBiaya = 0;
 
@@ -25,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             energiKendaraan = 18 / 70;
         }
 
-        let totalEnergi = jarakTempuh * energiKendaraan;
+        let totalEnergi = jarakTempuhValue * energiKendaraan;
 
         let jumlahHari = 0;
 
@@ -39,16 +56,15 @@ document.addEventListener("DOMContentLoaded", function () {
             jumlahHari = 365;
         }
 
-        estimasiBiaya = totalEnergi * kwhRumah * jumlahHari;
+        estimasiBiaya = totalEnergi * kwhRumahValue * jumlahHari;
 
         const formattedAmount = estimasiBiaya.toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
-
 
         const hasilBiaya = document.querySelector('.circle-result h2');
         hasilBiaya.textContent = formattedAmount;
 
         const hasil = document.querySelector('.square-result h6');
-        hasil.textContent = "Estimasi biaya tambahan untuk pengisian baterai Kendaraan " + jenisKendaraan + " per " + jangkaWaktu + " adalah"
+        hasil.textContent = "Estimasi biaya tambahan untuk pengisian baterai Kendaraan " + jenisKendaraan + " per " + jangkaWaktu + " adalah";
     });
 });
 
@@ -60,4 +76,3 @@ document.getElementById('resetBtn').addEventListener('click', function () {
     document.querySelector('.square-result h6').innerText = "Estimasi biaya tambahan untuk pengisian baterai Kendaraan ..... per ..... adalah";
     document.querySelector('.circle-result h2').innerText = "Rp. 0,00";
 });
-

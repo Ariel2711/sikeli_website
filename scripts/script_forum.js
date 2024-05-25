@@ -118,4 +118,47 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         forumPostsContainer.innerHTML += postHTML;
     });
+
+    const commentsData = [
+        {
+            "authorName": "Herman",
+            "authorImage": "../images/tesla-model-3-.jpg",
+            "replyContent": "Menurut saya, masih cukup mahal, tapi sebanding dengan teknologi yang ditawarkan.",
+            "replyDate": "13 December 2024",
+            "likes": 10,
+            "dislikes": 0
+        },
+        {
+            "authorName": "Siti",
+            "authorImage": "../images/hyundai-kona-electric-.jpg",
+            "replyContent": "<span class='text-primary'>@Herman</span> Sekarang ada banyak pilihan yang lebih terjangkau dibanding beberapa tahun yang lalu.",
+            "replyDate": "14 December 2024",
+            "likes": 20,
+            "dislikes": 5
+        }
+    ];
+
+    const commentsSection = document.getElementById('comments');
+
+    commentsData.forEach(comment => {
+        const commentHTML = `
+            <div class="reply">
+            <div class="post-header">
+                <div class="post-author">
+                    <img src="${comment.authorImage}" alt="Photo Profile">
+                    <span>${comment.author}</span>
+                </div>
+                <span class="post-date">${comment.commentDate}</span>
+            </div>
+            <div class="post-content">
+                <p>${comment.commentContent}</p>
+            </div>
+            <div class="review-actions">
+            <span class="fa fa-thumbs-up"></span><span>${comment.likes}</span>
+            <span class="fa fa-thumbs-down"></span><span>${comment.dislikes}</span>
+            </div>
+            </div>
+        `;
+        commentsSection.innerHTML += commentHTML;
+    });
 });

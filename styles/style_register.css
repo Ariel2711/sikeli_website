@@ -130,18 +130,23 @@ body {
         width: 200px;
         height: 200px;
     }
+
     .form-group label {
         font-size: 14px;
     }
+
     .form-group input {
         font-size: 14px;
     }
+
     .form-group button {
         font-size: 14px;
     }
+
     .login-link {
         font-size: 14px;
     }
+
     .container {
         max-width: 400px;
         margin: 0;
@@ -149,7 +154,7 @@ body {
     }
 }
 
-.login-link{
+.login-link {
     text-align: center;
 }
 

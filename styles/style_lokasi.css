@@ -51,20 +51,25 @@ ul.filters>li.active>a {
         flex-direction: column;
         height: 100%;
     }
+
     .card-title,
     .card-text-date {
         margin: 0;
     }
+
     .card-text-date {
         margin-top: auto;
     }
+
     .card-custom-height {
         height: 170px;
     }
+
     .img-custom-height {
         height: 170px;
         object-fit: cover;
     }
+
     .card-title {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -72,6 +77,7 @@ ul.filters>li.active>a {
         text-overflow: ellipsis;
         -webkit-line-clamp: 2;
     }
+
     .card-text-desc {
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -99,7 +105,7 @@ ul.filters>li.active>a {
     margin-top: 5px;
 }
 
-.card-body a{
+.card-body a {
     color: blue;
     text-decoration: none;
 }

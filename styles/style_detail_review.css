@@ -1,219 +1,224 @@
 body {
-    font-family: 'Lexend';
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
+  font-family: 'Lexend';
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
 .review-container {
-    /* max-width: 800px; */
-    width: 100%;
-    max-width: 90%;
-    margin: 20px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    /* padding: 20px; */
+  /* max-width: 800px; */
+  width: 100%;
+  max-width: 90%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  /* padding: 20px; */
 }
 
 .image-container img {
-    width: 100%;
-    /* height: 400px; */
-    max-height: 400px;
-    object-fit: cover;
+  width: 100%;
+  /* height: 400px; */
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .review-content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .review-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0px;
 }
 
 .profile img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .user-info {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .username {
-    font-weight: bold;
-    font-size: 1.1em;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 .review-date {
-    font-size: 0.9em;
-    color: #6c757d;
+  font-size: 0.9em;
+  color: #6c757d;
 }
 
 .review-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1.5em;
-    font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 
 .review-rating .fa.checked {
-    color: orange;
+  color: orange;
 }
 
 .review-rating .fa:not(.checked) {
-    color: #e4e5e9;
+  color: #e4e5e9;
 }
 
 .review-text p {
-    margin: 0 0 15px;
+  margin: 0 0 15px;
+  margin-bottom: 20px;
 }
 
 
 .review-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .review-actions .fa {
-    cursor: pointer;
-    color: #6c757d;
-    transition: color 0.3s;
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.3s;
 }
 
 .review-actions .fa:hover {
-    color: #007bff;
+  color: #007bff;
 }
 
 .breadcrumb-container {
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    border: 0;
-    margin-top: 80px;
-  }
-  
-  .breadcrumb {
-    /* justify-content: center; */
-    margin: auto auto;
-    font-size: 14px;
-  }
-  
-  .breadcrumb a,
-  .breadcrumb span {
-    margin-right: 5px;
-  }
-  
-  .breadcrumb a {
-    /* text-decoration: none; */
-    color: #007bff;
-    transition: color 0.3s ease;
-  }
-  
-  .breadcrumb a:hover {
-    color: #0056b3;
-  }
-  
-  .breadcrumb span {
-    color: black;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 1;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 0;
+  margin-top: 80px;
+}
+
+.breadcrumb {
+  /* justify-content: center; */
+  margin: auto auto;
+  font-size: 14px;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+  margin-right: 5px;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+  color: #0056b3;
+}
+
+.breadcrumb span {
+  color: black;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+}
+
+.comment-section h2 {
+  padding: 10px 10px;
+}
+
+.news-comment {
+  padding: 10px 10px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.comment-author {
+  display: flex;
+  align-items: center;
+}
+
+.comment-author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.author-name {
+  font-size: 15px;
+}
+
+.comment-date {
+  font-size: 15px;
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.comment-content {
+  margin-bottom: 15px;
+}
+
+.comment-content p {
+  line-height: 1.6;
+}
+
+.comment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment-love img {
+  width: 25px;
+  height: 25px;
+  box-shadow: none;
+}
+
+@media only screen and (max-width: 450px) {
+  .comment-section {
+    font-size: 26px;
   }
 
-  .comment-section h2{
-    padding: 10px 10px;
-  }
-  
-  .news-comment {
-    padding: 10px 10px;
-  }
-  
-  .comment-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-  }
-  
-  .comment-author {
-    display: flex;
-    align-items: center;
-  }
-  
   .comment-author img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  
-  .author-name {
-    font-size: 15px;
-  }
-  
-  .comment-date {
-    font-size: 15px;
-    color: rgb(0, 0, 0,0.5);
-  }
-  
-  .comment-content {
-    margin-bottom: 15px;
-  }
-  
-  .comment-content p {
-    line-height: 1.6;
-  }
-  
-  .comment-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .comment-love img {
-    width: 25px;
-    height: 25px;
-    box-shadow: none;
+    width: 30px;
+    height: 30px;
   }
 
-  @media only screen and (max-width: 450px) {
-    .comment-section {
-        font-size: 26px;
-      }
-    
-      .comment-author img {
-        width: 30px;
-        height: 30px;
-      }
-    
-      .author-name {
-        font-size: 12px;
-      }
-    
-      .comment-content p {
-        font-size: 12px;
-      }
-    
-      .comment-love img {
-        width: 20px;
-        height: 20px;
-      }
-    
-      .comment-date {
-        font-size: 12px;
-      }
+  .author-name {
+    font-size: 12px;
   }
+
+  .comment-content p {
+    font-size: 12px;
+  }
+
+  .comment-love img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .comment-date {
+    font-size: 12px;
+  }
+}
+
+.comment-section h2 {
+  padding: 10px 10px;
+}

@@ -1,114 +1,115 @@
-html, body{
+html,
+body {
   height: 100%;
   margin: 0;
 }
 
-body{
+body {
   display: flex;
   flex-direction: column;
 }
 
-.content{
+.content {
   flex: 1;
 }
 
-footer{
+footer {
   flex-shrink: 0;
 }
 
-body{
+body {
   background-color: #f0f8f8;
   font-family: 'Lexend';
 }
 
-/* .lihat-semua{
+.lihat-semua {
   text-decoration: none;
-} */
+}
 
-footer{
+footer {
   flex-shrink: 0;
 }
 
-.navbar{
+.navbar {
   background-color: #04738b;
 }
 
-.navbar-brand{
+.navbar-brand {
   font-size: x-large;
   text-decoration: none;
 }
 
-.offcanvas-title{
+.offcanvas-title {
   text-decoration: none;
 }
 
-.nav-link{
+.nav-link {
   color: white !important;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   font-weight: 600;
   /* color: aqua !important; */
 }
 
-.nav-link.active{
+.nav-link.active {
   color: aqua !important;
 }
 
-.nav-link.active:hover{
+.nav-link.active:hover {
   font-weight: 600;
   /* color: aqua !important; */
 }
 
-.card{
+.card {
   max-width: 800px;
 }
 
-.card:hover{
+.card:hover {
   transform: scale(1.01);
 }
 
-.card-home{
+.card-home {
   max-width: 540px;
 }
 
-.card-home:hover{
+.card-home:hover {
   transform: scale(1.01);
 }
 
-.span-square-kategori{
+.span-square-kategori {
   margin-top: 0px;
 }
 
-.square-kategori{
-  width: 10px; 
-  height: 10px; 
+.square-kategori {
+  width: 10px;
+  height: 10px;
   display: inline-block;
 }
 
-.text-kategori{
-  font-size: 15px; 
+.text-kategori {
+  font-size: 15px;
   margin: 0;
 }
 
-.title-berita{
+.title-berita {
   text-decoration: none;
   color: black;
 }
 
-.search-bar{
+.search-bar {
   margin-top: 80px;
 }
 
 @media (max-width: 1200px) {
-  .sidebar{
-    background-color: rgba(4,115,139,0.6);
+  .sidebar {
+    background-color: rgba(4, 115, 139, 0.6);
     backdrop-filter: blur(10px);
   }
 }
 
 .btn {
-  background-color:rgb(62,132,132);
+  background-color: rgb(62, 132, 132);
   border: 0;
   color: white;
   font-weight: 600;
@@ -121,7 +122,7 @@ footer{
 }
 
 .btn-login {
-  background-color:white;
+  background-color: white;
   border: 0;
   color: black;
   font-size: 15px;
@@ -136,7 +137,7 @@ footer{
 }
 
 .btn-slider {
-  background-color:white;
+  background-color: white;
   border: 0;
   color: black;
   font-size: 100px;
@@ -160,7 +161,7 @@ footer{
   margin-right: 0px;
 }
 
-.navbar-brand{
+.navbar-brand {
   margin-left: 0px;
 }
 
@@ -174,37 +175,38 @@ footer{
 }
 
 /* @media only screen and (max-width: 2000px){ */
-  .c-item{
-    height: 500px;
-  }
+.c-item {
+  height: 500px;
+}
 
-  .c-title{
-    font-size: 40px;
-    font-weight: 500;
-  }
+.c-title {
+  font-size: 40px;
+  font-weight: 500;
+}
 
-  .c-isi{
-    font-size: 25px;
-  }
+.c-isi {
+  font-size: 25px;
+}
+
 /* } */
 
-@media only screen and (max-width: 450px){
-  .c-item{
+@media only screen and (max-width: 450px) {
+  .c-item {
     height: 550px;
   }
 
-  .c-title{
+  .c-title {
     font-size: 25px;
     font-weight: 500;
   }
 
-  .c-isi{
+  .c-isi {
     font-size: 15px;
   }
 }
 
 
-.c-img{
+.c-img {
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5);
@@ -234,11 +236,11 @@ footer{
 
   .card-title,
   .card-text-date {
-      margin: 0;
+    margin: 0;
   }
 
   .card-text-date {
-      margin-top: auto;
+    margin-top: auto;
   }
 
 
@@ -246,21 +248,13 @@ footer{
     height: 170px;
     min-height: 170px;
   }
-  
+
   .img-custom-height-home {
     height: 170px;
     object-fit: cover;
   }
 
-  .card-title{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-line-clamp: 2;
-  }
-  
-  .card-title-home{
+  .card-title {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -268,7 +262,15 @@ footer{
     -webkit-line-clamp: 2;
   }
 
-  .card-text-desc{
+  .card-title-home {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+  }
+
+  .card-text-desc {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -277,7 +279,7 @@ footer{
     margin-top: 5px;
   }
 
-  .card-text-desc-home{
+  .card-text-desc-home {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -288,7 +290,7 @@ footer{
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 999px){
+@media only screen and (min-width: 768px) and (max-width: 999px) {
   .card-body {
     display: flex;
     flex-direction: column;
@@ -297,11 +299,11 @@ footer{
 
   .card-title,
   .card-text-date {
-      margin: 0;
+    margin: 0;
   }
 
   .card-text-date {
-      margin-top: auto;
+    margin-top: auto;
   }
 
 
@@ -309,21 +311,21 @@ footer{
     height: 120px;
     min-height: 120px;
   }
-  
+
   .img-custom-height-home {
     height: 120px;
     object-fit: cover;
   }
 
-  .card-title{
+  .card-title {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
   }
-  
-  .card-title-home{
+
+  .card-title-home {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -332,7 +334,7 @@ footer{
     font-size: 18px;
   }
 
-  .card-text-desc{
+  .card-text-desc {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -341,7 +343,7 @@ footer{
     margin-top: 5px;
   }
 
-  .card-text-desc-home{
+  .card-text-desc-home {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -352,7 +354,7 @@ footer{
   }
 }
 
-.card-title{
+.card-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -360,7 +362,7 @@ footer{
   -webkit-line-clamp: 2;
 }
 
-.card-title-home{
+.card-title-home {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -368,12 +370,12 @@ footer{
   -webkit-line-clamp: 2;
 }
 
-.card-body a{
+.card-body a {
   text-decoration: none;
   color: black;
 }
 
-.card-text-desc{
+.card-text-desc {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -383,7 +385,7 @@ footer{
   font-size: 15px;
 }
 
-.card-text-desc-home{
+.card-text-desc-home {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -392,7 +394,7 @@ footer{
   margin-top: 0px;
 }
 
-.card{
+.card {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border: 0;
 }
@@ -402,14 +404,14 @@ footer{
     height: 350px;
     min-height: 300px;
   } */
-  
+
   .img-custom-height-home {
     height: 270px;
     width: 100%;
     object-fit: cover;
   }
 
-  .img-custom-height{
+  .img-custom-height {
     height: 270px;
     width: 100%;
     object-fit: cover;
