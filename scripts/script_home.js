@@ -57,6 +57,13 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainerBerita.innerHTML += cardHTML;
     });
 
+    const lihatSemuaBerita = `
+        <a href="pages/berita.html" class="lihat-semua">
+        <h6 class="text-start">Lihat Semuanya</h6>
+        </a>
+    `;
+    cardContainerBerita.innerHTML += lihatSemuaBerita;
+
     const cardDataReview = [
         {
             "title": "Hyundai Kona Electric",
@@ -114,4 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         cardContainerReview.innerHTML += cardHTML;
     });
+
+    const lihatSemuaReview = `
+        <a href="pages/review.html" class="lihat-semua">
+        <h6 class="text-start">Lihat Semuanya</h6>
+        </a>
+    `;
+    cardContainerReview.innerHTML += lihatSemuaReview;
 });

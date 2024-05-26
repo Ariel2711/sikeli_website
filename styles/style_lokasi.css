@@ -109,3 +109,57 @@ ul.filters>li.active>a {
     color: blue;
     text-decoration: none;
 }
+
+.card-title {
+    color: black;
+}
+
+.container-tempat {
+    align-items: center;
+    width: 100%;
+    max-width: 90%;
+    margin: 20px auto;
+    /* padding: 10px 10px; */
+    border-radius: 5px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.breadcrumb-container {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 0;
+    margin-top: 80px;
+}
+
+.breadcrumb {
+    /* justify-content: center; */
+    margin: auto auto;
+    font-size: 14px;
+}
+
+.breadcrumb a,
+.breadcrumb span {
+    margin-right: 5px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #0056b3;
+}
+
+.breadcrumb span {
+    color: black;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+}

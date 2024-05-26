@@ -48,21 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     cardData.forEach(data => {
         const cardHTML = `
-                <div class="card mb-3 mt-3 mx-auto card-custom-height ${data.type}">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="${data.image}" class="img-fluid rounded-start img-custom-height" alt="...">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">${data.title}</h5>
-                                <p class="card-text-desc">${data.address}</p>
-                                <a href="${data.link}">open<span class="fluent--open-16-regular"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
+        <div class="card mb-3 mt-3 mx-auto card-custom-height ${data.type}">
+        <div class="row g-0">
+        <div class="col-md-4">
+        <img src="${data.image}" class="img-fluid rounded-start img-custom-height" alt="...">
+        </div>
+        <div class="col-md-8">
+        <div class="card-body">
+        <a href="../pages/detail_lokasi.html">
+        <h5 class="card-title">${data.title}</h5>
+        </a>
+        <p class="card-text-desc">${data.address}</p>
+        <a href="${data.link}">open<span class="fluent--open-16-regular"></span></a>
+        </div>
+        </div>
+        </div>
+        </div>
+        `;
         cardContainer.innerHTML += cardHTML;
     });
 
