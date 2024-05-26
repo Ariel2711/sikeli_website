@@ -276,3 +276,54 @@ body {
 .review-actions .fa:hover {
   color: #007bff;
 }
+
+.card-custom-height-big-review {
+  height: 350px;
+}
+
+.add-comment {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.add-comment input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: rgb(62, 132, 132);
+  border: 0;
+  color: white;
+  font-weight: 600;
+  font-family: 'Lexend';
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+.btn:hover {
+  background-color: #04738b;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn {
+    background-color: rgb(62, 132, 132);
+    border: 0;
+    color: white;
+    font-weight: 600;
+    font-family: 'Lexend';
+    font-size: 12px;
+    padding: 12px 10px;
+  }
+
+  .btn:hover {
+    background-color: #04738b;
+    color: white;
+  }
+}

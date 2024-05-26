@@ -11,12 +11,14 @@
     </script>
     <link rel="stylesheet" href="../styles/style_home.css">
     <link rel="stylesheet" href="../styles/style_detail_berita.css">
+    <link rel="stylesheet" href="../styles/style_review.css">
     <script src="../scripts/script_berita.js"></script>
     <link rel="icon" href="../images/Logo_SIKELI-No_Caption-Removebg.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Nyaman dan Irit Menjelajahi Trans Jawa Bersama All New Honda CR-V RS e:HEV</title>
 </head>
 
@@ -137,6 +139,11 @@
                 <h2>Comment</h2>
             </span>
 
+            <div class="add-comment">
+                <input type="text" id="new-comment" placeholder="Add your comment...">
+                <button class="btn">Add Comment</button>
+            </div>
+
             <div class="news-comment">
                 <hr>
                 <div class="comment-header">
@@ -219,10 +226,10 @@
 
             <hr>
             <span class="card-news-recommendation">
-                <h2>Rekomendasi Berita</h2>
+                <h2>Berita Terkait</h2>
             </span>
 
-            <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center">
                 <div class="col justify-content-center">
                     <div class="card card-custom-height-big">
                         <img src="../images/slider1.jpg" class="card-img-top img-custom-height-big" alt="...">
@@ -288,23 +295,61 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <span class="card-news-recommendation">
+                <h2>Review Terkait</h2>
+            </span>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-start">
                 <div class="col justify-content-center">
-                    <div class="card card-custom-height-big">
-                        <img src="../images/slider1.jpg" class="card-img-top img-custom-height-big" alt="...">
+                    <div class="card card-custom-height-big-review">
+                        <img src="/images/hyundai-kona-electric-.jpg" class="card-img-top img-custom-height-big"
+                            alt="...">
                         <div class="card-body">
                             <a href="detail_berita.html" class="title-berita">
-                                <h5 class="card-title">Nyaman dan Irit Menjelajahi Trans Jawa Bersama All New Honda CR-V
-                                    RS e:HEV</h5>
+                                <h5 class="card-title text-center">Hyundai Kona Electric</h5>
                             </a>
-                            <p class="card-text-desc">All New CR-V RS e:HEV menjadi pilihan karena selain ingin
-                                mengeksplorasi potensi mesin hybrid untuk menjelajah Trans Jawa, rangkaian fitur yang
-                                dimilikinya juga bisa membuat perjalanan lebih nyaman dan aman. Terutama lewat kehadiran
-                                teknologi Honda Sensing yang lengkap, menyediakan ragam fitur keselamatan aktif.</p>
-                            <span class="d-flex align-items-center span-square-kategori">
-                                <span class="square-kategori bg-primary me-2"></span>
-                                <h6 class="text-primary text-kategori">Mobil Listrik</h6>
-                            </span>
-                            <p class="card-text-date"><small class="text-muted">25 April 2024</small></p>
+                            <div class="star-group">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col justify-content-center">
+                    <div class="card card-custom-height-big-review">
+                        <img src="/images/tesla-model-3-.jpg" class="card-img-top img-custom-height-big" alt="...">
+                        <div class="card-body">
+                            <a href="detail_berita.html" class="title-berita">
+                                <h5 class="card-title text-center">Tesla Model 3</h5>
+                            </a>
+                            <div class="star-group">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col justify-content-center">
+                    <div class="card card-custom-height-big-review">
+                        <img src="/images/tesla-model-3-.jpg" class="card-img-top img-custom-height-big" alt="...">
+                        <div class="card-body">
+                            <a href="detail_berita.html" class="title-berita">
+                                <h5 class="card-title text-center">Tesla Model 3</h5>
+                            </a>
+                            <div class="star-group">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -312,11 +357,20 @@
         </div>
     </div>
 
-    <footer class="bg-dark text-white mt-5">
-        <div class="bg-secondary text-center py-3">
-            <p class="mb-0">© 2024 SIKELI. All rights reserved.</p>
+    <footer class="text-white mt-5">
+        <div class="footer-content py-3">
+            <div class="text-center mb-1">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <div class="text-center mt-1">
+                <p class="mb-0">© 2024 SIKELI. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
 </body>
 
 </html>
