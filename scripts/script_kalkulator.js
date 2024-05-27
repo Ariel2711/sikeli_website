@@ -21,8 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        const kwhRumahValue = parseFloat(kwhRumah);
-        const jarakTempuhValue = parseFloat(jarakTempuh);
+        function convertCurrencyToNumber(currencyString) {
+            let cleanedString = currencyString.replace(/\./g, '');
+
+            cleanedString = cleanedString.replace(',', '.');
+
+            let number = parseFloat(cleanedString);
+
+            return number;
+        }
+
+
+        const kwhRumahValue = convertCurrencyToNumber(kwhRumah);
+        const jarakTempuhValue = convertCurrencyToNumber(jarakTempuh);
 
         let estimasiBiaya = 0;
 

@@ -94,11 +94,11 @@
             </div>
             <div class="inputan">
               <h6>Biaya Per KwH Listrik Rumah (Rp)</h6>
-              <input type="text" class="label-input" name="kwh">
+              <input type="text" class="label-input" name="kwh" placeholder="ex: 1.500">
             </div>
             <div class="inputan">
               <h6>Jarak Tempuh Per Hari (Km)</h6>
-              <input type="text" class="label-input" name="jarak">
+              <input type="text" class="label-input" name="jarak" placeholder="ex: 1.5">
             </div>
             <div class="inputan">
               <h6>Jangka Waktu</h6>
@@ -111,7 +111,8 @@
             </div>
             <div class="row button-group">
               <div class="col text-center">
-                <button id="resetBtn" class="btn text-decoration-none px-4 py-1 rounded-4">RESET</button>
+                <button id="resetBtn" class="btn text-decoration-none px-4 py-1 rounded-4"
+                  style="background-color: transparent; color: rgb(62, 132, 132); border-color: rgb(62, 132, 132); outline: 2px solid;">RESET</button>
               </div>
               <div class="col text-center">
                 <button id="submitBtn" class="btn text-decoration-none px-4 py-1 rounded-4">SUBMIT</button>
@@ -120,7 +121,7 @@
           </div>
         </div>
 
-        <div class="col-md-12 col-lg-6 mb-3 card-result">
+        <div class="col-md-12 col-lg-6 mb-3 card-result" id="resultKalkulator">
           <div class="square px-3 py-3 d-flex flex-column justify-content-between square-result">
             <h6>Estimasi biaya tambahan untuk pengisian baterai Kendaraan ..... per ..... adalah</h6>
             <div class="circle-result mx-auto">
