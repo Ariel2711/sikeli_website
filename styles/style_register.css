@@ -119,12 +119,12 @@ body {
     border-color: black;
 }
 
-.login-link {
+#login-link a {
     text-align: center;
     margin-top: 15px;
 }
 
-#sign-in-here:hover {
+#login-link a:hover {
     color: blue;
     cursor: pointer;
 }
