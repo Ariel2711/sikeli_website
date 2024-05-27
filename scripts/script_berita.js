@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "date": "25 April 2024",
-            "class": "Terpopuler Motor"
+            "class": "Terpopuler Mobil"
         },
         {
             "title": "ECGO Atasi Kendala Ojol Pakai Motor Listrik, Bisa Jalan 200 Km Sehari",
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "date": "15 April 2024",
-            "class": "Terpopuler Mobil"
+            "class": "Mobil"
         },
         {
             "title": "Makin Banyak Merek Motor Listrik Bikin Pabrik di Indonesia, Aismoli Bilang Begini.",
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "date": "14 Februari 2024",
-            "class": "Motor Terpopuler"
+            "class": "Motor"
         },
         {
             "title": "Jaringan Terus Diperluas, Voltron Buka 6 SPKLU Lagi di PIK.",
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "date": "27 Desember 2023",
-            "class": "Motor Terpopuler"
+            "class": "Motor"
         },
         {
             "title": "Inkonsistensi Pemerintah Jadi Penyebab Turunnya Penjualan Mobil Listrik",
@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "date": "31 Desember 2023",
-            "class": "Motor Terpopuler"
+            "class": "Motor"
         },
         {
             "title": "Mobil Listrik Termurah Hyundai di Indonesia Mau Dijual Bulan Depan",
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "date": "20 Maret 2024",
-            "class": "Terpopuler Mobil"
+            "class": "Mobil"
 
         },
         {
