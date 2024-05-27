@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const lihatSemuaBerita = `
         <a href="pages/berita.html" class="lihat-semua">
-        <h6 class="text-start">Lihat Semuanya</h6>
+        <h6 class="text-center">Lihat Semuanya</h6>
         </a>
     `;
     cardContainerBerita.innerHTML += lihatSemuaBerita;
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const lihatSemuaReview = `
         <a href="pages/review.html" class="lihat-semua">
-        <h6 class="text-start">Lihat Semuanya</h6>
+        <h6 class="text-center">Lihat Semuanya</h6>
         </a>
     `;
     cardContainerReview.innerHTML += lihatSemuaReview;
