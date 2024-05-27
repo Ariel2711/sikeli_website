@@ -61,6 +61,12 @@ ul.filters>li.active>a {
     height: 170px;
   }
 
+  .card-custom-height img {
+    height: 170px;
+    object-fit: cover;
+    width: 100%;
+  }
+
   .card-custom-height-big {
     height: 400px;
   }

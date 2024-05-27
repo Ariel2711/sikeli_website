@@ -1,55 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const filters = document.querySelectorAll(".filters li");
-    const cards = document.querySelectorAll(".container");
-
-    filters.forEach(filter => {
-        filter.addEventListener("click", function () {
-            filters.forEach(item => {
-                item.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-            const filterValue = this.getAttribute("data-filter");
-
-            cards.forEach(card => {
-                if (filterValue === "*" || card.classList.contains(filterValue)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        });
-    });
-
-    const searchInput = document.getElementById("searchInput");
-    const searchButton = document.getElementById("searchButton");
-    const reviews = document.querySelectorAll(".container");
-
-    function filterReviews(searchTerm) {
-        reviews.forEach(function (review) {
-            const title = review.querySelector("h2").textContent.toLowerCase();
-            const description = review.querySelector("p").textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                review.style.display = "block";
-            } else {
-                review.style.display = "none";
-            }
-        });
-    }
-
-    searchInput.addEventListener("input", function () {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        filterReviews(searchTerm);
-    });
-
-    searchButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        filterReviews(searchTerm);
-    });
-
     const forumPosts = [
         {
             "author": "Sukirman",
@@ -62,7 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "views": "24 Views | 12 Reply",
-            "image": "/images/Mustache-man.png"
+            "image": "/images/Mustache-man.png",
+            "categoryFilter": "Motor FAQ"
         },
         {
             "author": "Suparjo",
@@ -75,7 +25,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "views": "25 Views | 4 Reply",
-            "image": "/images/Masculine-man.png"
+            "image": "/images/Masculine-man.png",
+            "categoryFilter": "Mobil FAQ"
         },
         {
             "author": "Suparjo",
@@ -88,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-danger"
             },
             "views": "54 Views | 20 Reply",
-            "image": "/images/Masculine-man.png"
+            "image": "/images/Masculine-man.png",
+            "categoryFilter": "Umum"
         },
         {
             "author": "Herman",
@@ -101,7 +53,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "views": "37 Views | 8 Reply",
-            "image": "/images/Bald-man.png"
+            "image": "/images/Bald-man.png",
+            "categoryFilter": "Mobil"
         },
         {
             "author": "Maimunah",
@@ -114,7 +67,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-danger"
             },
             "views": "25 Views | 4 Reply",
-            "image": "/images/Old-woman.png"
+            "image": "/images/Old-woman.png",
+            "categoryFilter": "Umum FAQ"
         },
         {
             "author": "Anne",
@@ -127,7 +81,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "views": "81 Views | 17 Reply",
-            "image": "/images/Blonde-girl.png"
+            "image": "/images/Blonde-girl.png",
+            "categoryFilter": "Mobil"
         },
         {
             "author": "Bayu",
@@ -140,7 +95,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "views": "25 Views | 4 Reply",
-            "image": "/images/Old-man.png"
+            "image": "/images/Old-man.png",
+            "categoryFilter": "Motor"
         },
         {
             "author": "Djawir",
@@ -153,7 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "views": "69 Views | 13 Reply",
-            "image": "/images/HoodieOld-man.png"
+            "image": "/images/HoodieOld-man.png",
+            "categoryFilter": "Motor"
         },
         {
             "author": "Djawir",
@@ -166,7 +123,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "views": "190 Views | 45 Reply",
-            "image": "/images/HoodieOld-man.png"
+            "image": "/images/HoodieOld-man.png",
+            "categoryFilter": "Mobil FAQ"
         },
         {
             "author": "Anne",
@@ -179,7 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-danger"
             },
             "views": "48 Views | 7 Reply",
-            "image": "/images/Blonde-girl.png"
+            "image": "/images/Blonde-girl.png",
+            "categoryFilter": "Umum FAQ"
         }
     ];
 
@@ -187,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     forumPosts.forEach(post => {
         const postHTML = `
-            <div class="container ${post.category.text} FAQ">
+            <div class="container ${post.categoryFilter}">
                 <div class="forum-post">
                     <div class="post-header">
                         <div class="post-author">
@@ -254,5 +213,58 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
         commentsSection.innerHTML += commentHTML;
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const filters = document.querySelectorAll(".filters li");
+    const cards = document.querySelectorAll(".container");
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function () {
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            cards.forEach(card => {
+                if (filterValue === "*" || card.classList.contains(filterValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+    const reviews = document.querySelectorAll(".container");
+
+    function filterReviews(searchTerm) {
+        reviews.forEach(function (review) {
+            const title = review.querySelector("h2").textContent.toLowerCase();
+            const description = review.querySelector("p").textContent.toLowerCase();
+
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                review.style.display = "block";
+            } else {
+                review.style.display = "none";
+            }
+        });
+    }
+
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterReviews(searchTerm);
+    });
+
+    searchButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterReviews(searchTerm);
     });
 });
