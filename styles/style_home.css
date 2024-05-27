@@ -54,11 +54,12 @@ footer {
 }
 
 .nav-link.active {
-  color: aqua !important;
+  /* color: silver !important; */
+  font-weight: 800;
 }
 
 .nav-link.active:hover {
-  font-weight: 600;
+  font-weight: 800;
   /* color: aqua !important; */
 }
 
