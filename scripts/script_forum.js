@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "color": "bg-success",
                 "textColor": "text-success"
             },
-            "views": "24 Views | 12 Reply"
+            "views": "24 Views | 12 Reply",
+            "image": "/images/Mustache-man.png"
         },
         {
             "author": "Suparjo",
@@ -73,7 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "color": "bg-primary",
                 "textColor": "text-primary"
             },
-            "views": "25 Views | 4 Reply"
+            "views": "25 Views | 4 Reply",
+            "image": "/images/Masculine-man.png"
         },
         {
             "author": "Suparjo",
@@ -85,7 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 "color": "bg-danger",
                 "textColor": "text-danger"
             },
-            "views": "54 Views | 20 Reply"
+            "views": "54 Views | 20 Reply",
+            "image": "/images/Masculine-man.png"
         }
     ];
 
@@ -97,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="forum-post">
                     <div class="post-header">
                         <div class="post-author">
-                            <img src="../images/slider3.jpg" alt="Photo Profile">
+                            <img src="${post.image}" alt="Photo Profile">
                             <span>${post.author}</span>
                         </div>
                         <span class="post-date">${post.date}</span>

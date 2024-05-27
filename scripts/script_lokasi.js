@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <h5 class="card-title">${data.title}</h5>
         </a>
         <p class="card-text-desc">${data.address}</p>
-        <a href="${data.link}">open<span class="fluent--open-16-regular"></span></a>
+        <a href="${data.link}" target="blank">open<span class="fluent--open-16-regular"></span></a>
         </div>
         </div>
         </div>
