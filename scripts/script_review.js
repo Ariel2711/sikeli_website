@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
             category: "Mobil"
         },
         {
-            imgSrc: "/images/slider1.jpg",
+            imgSrc: "/images/gesits.jpeg",
             stars: 2,
             title: "Gesits",
             type: "Skuter matic",
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
             category: "Motor"
         },
         {
-            imgSrc: "/images/slider1.jpg",
+            imgSrc: "/images/alva-one.jpeg",
             stars: 4,
             title: "Alva One",
             type: "Skuter matic",
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             category: "Motor"
         },
         {
-            imgSrc: "/images/slider1.jpg",
+            imgSrc: "/images/selis-e-max.png",
             stars: 5,
             title: "Selis E-Max",
             type: "Motor bebek",
