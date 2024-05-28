@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const cardData = [
-        {
+document.addEventListener("DOMContentLoaded", function() {
+    const cardData = [{
             "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
             "description": "Pabrikan asal China, Neta, tak main-main terjun ke pasar Indonesia. Buktinya salah satu model yang dijual saat ini yaitu Neta V-II sudah diproduksi di Tanah Air.",
             "link": "detail_berita.html",
@@ -62,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainerBig.innerHTML += cardHTML;
     });
 
-    const cardDataSmall = [
-        {
+    const cardDataSmall = [{
             "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
             "description": "Pabrikan asal China, Neta, tak main-main terjun ke pasar Indonesia. Buktinya salah satu model yang dijual saat ini yaitu Neta V-II sudah diproduksi di Tanah Air.",
             "link": "detail_berita.html",
@@ -253,12 +251,11 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainerSmall.innerHTML += cardHTML;
     });
 
-    const commentsData = [
-        {
+    const commentsData = [{
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
+            "commentDate": "12 mei 2024",
             "likes": 0,
             "dislikes": 0
         },
@@ -266,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
+            "commentDate": "12 mei 2024",
             "likes": 0,
             "dislikes": 0
         },
@@ -274,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
+            "commentDate": "12 mei 2024",
             "likes": 0,
             "dislikes": 0
         },
@@ -282,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
+            "commentDate": "12 mei 2024",
             "likes": 0,
             "dislikes": 0
         }
@@ -319,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards = document.querySelectorAll(".card-filter");
 
     filters.forEach(filter => {
-        filter.addEventListener("click", function () {
+        filter.addEventListener("click", function() {
             filters.forEach(item => {
                 item.classList.remove("active");
             });
@@ -339,12 +336,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const filters = document.querySelectorAll(".filters li");
     const cards = document.querySelectorAll(".card-filter");
 
     filters.forEach(filter => {
-        filter.addEventListener("click", function () {
+        filter.addEventListener("click", function() {
             filters.forEach(item => {
                 item.classList.remove("active");
             });
@@ -370,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cardsBig = document.querySelectorAll(".card-custom-height-big");
         const cardsMid = document.querySelectorAll(".card-mid");
 
-        cardsMid.forEach(function (card) {
+        cardsMid.forEach(function(card) {
             const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
             const cardDescription = card.querySelector(".card-text-desc").textContent.toLowerCase();
             if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
@@ -381,22 +378,22 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         if (searchTerm === "") {
-            cardsBig.forEach(function (card) {
+            cardsBig.forEach(function(card) {
                 card.style.display = "grid";
             });
         } else {
-            cardsBig.forEach(function (card) {
+            cardsBig.forEach(function(card) {
                 card.style.display = "none";
             });
         }
     }
 
-    searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", function() {
         const searchTerm = searchInput.value.toLowerCase();
         filterCards(searchTerm);
     });
 
-    searchButton.addEventListener("click", function () {
+    searchButton.addEventListener("click", function() {
         const searchTerm = searchInput.value.toLowerCase();
         filterCards(searchTerm);
     });

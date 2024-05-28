@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const forumPosts = [
-        {
+document.addEventListener("DOMContentLoaded", function() {
+    const forumPosts = [{
             "author": "Sukirman",
             "date": "25 April 2024",
             "title": "Harga Motor Listrik",
@@ -86,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Bayu",
-            "date": "28 December 2023",
+            "date": "28 mei 2023",
             "title": "Berapa jarak motor listrik?",
             "content": "Saya rencana mau beli motor listrik. Biasanya dipake berapa km baru habis baterainya?",
             "category": {
@@ -186,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     filters.forEach(filter => {
-        filter.addEventListener("click", function () {
+        filter.addEventListener("click", function() {
             filters.forEach(item => {
                 item.classList.remove("active");
             });
@@ -216,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const reviews = document.querySelectorAll(".container");
 
     function filterReviews(searchTerm) {
-        reviews.forEach(function (review) {
+        reviews.forEach(function(review) {
             const title = review.querySelector("h2").textContent.toLowerCase();
             const description = review.querySelector("p").textContent.toLowerCase();
 
@@ -228,12 +227,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", function() {
         const searchTerm = searchInput.value.trim().toLowerCase();
         filterReviews(searchTerm);
     });
 
-    searchButton.addEventListener("click", function (event) {
+    searchButton.addEventListener("click", function(event) {
         event.preventDefault();
         const searchTerm = searchInput.value.trim().toLowerCase();
         filterReviews(searchTerm);
