@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "color": "bg-success",
                 "textColor": "text-success"
             },
-            "views": "24 Views | 12 Reply",
+            "views": "35 Views | 8 Reply",
             "image": "/images/Mustache-man.png",
             "categoryFilter": "Motor"
         },
