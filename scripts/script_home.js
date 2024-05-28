@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
             "description": "Pabrikan asal China, Neta, tak main-main terjun ke pasar Indonesia. Buktinya salah satu model yang dijual saat ini yaitu Neta V-II sudah diproduksi di Tanah Air.",
             "link": "pages/detail_berita.html",
-            "image": "images/slider1.jpg",
+            "image": "images/Neta-Berita.jpg",
             "category": "Mobil Listrik",
             "categoryColor": "success",
             "date": "25 April 2024"
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "title": "ECGO Atasi Kendala Ojol Pakai Motor Listrik, Bisa Jalan 200 Km Sehari",
             "description": "Pengendara ojek online atau ojol saat ini sudah mulai menggunakan sepeda motor listrik. Cuma sebagian besar, memang masih mengandalkan motor bensin konc=vensional.",
             "link": "pages/detail_berita.html",
-            "image": "images/slider1.jpg",
+            "image": "images/ECGO-Berita.jpg",
             "category": "Mobil Listrik",
             "categoryColor": "primary",
             "date": "20 April 2024"
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "title": "Airlangga Hartarto Bocorkan Status Pabrik Baterai Mobil Listrik Hyundai di RI.",
             "description": "Menteri Koordinator Bidang Perekonomian, Airlangga Hartarto membocorkan status pabrik baterai Hyundai di Indonesia. Tempat pembuatan penyimpan energi untuk mobil listrik itu akan beroperasi dalam waktu dekat.",
             "link": "pages/detail_berita.html",
-            "image": "images/slider1.jpg",
+            "image": "images/Pabrik-Hyundai-Berita.jpg",
             "category": "Berita Umum",
             "categoryColor": "danger",
             "date": "20 April 2024"

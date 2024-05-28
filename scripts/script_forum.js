@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const forumPosts = [
         {
             "author": "Sukirman",
-            "date": "12 December 2023",
+            "date": "25 April 2024",
             "title": "Harga Motor Listrik",
             "content": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
             "category": {
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Suparjo",
-            "date": "31 December 2023",
+            "date": "11 April 2024",
             "title": "Jenis Mobil yang bagus?",
             "content": "Kalau mobil yang bagus sekarang apa kalau listrik?",
             "category": {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Suparjo",
-            "date": "15 November 2023",
+            "date": "19 Maret 2024",
             "title": "Di isi dirumah boros nggak?",
             "content": "Kalau mobil biasanya boros nggak buat listrik rumah?",
             "category": {
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Maimunah",
-            "date": "11 Maret 2024",
+            "date": "2 Februari 2024",
             "title": "Batere iso njeblug po?",
             "content": "Kula niku tau krungu, nek nganggo montor listrik niku iso kobongan montore. Tenanan po kae?",
             "category": {
@@ -66,13 +66,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 "color": "bg-danger",
                 "textColor": "text-danger"
             },
-            "views": "25 Views | 4 Reply",
+            "views": "71 Views | 19 Reply",
             "image": "/images/Old-woman.png",
             "categoryFilter": "Umum"
         },
         {
             "author": "Anne",
-            "date": "29 Agustus 2023",
+            "date": "29 Desember 2023",
             "title": "Apakah mobil listrik berisik?",
             "content": "Suara yang dikeluarkan mobil listrik berisik kah? Kalau dibandingkan sama mobil diesel gimana?",
             "category": {
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Djawir",
-            "date": "5 September 2023",
+            "date": "5 November 2023",
             "title": "Motor listrik tahan banjir nggak?",
             "content": "Kalau saya pakai terobos banjir, nanti bisa mati di tengah jalan nggak? Atau malah mati total?",
             "category": {
@@ -114,7 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Djawir",
-            "date": "17 Agustus 2023",
+            "date": "31 Oktober 2023",
             "title": "Ada mobil listrik anti peluru?",
             "content": "Bos saya suruh saya cariin mobil yang aman anti peluru gitu. Tapi dianya mau yang ramah lingkungan, mobil listrik ada yang memenuhi kriteria gitu nggak? Infokan rek",
             "category": {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Anne",
-            "date": "30 Maret 2024",
+            "date": "17 Agustus 2023",
             "title": "Listrik rumah minimal berapa?",
             "content": "I mau beli mobil dan motor listrik. Kira-kira listrik rumah I harus berapa VA?",
             "category": {
