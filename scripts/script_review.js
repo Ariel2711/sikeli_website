@@ -88,105 +88,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const reviewContainer = document.getElementById('review-container');
 
-    reviewsCard.forEach(review => {
-        const reviewDiv = document.createElement('div');
-        reviewDiv.classList.add('review');
-        // if (review.type === "SUV kompak" || review.type === "Sedan kompak" || review.type === "Hatchback City Car") {
-        //     reviewDiv.classList.add('Mobil');
-        // } else {
-        //     reviewDiv.classList.add('Motor');
-        // }
-        reviewDiv.classList.add(review.category);
+    function displayReviews(reviews) {
+        reviewContainer.innerHTML = '';
+        reviews.forEach(review => {
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('review', review.category);
 
-        if (review.stars >= 4) reviewDiv.classList.add('Terpopuler');
-
-        reviewDiv.innerHTML = `
-            <img src="${review.imgSrc}" alt="Image of ${review.title}">
-            <div class="star-group">
-                ${'<span class="fa fa-star checked"></span>'.repeat(review.stars)}
-                ${'<span class="fa fa-star"></span>'.repeat(5 - review.stars)}
-            </div>
-            <h2>${review.title}</h2>
-            <div class="description">
-                <p><strong>Jenis:</strong> ${review.type}</p>
-                <p><strong>Tenaga:</strong> ${review.power}</p>
-                <p><strong>Jarak tempuh:</strong> ${review.range}</p>
-                <p><strong>Kapasitas baterai:</strong> ${review.battery}</p>
-                <p><strong>Waktu pengisian daya:</strong> ${review.chargingTime}</p>
-                <p><strong>Fitur:</strong> ${review.features}</p>
-                <p><strong>Harga:</strong> ${review.price}</p>
-                <p><a href="${review.link}" class="read-more">Baca Selengkapnya</a></p>
-            </div>
-        `;
-        reviewContainer.appendChild(reviewDiv);
-    });
-
-    const commentsData = [
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        }
-    ];
-
-    const commentsSection = document.getElementById('comments');
-
-    commentsData.forEach(data => {
-        const commentHTML = `
-            <div class="news-comment">
-                <hr>
-                <div class="comment-header">
-                    <div class="comment-author">
-                        <img src="${data.authorImage}" alt="Photo Profile">
-                        <span class="author-name">${data.authorName}</span>
-                    </div>
+            reviewDiv.innerHTML = `
+                <img src="${review.imgSrc}" alt="Image of ${review.title}">
+                <div class="star-group">
+                    ${'<span class="fa fa-star checked"></span>'.repeat(review.stars)}
+                    ${'<span class="fa fa-star"></span>'.repeat(5 - review.stars)}
                 </div>
-                <div class="comment-content">
-                    <p>${data.commentContent}</p>
+                <h2>${review.title}</h2>
+                <div class="description">
+                    <p><strong>Jenis:</strong> ${review.type}</p>
+                    <p><strong>Tenaga:</strong> ${review.power}</p>
+                    <p><strong>Jarak tempuh:</strong> ${review.range}</p>
+                    <p><strong>Kapasitas baterai:</strong> ${review.battery}</p>
+                    <p><strong>Waktu pengisian daya:</strong> ${review.chargingTime}</p>
+                    <p><strong>Fitur:</strong> ${review.features}</p>
+                    <p><strong>Harga:</strong> ${review.price}</p>
+                    <p><a href="${review.link}" class="read-more">Baca Selengkapnya</a></p>
                 </div>
-                <div class="comment-footer">
-                    <div class="review-actions">
-                        <span class="fa fa-thumbs-up"></span><span>${data.likes}</span>
-                        <span class="fa fa-thumbs-down"></span><span>${data.dislikes}</span>
-                    </div>
-                    <span class="comment-date">${data.commentDate}</span>
-                </div>
-            </div>
-        `;
-        commentsSection.innerHTML += commentHTML;
-    });
-});
+            `;
+            reviewContainer.appendChild(reviewDiv);
+        });
+    }
 
-document.addEventListener("DOMContentLoaded", function () {
+    displayReviews(reviewsCard);
+
     const filters = document.querySelectorAll(".filters li");
-    const cards = document.querySelectorAll(".review");
 
     filters.forEach(filter => {
         filter.addEventListener("click", function () {
@@ -198,31 +130,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const filterValue = this.getAttribute("data-filter");
 
-            cards.forEach(card => {
-                if (filterValue === "*" || card.classList.contains(filterValue)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            });
+            if (filterValue === "Terpopuler") {
+                const sortedReviews = [...reviewsCard].sort((a, b) => b.stars - a.stars);
+                displayReviews(sortedReviews);
+            } else {
+                const filteredReviews = filterValue === "*" ? reviewsCard : reviewsCard.filter(review => review.category === filterValue);
+                displayReviews(filteredReviews);
+            }
         });
     });
 
     const searchInput = document.querySelector(".search-bar input");
     const searchButton = document.querySelector(".search-bar button");
-    const reviews = document.querySelectorAll(".review");
 
     function filterReviews(searchTerm) {
-        reviews.forEach(function (review) {
-            const title = review.querySelector("h2").textContent.toLowerCase();
-            const description = review.querySelector(".description").textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                review.style.display = "block";
-            } else {
-                review.style.display = "none";
-            }
+        const filteredReviews = reviewsCard.filter(review => {
+            const title = review.title.toLowerCase();
+            const description = `${review.type} ${review.power} ${review.range} ${review.battery} ${review.chargingTime} ${review.features} ${review.price}`.toLowerCase();
+            return title.includes(searchTerm) || description.includes(searchTerm);
         });
+        displayReviews(filteredReviews);
     }
 
     searchInput.addEventListener("input", function () {

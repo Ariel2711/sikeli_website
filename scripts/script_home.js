@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const cardDataBerita = [
         {
-            "title": "Nyaman dan Irit Menjelajahi Trans Jawa Bersama All New Honda CR-V RS e:HEV",
-            "description": "All New CR-V RS e:HEV menjadi pilihan karena selain ingin mengeksplorasi potensi mesin hybrid untuk menjelajah Trans Jawa, rangkaian fitur yang dimilikinya juga bisa membuat perjalanan lebih nyaman dan aman. Terutama lewat kehadiran teknologi Honda Sensing yang lengkap, menyediakan ragam fitur keselamatan aktif.",
+            "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
+            "description": "Pabrikan asal China, Neta, tak main-main terjun ke pasar Indonesia. Buktinya salah satu model yang dijual saat ini yaitu Neta V-II sudah diproduksi di Tanah Air.",
             "link": "pages/detail_berita.html",
             "image": "images/slider1.jpg",
             "category": "Mobil Listrik",
@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "date": "25 April 2024"
         },
         {
-            "title": "Road Trip Jakarta - Surabaya Bersama All New Toyota Yaris Cross S HV",
-            "description": "Toyota menjadi pabrikan yang aktif menawarkan produk hybrid. Cukup banyak model yang masuk lini keluarga hybrid ditawarkan di Indonesia. Salah satu yang terbaru adalah Yaris Cross. Varian atas dengan menawarkan opsi dengan imbuhan Toyota Hybrid System. Menjadi model yang pas sebagai tes perjalanan jarak jauh sekaligus meninjau jalur mudik. Kami pun memutuskan membawa All New Yaris Cross HEV dari Jakarta menuju Surabaya dalam Electria: Mudik with Hybrid.",
+            "title": "ECGO Atasi Kendala Ojol Pakai Motor Listrik, Bisa Jalan 200 Km Sehari",
+            "description": "Pengendara ojek online atau ojol saat ini sudah mulai menggunakan sepeda motor listrik. Cuma sebagian besar, memang masih mengandalkan motor bensin konc=vensional.",
             "link": "pages/detail_berita.html",
             "image": "images/slider1.jpg",
             "category": "Mobil Listrik",
@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "date": "20 April 2024"
         },
         {
-            "title": "Mudik Asyik Bareng Suzuki Ertiga Cruise Hybrid Menuju Kota Yogyakarta",
-            "description": "Guna menjaga kenyamanan dan efisiensi berkendara ketika melancong jauh, All New Ertiga Hybrid Cruise dimotori oleh mesin berkode K15B. Kemudian dilengkapi teknologi Smart Hybrid Vehicle by Suzuki (SHVS). Kapasitas baterai pun meningkat. Dari 6 Ah menjadi 10 Ah agar memberikan kinerja semakin optimal sebagai mobil rendah emisi dan irit bahan bakar. Bagian ini yang membuat kian mantap buat diajak berkelana dari Jakarta menuju Yogyakarta dengan jarak sejauh lebih kurang 600 km. Selain pengujian, perjalanan ini menjadi simulasi mudik Lebaran 2024.",
+            "title": "Airlangga Hartarto Bocorkan Status Pabrik Baterai Mobil Listrik Hyundai di RI.",
+            "description": "Menteri Koordinator Bidang Perekonomian, Airlangga Hartarto membocorkan status pabrik baterai Hyundai di Indonesia. Tempat pembuatan penyimpan energi untuk mobil listrik itu akan beroperasi dalam waktu dekat.",
             "link": "pages/detail_berita.html",
             "image": "images/slider1.jpg",
             "category": "Berita Umum",

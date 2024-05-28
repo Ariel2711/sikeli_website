@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "views": "24 Views | 12 Reply",
             "image": "/images/Mustache-man.png",
-            "categoryFilter": "Motor FAQ"
+            "categoryFilter": "Motor"
         },
         {
             "author": "Suparjo",
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "views": "25 Views | 4 Reply",
             "image": "/images/Masculine-man.png",
-            "categoryFilter": "Mobil FAQ"
+            "categoryFilter": "Mobil"
         },
         {
             "author": "Suparjo",
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "views": "25 Views | 4 Reply",
             "image": "/images/Old-woman.png",
-            "categoryFilter": "Umum FAQ"
+            "categoryFilter": "Umum"
         },
         {
             "author": "Anne",
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "views": "190 Views | 45 Reply",
             "image": "/images/HoodieOld-man.png",
-            "categoryFilter": "Mobil FAQ"
+            "categoryFilter": "Mobil"
         },
         {
             "author": "Anne",
@@ -138,87 +138,52 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             "views": "48 Views | 7 Reply",
             "image": "/images/Blonde-girl.png",
-            "categoryFilter": "Umum FAQ"
+            "categoryFilter": "Umum"
         }
     ];
 
     const forumPostsContainer = document.getElementById('forum-posts');
 
-    forumPosts.forEach(post => {
-        const postHTML = `
-            <div class="container ${post.categoryFilter}">
-                <div class="forum-post">
-                    <div class="post-header">
-                        <div class="post-author">
-                            <img src="${post.image}" alt="Photo Profile">
-                            <span>${post.author}</span>
+    function displayForumPosts(posts) {
+        forumPostsContainer.innerHTML = '';
+        posts.forEach(post => {
+            const postHTML = `
+                <div class="container ${post.categoryFilter}">
+                    <div class="forum-post">
+                        <div class="post-header">
+                            <div class="post-author">
+                                <img src="${post.image}" alt="Photo Profile">
+                                <span>${post.author}</span>
+                            </div>
+                            <span class="post-date">${post.date}</span>
                         </div>
-                        <span class="post-date">${post.date}</span>
-                    </div>
-                    <div class="post-content">
-                        <h2><a href="detail_forum.html">${post.title}</a></h2>
-                        <p>${post.content}</p>
-                    </div>
-                    <div class="post-footer">
-                        <span class="d-flex align-items-center span-square-kategori">
-                            <span class="square-kategori ${post.category.color} me-2"></span>
-                            <h6 class="${post.category.textColor} text-kategori">${post.category.text}</h6>
-                        </span>
-                        <span class="post-views">${post.views}</span>
+                        <div class="post-content">
+                            <h2><a href="detail_forum.html">${post.title}</a></h2>
+                            <p>${post.content}</p>
+                        </div>
+                        <div class="post-footer">
+                            <span class="d-flex align-items-center span-square-kategori">
+                                <span class="square-kategori ${post.category.color} me-2"></span>
+                                <h6 class="${post.category.textColor} text-kategori">${post.category.text}</h6>
+                            </span>
+                            <span class="post-views">${post.views}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        `;
-        forumPostsContainer.innerHTML += postHTML;
-    });
+            `;
+            forumPostsContainer.innerHTML += postHTML;
+        });
+    }
 
-    const commentsData = [
-        {
-            "authorName": "Herman",
-            "authorImage": "../images/tesla-model-3-.jpg",
-            "replyContent": "Menurut saya, masih cukup mahal, tapi sebanding dengan teknologi yang ditawarkan.",
-            "replyDate": "13 December 2024",
-            "likes": 10,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Siti",
-            "authorImage": "../images/hyundai-kona-electric-.jpg",
-            "replyContent": "<span class='text-primary'>@Herman</span> Sekarang ada banyak pilihan yang lebih terjangkau dibanding beberapa tahun yang lalu.",
-            "replyDate": "14 December 2024",
-            "likes": 20,
-            "dislikes": 5
-        }
-    ];
+    displayForumPosts(forumPosts);
 
-    const commentsSection = document.getElementById('comments');
-
-    commentsData.forEach(comment => {
-        const commentHTML = `
-            <div class="reply">
-            <div class="post-header">
-                <div class="post-author">
-                    <img src="${comment.authorImage}" alt="Photo Profile">
-                    <span>${comment.author}</span>
-                </div>
-                <span class="post-date">${comment.commentDate}</span>
-            </div>
-            <div class="post-content">
-                <p>${comment.commentContent}</p>
-            </div>
-            <div class="review-actions">
-            <span class="fa fa-thumbs-up"></span><span>${comment.likes}</span>
-            <span class="fa fa-thumbs-down"></span><span>${comment.dislikes}</span>
-            </div>
-            </div>
-        `;
-        commentsSection.innerHTML += commentHTML;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
     const filters = document.querySelectorAll(".filters li");
     const cards = document.querySelectorAll(".container");
+
+    function parseViews(viewString) {
+        const match = viewString.match(/(\d+) Views/);
+        return match ? parseInt(match[1]) : 0;
+    }
 
     filters.forEach(filter => {
         filter.addEventListener("click", function () {
@@ -230,13 +195,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const filterValue = this.getAttribute("data-filter");
 
-            cards.forEach(card => {
-                if (filterValue === "*" || card.classList.contains(filterValue)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
+            let filteredPosts = forumPosts.filter(post => {
+                return filterValue === "*" || post.categoryFilter === filterValue;
             });
+            displayForumPosts(filteredPosts);
+
+            if (filterValue === "FAQ") {
+                let filteredPosts = forumPosts.filter(post => {
+                    return true;
+                });
+                filteredPosts.sort((a, b) => parseViews(b.views) - parseViews(a.views));
+                displayForumPosts(filteredPosts);
+            }
+
         });
     });
 
