@@ -289,6 +289,11 @@ body {
   height: 350px;
 }
 
+.card-custom-height-big-review img {
+  height: 200px;
+  object-fit: cover;
+}
+
 .add-comment {
   display: flex;
   align-items: center;
@@ -334,4 +339,13 @@ body {
     background-color: #04738b;
     color: white;
   }
+}
+
+.star-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

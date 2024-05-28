@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "image": "images/ECGO-Berita.jpg",
             "category": "Mobil Listrik",
             "categoryColor": "primary",
-            "date": "20 April 2024"
+            "date": "14 Januari 2024"
         },
         {
             "title": "Airlangga Hartarto Bocorkan Status Pabrik Baterai Mobil Listrik Hyundai di RI.",
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "image": "images/Pabrik-Hyundai-Berita.jpg",
             "category": "Berita Umum",
             "categoryColor": "danger",
-            "date": "20 April 2024"
+            "date": "2 Januari 2024"
         }
     ];
 
@@ -66,6 +66,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cardDataReview = [
         {
+            "title": "Tesla Model 3",
+            "description": [
+                "Jenis: SUV kompak",
+                "Harga: Rp 990.000.000 (varian Performance)"
+            ],
+            "link": "/pages/detail_review.html",
+            "image": "images/tesla-model-3-.jpg",
+            "date": "10 Mei 2024"
+        },
+        {
             "title": "Hyundai Kona Electric",
             "description": [
                 "Jenis: Sedan kompak",
@@ -74,16 +84,6 @@ document.addEventListener("DOMContentLoaded", function () {
             "link": "/pages/detail_review.html",
             "image": "images/hyundai-kona-electric-.jpg",
             "date": "10 Mei 2024"
-        },
-        {
-            "title": "Tesla Model 3",
-            "description": [
-                "Jenis: SUV kompak",
-                "Harga: Rp 990.000.000 (varian Performance)"
-            ],
-            "link": "/pages/detail_review.html",
-            "image": "images/tesla-model-3-.jpg",
-            "date": "5 Mei 2024"
         },
         {
             "title": "Wuling Air EV",

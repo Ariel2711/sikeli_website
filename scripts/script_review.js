@@ -1,21 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const reviewsCard = [
         {
-            imgSrc: "/images/hyundai-kona-electric-.jpg",
-            stars: 3,
-            title: "Hyundai Kona Electric",
-            type: "SUV kompak",
-            power: "Listrik",
-            range: "345 km (varian Signature)",
-            battery: "64,8 kWh",
-            chargingTime: "7 jam 25 menit (AC 10 kW) atau 47 menit (DC 100 kW)",
-            features: "Sunroof, panoramic sunroof, head-up display, wireless charging, sound system Krell, Apple CarPlay dan Android Auto",
-            price: "Rp 675.000.000 (varian Signature)",
-            numPrice: 675000000,
-            link: "detail_review.html",
-            category: "Mobil"
-        },
-        {
             imgSrc: "/images/tesla-model-3-.jpg",
             stars: 4,
             title: "Tesla Model 3",
@@ -27,6 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
             features: "Autopilot, panoramic sunroof, heated seats, wireless charging, sound system premium, Apple CarPlay dan Android Auto",
             price: "Rp 990.000.000 (varian Performance)",
             numPrice: 990000000,
+            link: "detail_review.html",
+            category: "Mobil"
+        },
+        {
+            imgSrc: "/images/hyundai-kona-electric-.jpg",
+            stars: 3,
+            title: "Hyundai Kona Electric",
+            type: "SUV kompak",
+            power: "Listrik",
+            range: "345 km (varian Signature)",
+            battery: "64,8 kWh",
+            chargingTime: "7 jam 25 menit (AC 10 kW) atau 47 menit (DC 100 kW)",
+            features: "Sunroof, panoramic sunroof, head-up display, wireless charging, sound system Krell, Apple CarPlay dan Android Auto",
+            price: "Rp 675.000.000 (varian Signature)",
+            numPrice: 675000000,
             link: "detail_review.html",
             category: "Mobil"
         },
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             imgSrc: "/images/gesits.jpeg",
-            stars: 2,
+            stars: 3,
             title: "Gesits",
             type: "Skuter matic",
             power: "Listrik",
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
             category: "Motor"
         },
         {
-            imgSrc: "/images/selis-e-max.png",
+            imgSrc: "/images/selis.jpeg",
             stars: 5,
             title: "Selis E-Max",
             type: "Motor bebek",
@@ -108,13 +108,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
                 <h2>${review.title}</h2>
                 <div class="description">
+                <p><strong>Harga:</strong> ${review.price}</p>
                     <p><strong>Jenis:</strong> ${review.type}</p>
                     <p><strong>Tenaga:</strong> ${review.power}</p>
                     <p><strong>Jarak tempuh:</strong> ${review.range}</p>
                     <p><strong>Kapasitas baterai:</strong> ${review.battery}</p>
                     <p><strong>Waktu pengisian daya:</strong> ${review.chargingTime}</p>
                     <p><strong>Fitur:</strong> ${review.features}</p>
-                    <p><strong>Harga:</strong> ${review.price}</p>
                     <p><a href="${review.link}" class="read-more">Baca Selengkapnya</a></p>
                 </div>
             `;
