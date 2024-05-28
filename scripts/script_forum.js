@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         {
             "author": "Bayu",
-            "date": "28 Mei 2023",
+            "date": "28 Desember 2023",
             "title": "Berapa jarak motor listrik?",
             "content": "Saya rencana mau beli motor listrik. Biasanya dipake berapa km baru habis baterainya?",
             "category": {
