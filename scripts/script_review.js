@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "7 jam 25 menit (AC 10 kW) atau 47 menit (DC 100 kW)",
             features: "Sunroof, panoramic sunroof, head-up display, wireless charging, sound system Krell, Apple CarPlay dan Android Auto",
             price: "Rp 675.000.000 (varian Signature)",
+            numPrice: 675000000,
             link: "detail_review.html",
             category: "Mobil"
         },
@@ -25,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "5 jam 45 menit (AC 11 kW) atau 25 menit (DC 250 kW)",
             features: "Autopilot, panoramic sunroof, heated seats, wireless charging, sound system premium, Apple CarPlay dan Android Auto",
             price: "Rp 990.000.000 (varian Performance)",
+            numPrice: 990000000,
             link: "detail_review.html",
             category: "Mobil"
         },
@@ -39,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "5-6 jam (AC rumahan) atau 40 menit (fast charging)",
             features: "AC, layar sentuh infotainment, electric windows, remote keyless entry, ABS & EBD",
             price: "Rp243.000.000 (varian Standard Range)",
+            numPrice: 243000000,
             link: "detail_review.html",
             category: "Mobil"
         },
@@ -53,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "8 jam",
             features: "Lampu LED, speedometer digital, keyless entry, alarm, socket charger",
             price: "Rp27.500.000",
+            numPrice: 27500000,
             link: "detail_review.html",
             category: "Motor"
         },
@@ -67,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "4 jam",
             features: "Lampu LED, speedometer digital, keyless entry, alarm, USB port, socket charger",
             price: "Rp36.000.000",
+            numPrice: 36000000,
             link: "detail_review.html",
             category: "Motor"
         },
@@ -81,6 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "4 jam",
             features: "Lampu LED, speedometer digital, keyless entry, alarm, socket charger",
             price: "Rp21.500.000",
+            numPrice: 21500000,
             link: "detail_review.html",
             category: "Motor"
         }
@@ -132,6 +138,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (filterValue === "Terpopuler") {
                 const sortedReviews = [...reviewsCard].sort((a, b) => b.stars - a.stars);
+                displayReviews(sortedReviews);
+            } else if (filterValue === "Termahal") {
+                const sortedReviews = [...reviewsCard].sort((a, b) => b.numPrice - a.numPrice);
+                displayReviews(sortedReviews);
+            } else if (filterValue === "Termurah") {
+                const sortedReviews = [...reviewsCard].sort((b, a) => b.numPrice - a.numPrice);
                 displayReviews(sortedReviews);
             } else {
                 const filteredReviews = filterValue === "*" ? reviewsCard : reviewsCard.filter(review => review.category === filterValue);
