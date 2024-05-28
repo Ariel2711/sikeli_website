@@ -245,7 +245,7 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 
   .card-text-desc {
@@ -255,6 +255,14 @@ body {
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     margin-top: 5px;
+    /* font-size: 14px; */
+  }
+
+  #recommendation-title {
+    font-size: 18px;
+  }
+
+  #recommendation-desc {
     font-size: 14px;
   }
 }

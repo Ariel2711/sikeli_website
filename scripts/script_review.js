@@ -1,55 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const filters = document.querySelectorAll(".filters li");
-    const cards = document.querySelectorAll(".review");
-
-    filters.forEach(filter => {
-        filter.addEventListener("click", function () {
-            filters.forEach(item => {
-                item.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-            const filterValue = this.getAttribute("data-filter");
-
-            cards.forEach(card => {
-                if (filterValue === "*" || card.classList.contains(filterValue)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        });
-    });
-
-    const searchInput = document.querySelector(".search-bar input");
-    const searchButton = document.querySelector(".search-bar button");
-    const reviews = document.querySelectorAll(".review");
-
-    function filterReviews(searchTerm) {
-        reviews.forEach(function (review) {
-            const title = review.querySelector("h2").textContent.toLowerCase();
-            const description = review.querySelector(".description").textContent.toLowerCase();
-
-            if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                review.style.display = "block";
-            } else {
-                review.style.display = "none";
-            }
-        });
-    }
-
-    searchInput.addEventListener("input", function () {
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        filterReviews(searchTerm);
-    });
-
-    searchButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        const searchTerm = searchInput.value.trim().toLowerCase();
-        filterReviews(searchTerm);
-    });
-
     const reviewsCard = [
         {
             imgSrc: "/images/hyundai-kona-electric-.jpg",
@@ -62,7 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "7 jam 25 menit (AC 10 kW) atau 47 menit (DC 100 kW)",
             features: "Sunroof, panoramic sunroof, head-up display, wireless charging, sound system Krell, Apple CarPlay dan Android Auto",
             price: "Rp 675.000.000 (varian Signature)",
-            link: "detail_review.html"
+            numPrice: 675000000,
+            link: "detail_review.html",
+            category: "Mobil"
         },
         {
             imgSrc: "/images/tesla-model-3-.jpg",
@@ -75,7 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "5 jam 45 menit (AC 11 kW) atau 25 menit (DC 250 kW)",
             features: "Autopilot, panoramic sunroof, heated seats, wireless charging, sound system premium, Apple CarPlay dan Android Auto",
             price: "Rp 990.000.000 (varian Performance)",
-            link: "detail_review.html"
+            numPrice: 990000000,
+            link: "detail_review.html",
+            category: "Mobil"
         },
         {
             imgSrc: "/images/Wuling-Air-EV.jpg",
@@ -88,7 +41,9 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "5-6 jam (AC rumahan) atau 40 menit (fast charging)",
             features: "AC, layar sentuh infotainment, electric windows, remote keyless entry, ABS & EBD",
             price: "Rp243.000.000 (varian Standard Range)",
-            link: "detail_review.html"
+            numPrice: 243000000,
+            link: "detail_review.html",
+            category: "Mobil"
         },
         {
             imgSrc: "/images/gesits.jpeg",
@@ -101,7 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "8 jam",
             features: "Lampu LED, speedometer digital, keyless entry, alarm, socket charger",
             price: "Rp27.500.000",
-            link: "detail_review.html"
+            numPrice: 27500000,
+            link: "detail_review.html",
+            category: "Motor"
         },
         {
             imgSrc: "/images/alva-one.jpeg",
@@ -114,7 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "4 jam",
             features: "Lampu LED, speedometer digital, keyless entry, alarm, USB port, socket charger",
             price: "Rp36.000.000",
-            link: "detail_review.html"
+            numPrice: 36000000,
+            link: "detail_review.html",
+            category: "Motor"
         },
         {
             imgSrc: "/images/selis-e-max.png",
@@ -127,101 +86,92 @@ document.addEventListener("DOMContentLoaded", function () {
             chargingTime: "4 jam",
             features: "Lampu LED, speedometer digital, keyless entry, alarm, socket charger",
             price: "Rp21.500.000",
-            link: "detail_review.html"
+            numPrice: 21500000,
+            link: "detail_review.html",
+            category: "Motor"
         }
     ];
 
     const reviewContainer = document.getElementById('review-container');
 
-    reviewsCard.forEach(review => {
-        const reviewDiv = document.createElement('div');
-        reviewDiv.classList.add('review');
-        if (review.type === "SUV kompak" || review.type === "Sedan kompak" || review.type === "Hatchback City Car") {
-            reviewDiv.classList.add('Mobil');
-        } else {
-            reviewDiv.classList.add('Motor');
-        }
+    function displayReviews(reviews) {
+        reviewContainer.innerHTML = '';
+        reviews.forEach(review => {
+            const reviewDiv = document.createElement('div');
+            reviewDiv.classList.add('review', review.category);
 
-        reviewDiv.innerHTML = `
-            <img src="${review.imgSrc}" alt="Image of ${review.title}">
-            <div class="star-group">
-                ${'<span class="fa fa-star checked"></span>'.repeat(review.stars)}
-                ${'<span class="fa fa-star"></span>'.repeat(5 - review.stars)}
-            </div>
-            <h2>${review.title}</h2>
-            <div class="description">
-                <p><strong>Jenis:</strong> ${review.type}</p>
-                <p><strong>Tenaga:</strong> ${review.power}</p>
-                <p><strong>Jarak tempuh:</strong> ${review.range}</p>
-                <p><strong>Kapasitas baterai:</strong> ${review.battery}</p>
-                <p><strong>Waktu pengisian daya:</strong> ${review.chargingTime}</p>
-                <p><strong>Fitur:</strong> ${review.features}</p>
-                <p><strong>Harga:</strong> ${review.price}</p>
-                <p><a href="${review.link}" class="read-more">Baca Selengkapnya</a></p>
-            </div>
-        `;
-        reviewContainer.appendChild(reviewDiv);
+            reviewDiv.innerHTML = `
+                <img src="${review.imgSrc}" alt="Image of ${review.title}">
+                <div class="star-group">
+                    ${'<span class="fa fa-star checked"></span>'.repeat(review.stars)}
+                    ${'<span class="fa fa-star"></span>'.repeat(5 - review.stars)}
+                </div>
+                <h2>${review.title}</h2>
+                <div class="description">
+                    <p><strong>Jenis:</strong> ${review.type}</p>
+                    <p><strong>Tenaga:</strong> ${review.power}</p>
+                    <p><strong>Jarak tempuh:</strong> ${review.range}</p>
+                    <p><strong>Kapasitas baterai:</strong> ${review.battery}</p>
+                    <p><strong>Waktu pengisian daya:</strong> ${review.chargingTime}</p>
+                    <p><strong>Fitur:</strong> ${review.features}</p>
+                    <p><strong>Harga:</strong> ${review.price}</p>
+                    <p><a href="${review.link}" class="read-more">Baca Selengkapnya</a></p>
+                </div>
+            `;
+            reviewContainer.appendChild(reviewDiv);
+        });
+    }
+
+    displayReviews(reviewsCard);
+
+    const filters = document.querySelectorAll(".filters li");
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function () {
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            if (filterValue === "Terpopuler") {
+                const sortedReviews = [...reviewsCard].sort((a, b) => b.stars - a.stars);
+                displayReviews(sortedReviews);
+            } else if (filterValue === "Termahal") {
+                const sortedReviews = [...reviewsCard].sort((a, b) => b.numPrice - a.numPrice);
+                displayReviews(sortedReviews);
+            } else if (filterValue === "Termurah") {
+                const sortedReviews = [...reviewsCard].sort((b, a) => b.numPrice - a.numPrice);
+                displayReviews(sortedReviews);
+            } else {
+                const filteredReviews = filterValue === "*" ? reviewsCard : reviewsCard.filter(review => review.category === filterValue);
+                displayReviews(filteredReviews);
+            }
+        });
     });
 
-    const commentsData = [
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        },
-        {
-            "authorName": "Sukirman",
-            "authorImage": "../images/slider3.jpg",
-            "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 December 2024",
-            "likes": 0,
-            "dislikes": 0
-        }
-    ];
+    const searchInput = document.querySelector(".search-bar input");
+    const searchButton = document.querySelector(".search-bar button");
 
-    const commentsSection = document.getElementById('comments');
+    function filterReviews(searchTerm) {
+        const filteredReviews = reviewsCard.filter(review => {
+            const title = review.title.toLowerCase();
+            const description = `${review.type} ${review.power} ${review.range} ${review.battery} ${review.chargingTime} ${review.features} ${review.price}`.toLowerCase();
+            return title.includes(searchTerm) || description.includes(searchTerm);
+        });
+        displayReviews(filteredReviews);
+    }
 
-    commentsData.forEach(data => {
-        const commentHTML = `
-            <div class="news-comment">
-                <hr>
-                <div class="comment-header">
-                    <div class="comment-author">
-                        <img src="${data.authorImage}" alt="Photo Profile">
-                        <span class="author-name">${data.authorName}</span>
-                    </div>
-                </div>
-                <div class="comment-content">
-                    <p>${data.commentContent}</p>
-                </div>
-                <div class="comment-footer">
-                    <div class="review-actions">
-                        <span class="fa fa-thumbs-up"></span><span>${data.likes}</span>
-                        <span class="fa fa-thumbs-down"></span><span>${data.dislikes}</span>
-                    </div>
-                    <span class="comment-date">${data.commentDate}</span>
-                </div>
-            </div>
-        `;
-        commentsSection.innerHTML += commentHTML;
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterReviews(searchTerm);
+    });
+
+    searchButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        filterReviews(searchTerm);
     });
 });

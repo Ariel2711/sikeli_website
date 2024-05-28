@@ -1,65 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const filters = document.querySelectorAll(".filters li");
-    const cards = document.querySelectorAll(".card-filter");
-
-    filters.forEach(filter => {
-        filter.addEventListener("click", function () {
-            filters.forEach(item => {
-                item.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-            const filterValue = this.getAttribute("data-filter");
-
-            cards.forEach(card => {
-                if (filterValue === "*" || card.classList.contains(filterValue)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        });
-    });
-
-    const searchInput = document.getElementById("searchInput");
-    const searchButton = document.getElementById("searchButton");
-
-    function filterCards(searchTerm) {
-        const cardsBig = document.querySelectorAll(".card-custom-height-big");
-        const cardsMid = document.querySelectorAll(".card-mid");
-
-        cardsMid.forEach(function (card) {
-            const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
-            const cardDescription = card.querySelector(".card-text-desc").textContent.toLowerCase();
-            if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
-                card.style.display = "block";
-            } else {
-                card.style.display = "none";
-            }
-        });
-
-        if (searchTerm === "") {
-            cardsBig.forEach(function (card) {
-                card.style.display = "grid";
-            });
-        } else {
-            cardsBig.forEach(function (card) {
-                card.style.display = "none";
-            });
-        }
-    }
-
-    searchInput.addEventListener("input", function () {
-        const searchTerm = searchInput.value.toLowerCase();
-        filterCards(searchTerm);
-    });
-
-    searchButton.addEventListener("click", function () {
-        const searchTerm = searchInput.value.toLowerCase();
-        filterCards(searchTerm);
-    });
-
     const cardData = [
         {
             "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
@@ -125,6 +64,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cardDataSmall = [
         {
+            "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
+            "description": "Pabrikan asal China, Neta, tak main-main terjun ke pasar Indonesia. Buktinya salah satu model yang dijual saat ini yaitu Neta V-II sudah diproduksi di Tanah Air.",
+            "link": "detail_berita.html",
+            "image": "../images/slider1.jpg",
+            "category": {
+                "text": "Mobil Listrik",
+                "color": "bg-primary",
+                "textColor": "text-primary"
+            },
+            "date": "25 April 2024",
+            "class": "Terpopuler Mobil"
+        },
+        {
+            "title": "ECGO Atasi Kendala Ojol Pakai Motor Listrik, Bisa Jalan 200 Km Sehari",
+            "description": "Pengendara ojek online atau ojol saat ini sudah mulai menggunakan sepeda motor listrik. Cuma sebagian besar, memang masih mengandalkan motor bensin konc=vensional.",
+            "link": "detail_berita.html",
+            "image": "../images/slider2.jpg",
+            "category": {
+                "text": "Motor Listrik",
+                "color": "bg-success",
+                "textColor": "text-success"
+            },
+            "date": "14 Januari 2024",
+            "class": "Terpopuler Motor"
+        },
+        {
+            "title": "Airlangga Hartarto Bocorkan Status Pabrik Baterai Mobil Listrik Hyundai di RI.",
+            "description": "Menteri Koordinator Bidang Perekonomian, Airlangga Hartarto membocorkan status pabrik baterai Hyundai di Indonesia. Tempat pembuatan penyimpan energi untuk mobil listrik itu akan beroperasi dalam waktu dekat.",
+            "link": "detail_berita.html",
+            "image": "../images/slider3.jpg",
+            "category": {
+                "text": "Berita Umum",
+                "color": "bg-danger",
+                "textColor": "text-danger"
+            },
+            "date": "20 April 2024",
+            "class": "Terpopuler Berita-Umum"
+        },
+        {
             "title": "Yuanhang Auto resmi luncurkan mobil listrik H9.",
             "description": "Jenama otomotif yang fokus dalam pengembangan kendaraan elektrik, Yuanhang Auto resmi menghadirkan kendaraan jenis Sport Utility Vehicle (SUV) listrik murni H9 dengan tiga pilihan jarak jelajah 650 km, 840 km, dan 950 km.",
             "link": "detail_berita.html",
@@ -135,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "date": "15 April 2024",
-            "class": "Terpopuler Mobil"
+            "class": "Mobil"
         },
         {
             "title": "Makin Banyak Merek Motor Listrik Bikin Pabrik di Indonesia, Aismoli Bilang Begini.",
@@ -148,10 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "date": "14 Februari 2024",
-            "class": "Motor Terpopuler"
+            "class": "Motor"
         },
         {
-            "title":"Jaringan Terus Diperluas, Voltron Buka 6 SPKLU Lagi di PIK.",
+            "title": "Jaringan Terus Diperluas, Voltron Buka 6 SPKLU Lagi di PIK.",
             "description": "PT Exelly Elektrik Indonesia (Voltron), terus memperluas jaringan Stasiun Pengisian Kendaraan Listrik Umum (SPKLU) untuk mendukung ekosistem di Indonesia. Kali ini, operator penyedia pengisian baterai swasta tersebut, menambah enam mesin di area parkir kendaraan Batavia Pantai Indah Kapuk (PIK) selama 1x24 jam, dengan fasilitas yang nyaman.",
             "link": "detail_berita.html",
             "image": "../images/slider3.jpg",
@@ -174,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "date": "27 Desember 2023",
-            "class": "Motor Terpopuler"
+            "class": "Motor"
         },
         {
             "title": "Inkonsistensi Pemerintah Jadi Penyebab Turunnya Penjualan Mobil Listrik",
@@ -201,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-success"
             },
             "date": "31 Desember 2023",
-            "class": "Motor Terpopuler"
+            "class": "Motor"
         },
         {
             "title": "Mobil Listrik Termurah Hyundai di Indonesia Mau Dijual Bulan Depan",
@@ -214,12 +192,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 "textColor": "text-primary"
             },
             "date": "20 Maret 2024",
-            "class": "Terpopuler Mobil"
+            "class": "Mobil"
 
         },
         {
             "title": "Perbandingan Harga Hyundai Kona Electric CBU dan Rakitan Lokal, Turun Ratusan Juta!",
-            "description": "Hyundai Kona Electric rakitan lokal bakal menjadi mobil listrik termurah Hyundai yang dijual di Indonesia. Sejatinya Kona Electric pernah mewarnai jalanan Indonesia tapi statusnya diimpor dari Korea Selatan.",            
+            "description": "Hyundai Kona Electric rakitan lokal bakal menjadi mobil listrik termurah Hyundai yang dijual di Indonesia. Sejatinya Kona Electric pernah mewarnai jalanan Indonesia tapi statusnya diimpor dari Korea Selatan.",
             "link": "detail_berita.html",
             "image": "/images/slider1.jpg",
             "category": {
@@ -335,5 +313,91 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         `;
         commentsSection.innerHTML += commentHTML;
+    });
+
+    const filters = document.querySelectorAll(".filters li");
+    const cards = document.querySelectorAll(".card-filter");
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function () {
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            cards.forEach(card => {
+                if (filterValue === "*" || card.classList.contains(filterValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const filters = document.querySelectorAll(".filters li");
+    const cards = document.querySelectorAll(".card-filter");
+
+    filters.forEach(filter => {
+        filter.addEventListener("click", function () {
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            this.classList.add("active");
+
+            const filterValue = this.getAttribute("data-filter");
+
+            cards.forEach(card => {
+                if (filterValue === "*" || card.classList.contains(filterValue)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+            });
+        });
+    });
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    function filterCards(searchTerm) {
+        const cardsBig = document.querySelectorAll(".card-custom-height-big");
+        const cardsMid = document.querySelectorAll(".card-mid");
+
+        cardsMid.forEach(function (card) {
+            const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
+            const cardDescription = card.querySelector(".card-text-desc").textContent.toLowerCase();
+            if (cardTitle.includes(searchTerm) || cardDescription.includes(searchTerm)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+        if (searchTerm === "") {
+            cardsBig.forEach(function (card) {
+                card.style.display = "grid";
+            });
+        } else {
+            cardsBig.forEach(function (card) {
+                card.style.display = "none";
+            });
+        }
+    }
+
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        filterCards(searchTerm);
+    });
+
+    searchButton.addEventListener("click", function () {
+        const searchTerm = searchInput.value.toLowerCase();
+        filterCards(searchTerm);
     });
 });

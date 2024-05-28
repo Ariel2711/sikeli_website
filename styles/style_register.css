@@ -58,6 +58,15 @@ body {
     box-sizing: border-box;
 }
 
+#confirmation {
+    margin: 0;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
 .form-group input:hover {
     border-color: black;
 }
@@ -110,12 +119,12 @@ body {
     border-color: black;
 }
 
-.login-link {
+#login-link a {
     text-align: center;
     margin-top: 15px;
 }
 
-#sign-in-here:hover {
+#login-link a:hover {
     color: blue;
     cursor: pointer;
 }
