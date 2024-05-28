@@ -46,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
         } else if (jenisKendaraan == "Wuling Air EV") {
             energiKendaraan = 18 / 200;
         } else if (jenisKendaraan == "Gesits") {
-            energiKendaraan = 18 / 100;
+            energiKendaraan = 5 / 100;
         } else if (jenisKendaraan == "Alva One") {
-            energiKendaraan = 18 / 70;
+            energiKendaraan = 2.7 / 70;
         } else if (jenisKendaraan == "Selis E-Max") {
-            energiKendaraan = 18 / 70;
+            energiKendaraan = 2.9 / 60;
         }
 
         let totalEnergi = jarakTempuhValue * energiKendaraan;
