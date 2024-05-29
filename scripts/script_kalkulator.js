@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         const kwhRumahValue = convertCurrencyToNumber(kwhRumah);
-        const jarakTempuhValue = convertCurrencyToNumber(jarakTempuh);
+        const jarakTempuhValue = parseFloat(jarakTempuh);
 
         let estimasiBiaya = 0;
 
@@ -76,6 +76,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const hasil = document.querySelector('.square-result h6');
         hasil.textContent = "Estimasi biaya tambahan untuk pengisian baterai Kendaraan " + jenisKendaraan + " per " + jangkaWaktu + " adalah";
+
+        if (window.innerWidth <= 991) {
+            var targetElement = document.getElementById('resultKalkulator');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
 
