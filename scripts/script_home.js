@@ -1,6 +1,5 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const cardDataBerita = [
-        {
+document.addEventListener("DOMContentLoaded", function() {
+    const cardDataBerita = [{
             "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
             "description": "Pabrikan asal China, Neta, tak main-main terjun ke pasar Indonesia. Buktinya salah satu model yang dijual saat ini yaitu Neta V-II sudah diproduksi di Tanah Air.",
             "link": "pages/detail_berita.html",
@@ -64,8 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
     cardContainerBerita.innerHTML += lihatSemuaBerita;
 
-    const cardDataReview = [
-        {
+    const cardDataReview = [{
             "title": "Tesla Model 3",
             "description": [
                 "Jenis: SUV kompak",

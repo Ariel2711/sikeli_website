@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 mei 2024",
+            "commentDate": "12 Mei 2024",
             "likes": 0,
             "dislikes": 0
         },
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 mei 2024",
+            "commentDate": "12 Mei 2024",
             "likes": 0,
             "dislikes": 0
         },
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 mei 2024",
+            "commentDate": "12 Mei 2024",
             "likes": 0,
             "dislikes": 0
         },
@@ -279,7 +279,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "authorName": "Sukirman",
             "authorImage": "../images/slider3.jpg",
             "commentContent": "Motor Listrik sekarang masih mahal atau nggak dibanding dulu?",
-            "commentDate": "12 mei 2024",
+            "commentDate": "12 Mei 2024",
             "likes": 0,
             "dislikes": 0
         }
