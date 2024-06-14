@@ -1,4 +1,6 @@
+// Event listener untuk memastikan konten DOM telah dimuat sebelum dieksekusi
 document.addEventListener("DOMContentLoaded", function () {
+    // Mendefinisikan array objek yang berisi data review
     const reviewsCard = [
         {
             imgSrc: "/images/tesla-model-3-.jpg",
@@ -92,6 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
+    // Mendapatkan elemen container untuk review
     const reviewContainer = document.getElementById('review-container');
 
     function displayReviews(reviews) {
@@ -100,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const reviewDiv = document.createElement('div');
             reviewDiv.classList.add('review', review.category);
 
+            // Membuat struktur HTML untuk setiap review
             reviewDiv.innerHTML = `
                 <img src="${review.imgSrc}" alt="Image of ${review.title}">
                 <div class="star-group">
@@ -122,20 +126,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Memanggil fungsi untuk menampilkan review pada halaman
     displayReviews(reviewsCard);
 
+    // Mendapatkan elemen-elemen filter
     const filters = document.querySelectorAll(".filters li");
 
+    // Menambahkan event listener untuk setiap filter
     filters.forEach(filter => {
         filter.addEventListener("click", function () {
+            // Menghapus kelas 'active' dari semua filter
             filters.forEach(item => {
                 item.classList.remove("active");
             });
 
+            // Menambahkan kelas 'active' ke filter yang diklik
             this.classList.add("active");
 
+            // Mendapatkan nilai filter yang diklik
             const filterValue = this.getAttribute("data-filter");
 
+            // Melakukan filter atau pengurutan berdasarkan nilai filter yang dipilih
             if (filterValue === "Terpopuler") {
                 const sortedReviews = [...reviewsCard].sort((a, b) => b.stars - a.stars);
                 displayReviews(sortedReviews);
@@ -152,9 +163,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Mendapatkan elemen input pencarian
     const searchInput = document.querySelector(".search-bar input");
     const searchButton = document.querySelector(".search-bar button");
 
+    // Fungsi untuk melakukan filter review berdasarkan kata kunci pencarian
     function filterReviews(searchTerm) {
         const filteredReviews = reviewsCard.filter(review => {
             const title = review.title.toLowerCase();
@@ -164,11 +177,13 @@ document.addEventListener("DOMContentLoaded", function () {
         displayReviews(filteredReviews);
     }
 
+    // Menambahkan event listener untuk input pencarian
     searchInput.addEventListener("input", function () {
         const searchTerm = searchInput.value.trim().toLowerCase();
         filterReviews(searchTerm);
     });
 
+    // Menambahkan event listener untuk tombol pencarian
     searchButton.addEventListener("click", function (event) {
         event.preventDefault();
         const searchTerm = searchInput.value.trim().toLowerCase();

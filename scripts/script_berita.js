@@ -1,3 +1,4 @@
+// Event listener untuk memastikan konten DOM telah dimuat sebelum dieksekusi
 document.addEventListener("DOMContentLoaded", function () {
     const cardData = [
         {
@@ -40,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cardContainerBig = document.getElementById('cardContainerBig');
 
+    // Menghasilkan tampilan untuk setiap card besar
     cardData.forEach(data => {
         const cardHTML = `
             <div class="col justify-content-center">
@@ -227,6 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const cardContainerSmall = document.getElementById('cardContainerSmall');
 
+    // Menghasilkan tampilan untuk setiap card kecil
     cardDataSmall.forEach(data => {
         const cardHTML = `
             <div class="card mb-3 mt-3 card-filter card-custom-height mx-auto ${data.class} card-mid">
@@ -256,31 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const filters = document.querySelectorAll(".filters li");
     const cards = document.querySelectorAll(".card-filter");
 
-    filters.forEach(filter => {
-        filter.addEventListener("click", function () {
-            filters.forEach(item => {
-                item.classList.remove("active");
-            });
-
-            this.classList.add("active");
-
-            const filterValue = this.getAttribute("data-filter");
-
-            cards.forEach(card => {
-                if (filterValue === "*" || card.classList.contains(filterValue)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        });
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const filters = document.querySelectorAll(".filters li");
-    const cards = document.querySelectorAll(".card-filter");
-
+    // Menambahkan event listener untuk filter
     filters.forEach(filter => {
         filter.addEventListener("click", function () {
             filters.forEach(item => {
@@ -301,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Event listener untuk pencarian
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
 
@@ -308,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const cardsBig = document.querySelectorAll(".card-custom-height-big");
         const cardsMid = document.querySelectorAll(".card-mid");
 
+        // Filter card kecil berdasarkan judul dan deskripsi
         cardsMid.forEach(function (card) {
             const cardTitle = card.querySelector(".card-title").textContent.toLowerCase();
             const cardDescription = card.querySelector(".card-text-desc").textContent.toLowerCase();
@@ -318,6 +299,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
+        // Menampilkan kembali semua card besar jika tidak ada yang dicari
         if (searchTerm === "") {
             cardsBig.forEach(function (card) {
                 card.style.display = "grid";
@@ -329,11 +311,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    // Mengaktifkan filter saat input berubah
     searchInput.addEventListener("input", function () {
         const searchTerm = searchInput.value.toLowerCase();
         filterCards(searchTerm);
     });
 
+    // Mengaktifkan filter saat tombol pencarian diklik
     searchButton.addEventListener("click", function () {
         const searchTerm = searchInput.value.toLowerCase();
         filterCards(searchTerm);

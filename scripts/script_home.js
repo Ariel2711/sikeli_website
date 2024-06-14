@@ -1,4 +1,6 @@
+// Event listener untuk memastikan konten DOM telah dimuat sebelum dieksekusi
 document.addEventListener("DOMContentLoaded", function () {
+    // Data card untuk bagian berita
     const cardDataBerita = [
         {
             "title": "Neta Buatan Bekasi Belum Lirik Pasar Ekspor",
@@ -29,9 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
+    // Container untuk menampilkan card-card berita
     const cardContainerBerita = document.getElementById('cardContainerBerita');
 
+    // Menambahkan setiap card berita ke dalam DOM
     cardDataBerita.forEach(data => {
+        // Membuat HTML untuk card berita
         const cardHTML = `
             <div class="card card-home mb-3 mt-3 card-custom-height-home mx-auto">
                 <div class="row g-0">
@@ -54,16 +59,23 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
+
+        // Menambahkan HTML card berita ke dalam container
         cardContainerBerita.innerHTML += cardHTML;
     });
 
+    // Tombol "Lihat Semuanya" untuk bagian berita
     const lihatSemuaBerita = `
         <a href="pages/berita.html" class="lihat-semua">
         <h6 class="text-center">Lihat Semuanya</h6>
         </a>
     `;
+
+    // Menambahkan tombol "Lihat Semuanya" ke dalam container berita
     cardContainerBerita.innerHTML += lihatSemuaBerita;
 
+
+    // Data card untuk bagian review
     const cardDataReview = [
         {
             "title": "Tesla Model 3",
@@ -97,10 +109,15 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     ];
 
+    // Container untuk menampilkan card-card review
     const cardContainerReview = document.getElementById('cardContainerReview');
 
+    // Menambahkan setiap card review ke dalam DOM
     cardDataReview.forEach(data => {
-        const descriptionHTML = data.description.map(desc => `<h6 class="card-text-desc-home">${desc}</h6>`).join('');
+        // Membuat HTML untuk deskripsi card review
+        const descriptionHTML = data.description.map(desc => `<!-- Deskripsi card review -->`).join('');
+
+        // Membuat HTML untuk card review
         const cardHTML = `
             <div class="card card-home mb-3 mt-3 card-custom-height-home mx-auto">
                 <div class="row g-0">
@@ -119,13 +136,18 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
+
+        // Menambahkan HTML card review ke dalam container
         cardContainerReview.innerHTML += cardHTML;
     });
 
+    // Tombol "Lihat Semuanya" untuk bagian review
     const lihatSemuaReview = `
         <a href="pages/review.html" class="lihat-semua">
         <h6 class="text-center">Lihat Semuanya</h6>
         </a>
     `;
+
+    // Menambahkan tombol "Lihat Semuanya" ke dalam container review
     cardContainerReview.innerHTML += lihatSemuaReview;
 });

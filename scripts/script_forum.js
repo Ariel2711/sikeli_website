@@ -1,3 +1,4 @@
+// Event listener untuk memastikan konten DOM telah dimuat sebelum dieksekusi
 document.addEventListener("DOMContentLoaded", function () {
     const forumPosts = [
         {
@@ -144,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const forumPostsContainer = document.getElementById('forum-posts');
 
+    // Fungsi untuk menampilkan postingan forum
     function displayForumPosts(posts) {
         forumPostsContainer.innerHTML = '';
         posts.forEach(post => {
@@ -175,51 +177,66 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Menampilkan semua postingan forum saat DOM dimuat
     displayForumPosts(forumPosts);
 
+    // Mendapatkan semua elemen filter dan kontainer postingan forum
     const filters = document.querySelectorAll(".filters li");
     const cards = document.querySelectorAll(".container");
 
+    // Fungsi untuk mengubah string tampilan menjadi bilangan bulat
     function parseViews(viewString) {
         const match = viewString.match(/(\d+) Views/);
         return match ? parseInt(match[1]) : 0;
     }
 
+    // Menambahkan event listener untuk setiap filter
     filters.forEach(filter => {
         filter.addEventListener("click", function () {
+            // Menghapus kelas "active" dari semua filter
             filters.forEach(item => {
                 item.classList.remove("active");
             });
 
+            // Menambahkan kelas "active" pada filter yang diklik
             this.classList.add("active");
 
+            // Mendapatkan nilai filter yang diklik
             const filterValue = this.getAttribute("data-filter");
 
+            // Menerapkan filter pada postingan forum
             let filteredPosts = forumPosts.filter(post => {
                 return filterValue === "*" || post.categoryFilter === filterValue;
             });
+
+            // Menampilkan postingan forum yang sudah difilter
             displayForumPosts(filteredPosts);
 
+            // Jika filter "FAQ" dipilih, maka urutkan postingan berdasarkan jumlah views
             if (filterValue === "FAQ") {
                 let filteredPosts = forumPosts.filter(post => {
                     return true;
                 });
+                // Urutkan postingan berdasarkan jumlah views dari yang tertinggi ke terendah
                 filteredPosts.sort((a, b) => parseViews(b.views) - parseViews(a.views));
+                // Menampilkan postingan forum yang sudah diurutkan
                 displayForumPosts(filteredPosts);
             }
-
         });
     });
 
+    // Mendapatkan elemen input pencarian dan tombol pencarian
     const searchInput = document.getElementById("searchInput");
     const searchButton = document.getElementById("searchButton");
     const reviews = document.querySelectorAll(".container");
 
+    // Fungsi untuk melakukan filter pada postingan forum berdasarkan pencarian
     function filterReviews(searchTerm) {
         reviews.forEach(function (review) {
             const title = review.querySelector("h2").textContent.toLowerCase();
             const description = review.querySelector("p").textContent.toLowerCase();
 
+            // Menampilkan atau menyembunyikan postingan forum berdasarkan apakah judul atau deskripsinya cocok dengan kata kunci pencarian
             if (title.includes(searchTerm) || description.includes(searchTerm)) {
                 review.style.display = "block";
             } else {
@@ -228,14 +245,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    // Event listener untuk memfilter postingan forum saat input pencarian berubah
     searchInput.addEventListener("input", function () {
+        // Mendapatkan kata kunci pencarian
         const searchTerm = searchInput.value.trim().toLowerCase();
+        // Melakukan filter pada postingan forum berdasarkan kata kunci pencarian
         filterReviews(searchTerm);
     });
 
+    // Event listener untuk memfilter postingan forum saat tombol pencarian diklik
     searchButton.addEventListener("click", function (event) {
         event.preventDefault();
+        // Mendapatkan kata kunci pencarian
         const searchTerm = searchInput.value.trim().toLowerCase();
+        // Melakukan filter pada postingan forum berdasarkan kata kunci pencarian
         filterReviews(searchTerm);
     });
 });
